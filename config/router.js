@@ -16,4 +16,11 @@ router.route('/parks')
 router.route('/parks/:id')
   .get(getSinglePark)
 
+// Authentication
+router.route('/register') // POST
+
+router.route('/login') // POST
+
+router.route('/profile') // GET
+
 export default router
