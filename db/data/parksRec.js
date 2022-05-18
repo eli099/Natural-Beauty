@@ -1,4 +1,4 @@
-export default [
+const parksRec = [
   {
     code: 10,
     name: 'South Down National Park',
@@ -8,8 +8,8 @@ export default [
     parkImg: ['SDNP1.png', 'SDNP2.jpeg', 'SDNP3.jpeg'],
     iconicWildlife: ['burnt orchid', 'round-headed rampion', 'otter', 'skylark', 'barn owl', 'brown trout', 'barbastelle bat', 'chalk carpet moth', 'sundew (carnivorous plant)'],
     keyWildlife: ['butterflies'],
-    trails: [trail1, trail2, trail3],
-    activities: [Walking, Hiking, Bird - watching, Star - gazing],
+    trails: ['trail1', 'trail2', 'trail3'],
+    activities: ['Walking', 'Hiking', 'Bird - watching', 'Star - gazing'],
     reviews: {
       beauty: 5,
       wildlife: 4,
@@ -21,11 +21,13 @@ export default [
       {
         name: 'Malham Cove',
         location: [4234, 23423],
-        description: xxxx,
-        keyFeature: xxx,
-        localImg: ['URL', 'URL', 'URL']
-        usersSay: [SELECT]
+        description: 'xxxx',
+        keyFeature: 'xxx',
+        localImg: ['URL', 'URL', 'URL'],
+        usersSay: ['SELECT'],
       }
     ]
   }
 ]
+
+export default parksRec
