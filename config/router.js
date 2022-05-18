@@ -1,4 +1,5 @@
 import express from 'express'
+import { loginUser, registerUser } from '../controllers/auth.js'
 
 // Import controllers
 import { getSinglePark, showParks } from '../controllers/parks.js'
@@ -18,8 +19,10 @@ router.route('/parks/:id')
 
 // Authentication
 router.route('/register') // POST
+  .post(registerUser)
 
 router.route('/login') // POST
+  .post(loginUser)
 
 router.route('/profile') // GET
 
