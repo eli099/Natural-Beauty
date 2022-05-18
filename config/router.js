@@ -13,7 +13,7 @@ router.route('/parks')
   .get(showParks)
 
 // Individual
-router.route('/parks')
+router.route('/parks/:id')
   .get(getSinglePark)
 
 export default router
