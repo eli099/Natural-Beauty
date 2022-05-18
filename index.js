@@ -43,7 +43,7 @@ const startServer = async () => {
   })
 
   // Connect to router
-  app.use(router)
+  app.use('/api', router)
 
   // Connect to database with mongoose
   await mongoose.connect(MONGODB_CONNECTION_STRING)
