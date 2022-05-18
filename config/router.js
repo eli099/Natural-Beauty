@@ -1,5 +1,6 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
+// import { secureRoute } from './secureRoute.js'
 
 // Import controllers
 import { getSinglePark, showParks } from '../controllers/parks.js'
