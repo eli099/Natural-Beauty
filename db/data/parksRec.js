@@ -1,4 +1,4 @@
-export default [
+const parksRec = [
   {
     code: 'SDNP',
     name: 'South Down National Park',
@@ -109,7 +109,7 @@ export default [
         name: 'Visit Dunster Castle',
         code: 'DC',
         location: [51.1859, -3.4389],
-        description: 'Dunster Castle is steeped in history, well yes, it\’s a castle, but this building is so wonderfully preserved with the efforts of the National Trust, keeping this castle authentic and true to history. Great views of castle on approach, sitting majestically high, with Fabulous gardens, fascinating house and relaxed atmosphere.',
+        description: 'Dunster Castle is steeped in history, well yes, it\'s a castle, but this building is so wonderfully preserved with the efforts of the National Trust, keeping this castle authentic and true to history. Great views of castle on approach, sitting majestically high, with Fabulous gardens, fascinating house and relaxed atmosphere.',
         keyFeature: 'Historically preserved castle',
         localImg: ['../../assets/parkImgs/EMNP/DC1.jpeg', '../../assets/parkImgs/EMNP/DC2.jpeg', '../../assets/parkImgs/EMNP/DC3.jpeg'],
         moreInfo: 'https://www.thebestofexmoor.co.uk/blog/dunster-castle/',
@@ -128,3 +128,5 @@ export default [
     ]
   }
 ]
+
+export default parksRec
