@@ -1,0 +1,10 @@
+.parks-container{
+  .park{
+    height: 350px;
+    max-width: 300px;
+    margin: 0 auto;
+    .park-img{
+      max-width: 100%;
+    }
+  }
+}
