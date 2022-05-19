@@ -60,7 +60,7 @@ const Login = () => {
           {/* Email */}
           <input type="text" name="email" placeholder="Email" aria-label="Email" required value={formData.email} onChange={handleChange} />
           {/* Password */}
-          <input type="text" name="password" placeholder="Password" aria-label="Password" required value={formData.password} onChange={handleChange} />
+          <input type="password" name="password" placeholder="Password" aria-label="Password" required value={formData.password} onChange={handleChange} />
           
           {/* Error Message */}
           {errors && <p className="auth-error cent">Unauthorised</p>}

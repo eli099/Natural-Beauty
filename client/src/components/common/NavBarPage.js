@@ -16,11 +16,17 @@ const NavBarPage = () => {
 
   return (
     <header>
-    <nav id="nav-bar">
-      <Link to="/" className="logo">🏔</Link>
-      <Link to="/login">Login</Link>
-      <Link onClick={handleLogout} to="">Logout</Link>
-    </nav>
+      <nav id="nav-bar">
+        <div className="nav-left">
+          <Link to="/" className="logo">🏔</Link>
+        </div>
+        <div className="nav-right">
+          <Link to="/login">National Parks</Link>
+          <Link to="/register">Register</Link>
+          <Link to="/login">Login</Link>
+          <Link onClick={handleLogout} to="">Logout</Link>
+        </div>
+      </nav>
     </header>
   )
 }

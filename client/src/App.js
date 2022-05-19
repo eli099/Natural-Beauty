@@ -32,13 +32,16 @@ const App = () => {
       <BrowserRouter>
         <NavBarPage />
         <Routes>
+          {/* Home */}
           <Route path="/" element={<Home />} />
           {/* Auth routes */}
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+
+          {/* Maps */}
           <Route path="/maptest" element={<Map />} />
           <Route path="/park" element={<Park />} />
-          <Route path="/maptest" element={<Map />}></Route>
+          <Route path="/maptest" element={<Map />} />
           <Route path="/parkmaptest" element={<ParkMap />} />
         </Routes>
       </BrowserRouter>
