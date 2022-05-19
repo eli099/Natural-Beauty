@@ -11,6 +11,7 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Home from './Home'
 import Map from './components/Map'
+import ParkMap from './components/maps/ParkMap'
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/maptest" element={<Map />}></Route>
+          <Route path="/parkmaptest" element={<ParkMap />} />
         </Routes>
       </BrowserRouter>
       

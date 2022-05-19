@@ -6,7 +6,7 @@ import { PORT, MONGODB_CONNECTION_STRING } from './config/environment.js'
 import { getSinglePark, showParks } from './controllers/parks.js'
 
 // Import model
-import Park from './models/example.js'
+import Park from './models/parks.js'
 
 // Import router
 import router from './config/router.js'
