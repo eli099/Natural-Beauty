@@ -1,10 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react'
 import axios from 'axios'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import mapboxgl from '!mapbox-gl' // eslint-disable-line import/no-webpack-loader-syntax
 
 // Import components
 // import Map from './components.js/Map'
+import Register from './components.js/auth/Register'
+import Home from './Home'
 
 const App = () => {
 
@@ -23,12 +27,12 @@ const App = () => {
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
-    container: mapContainer.current,
-    style: 'mapbox://styles/mrbread/cl3bpcmjx000a14muue539u5n',
-    center: [lng, lat],
-    zoom: zoom
+      container: mapContainer.current,
+      style: 'mapbox://styles/mrbread/cl3bpcmjx000a14muue539u5n',
+      center: [lng, lat],
+      zoom: zoom
     });
-    });
+  });
 
   useEffect(() => {
     const getData = async () => {
@@ -41,7 +45,14 @@ const App = () => {
   return (
     <>
       <h1>Natural Beauty</h1>
-      <div ref={mapContainer} className="map-container" />
+      {/* Components with link components */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
+      {/* <div ref={mapContainer} className="map-container" /> */}
     </>
   )
 }

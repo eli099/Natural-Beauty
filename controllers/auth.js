@@ -1,6 +1,6 @@
 import User from '../models/users.js'
 import jwt from 'jsonwebtoken'
-import SECRET from '../config/environment.js'
+import { SECRET } from '../config/environment.js'
 
 // METHOD: POST
 // Endpoint: /register
