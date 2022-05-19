@@ -68,8 +68,8 @@ const parksRec = [
     name: 'Exmoor National Park',
     location: [51.1346, -3.6462],
     postcode: 'TA22 9HL',
-    description: 'Famous for its wild deer and ponies, dramatic coastline and rugged heather moorland, there\’s plenty to see and do at Exmoor NP.  Large areas of open moorland provide a sense of remoteness and tranquillity rare in southern Britain. Spectacular coastal views, deep wooded valleys, high sea cliffs and fast flowing streams all combine to form a rich and distinct mosaic.',
-    parkImg: ['../../assets/parkImgs/EMNP/EMNP1.jpeg', '../../assets/parkImgs/EMNP/EMNP1.jpeg', '../../assets/parkImgs/EMNP/EMNP1.png'],
+    description: 'Famous for its wild deer and ponies, dramatic coastline and rugged heather moorland, there\'s plenty to see and do at Exmoor NP.  Large areas of open moorland provide a sense of remoteness and tranquillity rare in southern Britain. Spectacular coastal views, deep wooded valleys, high sea cliffs and fast flowing streams all combine to form a rich and distinct mosaic.',
+    parkImg: ['../../assets/parkImgs/EMNP/EMNP1.jpeg', '../../assets/parkImgs/EMNP/EMNP2.jpeg', '../../assets/parkImgs/EMNP/EMNP3.png'],
     website: 'https://www.exmoor-nationalpark.gov.uk/', 
     iconicWildlife: ['wild red deer', 'Exmoor ponies', 'otters', 'butterflies', ],
     keyWildlife: ['wild red deer'],
@@ -122,7 +122,7 @@ const parksRec = [
         location: [50.864231, -0.550414],
         description: 'The East Lyn River and Hoar Oak Water come together at Watersmeet to create a glorious waterfall. It\'s a fantastic spot for wild swimming, with small plunge pools by the waterfall, or, a little further along the river from there, you will find Long Pool which stretches further and goes deeper…',
         keyFeature: 'Wild-swmming',
-        localImg: ['../../assets/parkImgs/EMNP/WSW1.jpeg', '../../assets/parkImgs/EMNP/WSW2.jpeg', '../../assets/parkImgs/SDNP/EMNP/WSW3.jpeg'],
+        localImg: ['../../assets/parkImgs/EMNP/WSW1.jpeg', '../../assets/parkImgs/EMNP/WSW2.jpeg', '../../assets/parkImgs/EMNP/WSW3.jpeg'],
         moreInfo: 'https://www.visitarundel.co.uk/listing/arundel-wetland-centre/',
         // usersSay: [SELECT]
       }
@@ -249,7 +249,7 @@ const parksRec = [
         // usersSay: [SELECT]
       },
       {
-        name: ' Admire the Ice Age cave art at Creswell Crags',
+        name: 'Admire the Ice Age cave art at Creswell Crags',
         code: 'IACA',
         location: [53.263863, -1.193336],
         category: 'Hidden gem',
@@ -257,6 +257,74 @@ const parksRec = [
         keyFeature: 'Cave art',
         localImg: ['../../assets/parkImgs/PDNP/IACA1.jpeg', '../../assets/parkImgs/PDNP/IACA2.jpeg', '../../assets/parkImgs/PDNP/IACA3.jpeg'],
         moreInfo: 'https://www.creswell-crags.org.uk/',
+        // usersSay: [SELECT]
+      }
+    ]
+  },
+  {
+    code: 'DMNP',
+    name: 'Dartmoor National Park',
+    location: [50.5719, -3.9207],
+    postcode: 'TQ13 9JQ',
+    description: 'Wild, open moorlands and deep river valleys, with a rich history and rare wildlife, the story of Dartmoor\'s cherished and protected landscape and wildlife is one of powerful geological forces, relentless weather and more than 10,000 years of human activity.',
+    parkImg: ['../../assets/parkImgs/DMNP/DMNP1.jpeg', '../../assets/parkImgs/DMNP/DMNP2.jpeg', '../../assets/parkImgs/DMNP/DMNP3.jpeg'],
+    website: 'https://www.dartmoor.gov.uk/', 
+    iconicWildlife: ['blue ground beetle', 'cuckoo', 'marsh fritillary butterfly', 'otter', 'ash black slug', 'hazel dormouse', 'rare bats'],
+    keyWildlife: ['butterflies'],
+    trails: [{
+      name: 'Buckfastleigh Walk',
+      link: 'https://www.dartmoor.gov.uk/enjoy-dartmoor/outdoor-activities/walking/walking-routes/welcome-to-dartmoor-buckfastleigh-walk'
+      }, 
+      {
+        name: 'Meldon Reservoir and Black Tor',
+        link: 'https://www.alltrails.com/trail/england/devon/meldon-reservoir-and-black-tor'
+      },
+      {
+        name: 'Becky Falls Ancient Woodland park',
+        link: 'https://www.beckyfalls.com/info/walking-at-becky-falls/'
+      }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Wild camping', 'Canoeing', 'Rock climbing', 'Bird-watching', 'Letterboxing'],
+    reviews: {
+      beauty: 5,
+      wildlife: 4,
+      trails: 5,
+      camping: 3,
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'Berry Pomeror Castle ruins',
+        code: 'BP',
+        location: [50.4492, -3.6365],
+        category: 'Spectacular scenery',
+        description: 'Tucked away in a deep wooded valley, Berry Pomeroy Castle is the perfect romantic ruin with a colourful history of intrigue.',
+        keyFeature: 'Castle ruins',
+        localImg: ['../../assets/parkImgs/DMNP/BP1.jpeg', '../../assets/parkImgs/DMNP/BP2.jpeg', '../../assets/parkImgs/DMNP/BP3.jpeg'],
+        moreInfo: '',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Wild camping',
+        code: 'WC',
+        location: [50.445178, -3.910793],
+        category: 'Wild adventure',
+        description: 'As the only place in England that wild camping is legal, at Dartmoor it is also actively encouraged. Piles Copse is an idyllic place to wild camp, with a pretty stream setting',
+        keyFeature: 'Wild camping',
+        localImg: ['../../assets/parkImgs/DMNP/WC1.jpeg', '../../assets/parkImgs/DMNP/WC2.jpeg', '../../assets/parkImgs/DMNP/WC3.jpeg'],
+        moreInfo: 'https://pilescopse.org.uk/camping/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Letterboxing',
+        code: 'LB',
+        location: [50.6553, -3.9774],
+        category: 'Hidden gem',
+        description: 'In 1854, James Perrott set up a small cairn at Cranmere Pool, inside he put a glass jar where visitors who had ventured to the lonely, bleak spot could leave their visiting cards. To this day, hikers leave a letter or postcard inside a box along the trail, for the next person to discover.',
+        keyFeature: 'Letterboxing',
+        localImg: ['../../assets/parkImgs/DMNP/LB1.jpeg', '../../assets/parkImgs/DMNP/LB2.jpeg', '../../assets/parkImgs/PDMNP/LB3.jpeg'],
+        moreInfo: 'https://www.dartmoor.gov.uk/enjoy-dartmoor/outdoor-activities/letterboxing-and-geocaching',
         // usersSay: [SELECT]
       }
     ]
