@@ -11,6 +11,21 @@ const App = () => {
   })
 
   return <h1>Natural Beauty</h1>
+  // return (
+  //   <main className='site-wrapper'>
+  //     <BrowserRouter>
+  //       <PageNavBar />
+  //       <Routes>
+  //         <Route path="/" element={<Home />} />
+  //         <Route path="/register" element={<Register />} />
+  //         <Route path="/login" element={<Login />} />
+  //         <Route path="/parks" element={<Parks />} />
+  //         <Route path="/parks/:id" element={<Park />} />
+  //         <Route path="*" element={<Not_Found />} />
+  //       </Routes>
+  //     </BrowserRouter>
+  //   </main>
+  // )
 }
 
 export default App
