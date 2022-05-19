@@ -13,6 +13,7 @@ import Home from './Home'
 import Map from './components/Map'
 import Park from './components/parks/Park'
 import NavBarPage from './components/common/NavBarPage'
+import ParkMap from './components/maps/ParkMap'
 
 const App = () => {
 
@@ -37,6 +38,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/maptest" element={<Map />} />
           <Route path="/park" element={<Park />} />
+          <Route path="/maptest" element={<Map />}></Route>
+          <Route path="/parkmaptest" element={<ParkMap />} />
         </Routes>
       </BrowserRouter>
     </main>

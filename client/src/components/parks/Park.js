@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 // eslint-disable-next-line
-// import ParkMap from '../Maps/ParkMap'
-
+import ParkMap from '../maps/ParkMap'
 
 // Below we will import useParams - this is a method that returns an object of placeholders as keys
 // eslint-disable-next-line
@@ -42,11 +41,11 @@ const Park = () => {
           <img id='park-reel' src={park.parkImg[0]} alt={park.name} img/>
           {/* https://www.npmjs.com/package/react-image-gallery */}
           <h2>${park.name}</h2>
-          <img id='favourite' src='../assets/favourite.jpg' onClick={userEvent.favourite.add} alt='Favourite'></img>
+          {/* <img id='favourite' src='../assets/favourite.jpg' onClick={user.favourite.add} alt='Favourite'></img> */}
           <h4>${park.description}</h4>
           <div id='key-wildlife-container'>
-            <p>${park.keyWildlife.name}</p>
-            <img src={park.keyWildlife.img} alt={park.keyWildlife.name}></img>
+            {/* <p>${park.keyWildlife.name}</p> */}
+            {/* <img src={park.keyWildlife.img} alt={park.keyWildlife.name}></img> */}
           </div>
         </div>
         <div id='park-map'>
