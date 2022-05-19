@@ -84,6 +84,12 @@ const ParkMap = () => {
         hoveredStateId = null
     })
   })
+  return (
+    <>
+      <h1>Map Test</h1>
+      <div ref={mapContainer} className="map-container" />
+    </>
+  )
 }
 
 export default ParkMap
