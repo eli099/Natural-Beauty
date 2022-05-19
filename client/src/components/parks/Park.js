@@ -17,7 +17,7 @@ const Park = () => {
   useEffect(() => {
     const getPark = async () => {
       try {
-        const { data } = await axios.get(`api/parks/${id}`)
+        const { data } = await axios.get(`/api/parks/${id}/`)
         setPark(data)
         console.log(data)
       } catch (err) {

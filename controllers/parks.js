@@ -1,9 +1,10 @@
-import Park from "../models/example.js"
+import Park from "../models/parks.js"
 
 // Method: GET
 // Endpoint: /parks
 // Description: Return all nation park documents
 export const showParks = async (req, res, next) => {
+  console.log('hello')
   const park = await Park.find()
   console.log({ park })
   return res.status(200).json(park)

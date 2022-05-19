@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import { MONGODB_CONNECTION_STRING } from '../config/environment.js'
 
 // Import national park model
-import Park from '../models/example.js'
+import Park from '../models/parks.js'
 
 // Import seed data
 import parkData from './data/parksRec.js'
@@ -21,6 +21,7 @@ const seedDatabase = async () => {
     // Add seed data back in
     const parksAdded = await Park.create(parkData)
     console.log(`🌱 Database seeded with ${parksAdded.length} national park/s`)
+    console.log(parksAdded[0].attractions)
 
     // Close connection to database
     await mongoose.connection.close()

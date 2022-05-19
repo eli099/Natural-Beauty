@@ -11,13 +11,15 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Home from './Home'
 import Map from './components/Map'
+import ParksIndex from './components/parks/ParksIndex'
 
 const App = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get('/api/parks') // * <-- replace with your endpoint
+      const { data } = await axios.get('/api/parks/') // * <-- replace with your endpoint
       console.log(data)
+      // console.log('Are you even trying???')
     }
     getData()
   })
@@ -32,6 +34,8 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/maptest" element={<Map />}></Route>
+
+          <Route path="/parks" element={<ParksIndex />} />
         </Routes>
       </BrowserRouter>
       
