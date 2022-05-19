@@ -1,4 +1,3 @@
-import { getNextKeyDef } from '@testing-library/user-event/dist/keyboard/getNextKeyDef'
 import jwt from 'jsonwebtoken'
 import User from '../models/users.js'
 import { SECRET } from './environment.js'
