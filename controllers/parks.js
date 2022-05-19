@@ -1,4 +1,4 @@
-import Park from "../models/example.js"
+import Park from "../models/parks.js"
 
 // Method: GET
 // Endpoint: /parks
