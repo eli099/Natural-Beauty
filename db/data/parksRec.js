@@ -192,6 +192,74 @@ const parksRec = [
         // usersSay: [SELECT]
       }
     ]
+  },
+  {
+    code: 'PDNP',
+    name: 'Peak District National Park',
+    location: [53.3342, -1.7837],
+    postcode: 'S33 8WS',
+    description: 'Known as a land of two halves, the Peak District is divided into the White Peak with steep limestone valleys in the North, and dramatic gritstone ridges and stark moorland plateaus making up the Dark Peak in the South.',
+    parkImg: ['../../assets/parkImgs/PDNP/PDNP1.jpeg', '../../assets/parkImgs/PDNP/PDNP2.jpeg', '../../assets/parkImgs/PDNP/PDNP3.jpeg'],
+    website: 'https://www.peakdistrict.gov.uk/', 
+    iconicWildlife: ['wild red deer', 'owls', 'curlews', 'sparrowhawks', 'buzzards'],
+    keyWildlife: ['wild red deer'],
+    trails: [{
+      name: 'The Kinder moorland walk',
+      link: 'https://www.nationaltrust.org.uk/kinder-edale-and-the-dark-peak/trails/kinder-moorland-walk---a-glimpse-into-the-future'
+      }, 
+      {
+        name: 'Flash and Three Shires Head Circular',
+        link: 'https://www.alltrails.com/trail/england/staffordshire/flash-and-three-shires-head-circular'
+      },
+      {
+        name: 'Dovestone Reservoir and Chew Reservoir Circular',
+        link: 'https://www.alltrails.com/trail/england/greater-manchester/dovestone-reservoir-and-chew-reservoir-circular'
+      }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Boating', 'Sailing', 'Rock climbing', 'Bird-watching', 'Stargazing'],
+    reviews: {
+      beauty: 5,
+      wildlife: 3,
+      trails: 5,
+      camping: 3,
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'Ridge Walk Mam Tor to Losehill',
+        code: 'RW',
+        location: [53.3492, -1.8096],
+        category: 'Spectacular scenery',
+        description: 'As one of 10 Dark Skies Discovery Sites within the National Park, Seven Sisters Country Park is one of the best places to view the night sky. On a clear night from October through to March, it\'s possible to catch glimpses of the Milky Way as it rises above the famous chalk cliffs.',
+        keyFeature: 'Breath-taking views',
+        localImg: ['../../assets/parkImgs/PDNP/RW1.jpeg', '../../assets/parkImgs/PDNP/RW2.jpeg', '../../assets/parkImgs/PDNP/RW3.jpeg'],
+        moreInfo: 'https://www.tripadvisor.co.uk/Attraction_Review-g499576-d3474329-Reviews-Ridge_Walk_Mam_Tor_to_Losehill-Castleton_Hope_Valley_Peak_District_National_Park_.html',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Stay under the stars in a wooden pod',
+        code: 'WP',
+        location: [53.344846, -1.646877],
+        category: 'Wild adventure',
+        description: 'Enjoy your wilderness with a little bit of luxury, stay under the stars in your very own wooden camping pod',
+        keyFeature: '(Almost) wild camping',
+        localImg: ['../../assets/parkImgs/PDNP/WP1.jpeg', '../../assets/parkImgs/PDNP/WP2.jpeg', '../../assets/parkImgs/PDNP/WP3.jpeg'],
+        moreInfo: 'https://www.peakdistrict.gov.uk/visiting/things-to-do/camping/camping-northlees/camping-pods',
+        // usersSay: [SELECT]
+      },
+      {
+        name: ' Admire the Ice Age cave art at Creswell Crags',
+        code: 'IACA',
+        location: [53.263863, -1.193336],
+        category: 'Hidden gem',
+        description: 'You\'ve probably heard of the Peak District and Derbyshire\'s famous show caverns at Castleton, but did you know that the caves at Creswell Crags, near Bolsover, are home to Britain\'s only Ice Age rock art? Nestled in a limestone gorge of caves and fissures, this site of international importance is a peaceful place to explore, with stunning lakeside walks.',
+        keyFeature: 'Cave art',
+        localImg: ['../../assets/parkImgs/PDNP/IACA1.jpeg', '../../assets/parkImgs/PDNP/IACA2.jpeg', '../../assets/parkImgs/PDNP/IACA3.jpeg'],
+        moreInfo: 'https://www.creswell-crags.org.uk/',
+        // usersSay: [SELECT]
+      }
+    ]
   }
 ]
 
