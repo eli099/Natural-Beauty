@@ -18,17 +18,6 @@ const logger = (req, res, next) => {
   next()
 }
 
-// // Example document
-// const examplePark = {
-//   NAME: "SOUTH DOWNS",
-//   MEASURE: 1653,
-//   DESIG_DATE: 1269993600000,
-//   HOTLINK: "http://southdowns.gov.uk/",
-//   STATUS: "Designated",
-//   Shape__Area: 1652679314.27636,
-//   Shape__Length: 602554.506861322
-// }
-
 // Initialise express server
 const startServer = async () => {
 
