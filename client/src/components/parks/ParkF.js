@@ -11,10 +11,11 @@ const NationalPark = () => {
   const { id } = useParams()
   const navigate = useNavigate()
 
-  const [park, setPark] = useState(null)
+  const [park, setPark] = useState()
   const [errors, setErrors] = useState(false)
 
   useEffect(() => {
+    console.log('HELLO??')
     const getPark = async () => {
       try {
         const { data } = await axios.get(`/api/parks/${id}`)
@@ -29,19 +30,26 @@ const NationalPark = () => {
     }
     getPark()
 
+
   }, [id])
 
 
+  // console.log('ON FIRST RENDER ->', park.name)
+
   return (
     <>
-      <h1>Where is my lovely nation park??</h1>
-      <Container className='np-container'>
-        <h1>{park.name}</h1>
-        <img src={park.parkImg[0]} alt={park.name} className='np-img' />
-      </Container>
+      <h1>Where is my lovely national park??</h1>
+      {park ?
+        <Container className='np-container'>
+          <h1>{park.name}</h1>
+          <img src={park.parkImg[0]} alt={park.name} className='np-img' />
+        </Container> 
+        :
+        <p>I hate this</p>
+      }
     </>
   )
-  
+
 }
 
 export default NationalPark
