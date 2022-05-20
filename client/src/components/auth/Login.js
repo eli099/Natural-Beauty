@@ -39,7 +39,7 @@ const Login = () => {
     e.preventDefault()
     try {
       // Make post request to /login endpoint
-      const { data } = await axios.post('/api/login', formData) // formData = request body
+      const { data } = await axios.post('api/login', formData) // formData = request body
       console.log(data)
       saveTokenToLocalStorage(data.token)
       // Navigate to index page if successful
