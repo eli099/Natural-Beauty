@@ -15,10 +15,9 @@ import ParksIndex from './components/parks/ParksIndex'
 import NationalPark from './components/parks/ParkF'
 import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
-import ProfilePage from './ProfilePage'
+import ProfilePage from './components/'
 
 const App = () => {
-
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/parks/') // * <-- replace with your endpoint
@@ -45,6 +44,8 @@ const App = () => {
           <Route path="/profile/:id" element={<ProfilePage />} />
 
           {/* Maps */}
+          <Route path="/maptest" element={<Map />} />
+          {/* <Route path="/park" element={<Park />} /> */}
           <Route path="/maptest" element={<Map />} />
           <Route path="/parkmaptest" element={<ParkMap />} />
 
