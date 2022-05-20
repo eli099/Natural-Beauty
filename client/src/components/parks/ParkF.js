@@ -21,19 +21,27 @@ const NationalPark = () => {
         console.log(data.name)
         console.log('Park data from get -> ', data)
         setPark(data)
+        // console.log('park data->', park)
       } catch (error) {
         console.log('🧭 There was a problem finding your park ->', error)
         setErrors(true)
       }
     }
     getPark()
+
   }, [id])
 
+
   return (
-    <h1>At some point, we'll get a national park in here looking luuuuuuuvely</h1>
+    <>
+      <h1>Where is my lovely nation park??</h1>
+      <Container className='np-container'>
+        <h1>{park.name}</h1>
+        <img src={park.parkImg[0]} alt={park.name} className='np-img' />
+      </Container>
+    </>
   )
-
-
+  
 }
 
 export default NationalPark
