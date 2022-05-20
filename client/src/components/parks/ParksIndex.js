@@ -38,27 +38,30 @@ const ParksIndex = () => {
   }, [navigate])
 
   return (
-    <Container className='parks-container'>
-      <Row>
-        {parks.map(park => {
-          const { _id, code, name, parkImg, iconicWildlife, activities } = park
-          return (
-            <Col key={_id} md='6' lg='4' className='park mb-4'>
-              <Link to={`parks/${_id}`}>
-                <Card>
-                  <Card.Img className='park-img' variant="top" src={`${parkImg[0]}`} />
-                  <Card.Body>
-                    <Card.Title className='text-center mb-0' >{name}</Card.Title>
-                    <Card.Text>{`Here you can find: ${iconicWildlife}`}</Card.Text>
-                    {/* <Card.Text>{`Here you can enjoy: ${activities}`}</Card.Text> */}
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
-          )
-        })}
-      </Row>
-    </Container>
+    <section>
+      <Container className='parks-container'>
+        <Row>
+          {parks.map(park => {
+            const { _id, code, name, parkImg, iconicWildlife, activities } = park
+            return (
+              <Col key={_id} md='6' lg='4' className='park mb-4'>
+                <Link to={`parks/${_id}`}>
+                  <Card>
+                    <Card.Img className='park-img' variant="top" src={`../${parkImg[0]}`} />
+                    <Card.Body>
+                      <Card.Title className='text-center mb-0' >{name}</Card.Title>
+                      <Card.Text>{`Here you can find: ${iconicWildlife}`}</Card.Text>
+                      {/* <Card.Text>{`Here you can enjoy: ${activities}`}</Card.Text> */}
+                    </Card.Body>
+                  </Card>
+                </Link>
+              </Col>
+            )
+          })}
+        </Row>
+      </Container>
+    </section>
+
   )
 }
 
