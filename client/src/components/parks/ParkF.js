@@ -35,27 +35,26 @@ const NationalPark = () => {
 
   }, [id])
 
-  const imageCarousel = [
-    {
-      original: park.parkImg[0],
-      thumbnail: park.parkImg[0]
-    },
-    {
-      original: park.parkImg[1],
-      thumbnail: park.parkImg[1]
-    },
-    {
-      original: park.parkImg[1],
-      thumbnail: park.parkImg[1]
-    }
-  ]
+  // const imageCarousel = [
+  //   {
+  //     original: park.parkImg[0],
+  //     thumbnail: park.parkImg[0]
+  //   },
+  //   {
+  //     original: park.parkImg[1],
+  //     thumbnail: park.parkImg[1]
+  //   },
+  //   {
+  //     original: park.parkImg[1],
+  //     thumbnail: park.parkImg[1]
+  //   }
+  // ]
 
 
   // console.log('ON FIRST RENDER ->', park.name)
 
   return (
     <>
-      <h1>Where is my lovely national park??</h1>
       {park ?
         <Container className='np-container'>
           <h1>{park.name}</h1>
