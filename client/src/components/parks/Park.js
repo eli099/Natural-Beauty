@@ -1,30 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-
-// eslint-disable-next-line
-import ParkMap from '../maps/ParkMap'
-
-// Below we will import useParams - this is a method that returns an object of placeholders as keys
-// eslint-disable-next-line
-import { useParams, Link, useNavigate } from 'react-router-dom'
-
 // eslint-disable-next-line
 // import { owner, getTokenFromLocalStorage } from '../../helpers/authorise'
 import userEvent from '@testing-library/user-event'
 
 const Park = () => {
   
-  const navigate = useNavigate()
+//   const navigate = useNavigate()
 
-  const { id } = useParams()
+//   const { id } = useParams()
 
-  const [ park, setPark ] = useState(null)
-  const [ errors, setErrors ] = useState(false)
+//   const [ park, setPark ] = useState(null)
+//   const [ errors, setErrors ] = useState(false)
 
   useEffect(() => {
     const getPark = async () => {
       try {
-        const { data } = await axios.get(`/api/parks/${id}`)
+        const { data } = await axios.get(`/api/parks/${id}/`)
         setPark(data)
         console.log(data)
       } catch (err) {
@@ -56,6 +46,6 @@ const Park = () => {
   )
 
 
-}
+// }
 
-export default Park
+// export default Park

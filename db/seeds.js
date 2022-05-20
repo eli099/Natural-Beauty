@@ -27,6 +27,7 @@ const seedDatabase = async () => {
     // Add seed data back in
     const parksAdded = await Park.create(parkData)
     console.log(`🌱 Database seeded with ${parksAdded.length} national parks and ${usersAdded.length} users.`)
+    // console.log(parksAdded[0].attractions)
 
     // Close connection to database
     await mongoose.connection.close()
