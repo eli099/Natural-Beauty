@@ -12,7 +12,7 @@ import Login from './components/auth/Login'
 import Home from './Home'
 import Map from './components/Map'
 import ParksIndex from './components/parks/ParksIndex'
-import nationalPark from './components/parks/ParkF'
+import NationalPark from './components/parks/ParkF'
 import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
 
@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/parks/') // * <-- replace with your endpoint
-      console.log(data)
+      // console.log(data)
       // console.log('Are you even trying???')
     }
     getData()
@@ -47,7 +47,7 @@ const App = () => {
 
           {/* Parks pages */}
           <Route path="/parks" element={<ParksIndex />} />
-          <Route path="/parks/:id" element={<nationalPark />} />
+          <Route path="/parks/:id" element={<NationalPark />} />
         </Routes>
       </BrowserRouter>
     </main>
