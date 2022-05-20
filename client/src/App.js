@@ -15,6 +15,7 @@ import ParksIndex from './components/parks/ParksIndex'
 import NationalPark from './components/parks/ParkF'
 import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
+import ProfilePage from './ProfilePage'
 
 const App = () => {
 
@@ -40,8 +41,10 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
 
+          {/* User */}
+          <Route path="/profile/:id" element={<ProfilePage />} />
+
           {/* Maps */}
-          <Route path="/maptest" element={<Map />} />
           <Route path="/maptest" element={<Map />} />
           <Route path="/parkmaptest" element={<ParkMap />} />
 
