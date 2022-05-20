@@ -11,13 +11,10 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Home from './Home'
 import Map from './components/Map'
-<<<<<<< HEAD
 import ParksIndex from './components/parks/ParksIndex'
-=======
 import Park from './components/parks/Park'
 import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
->>>>>>> development
 
 const App = () => {
 
