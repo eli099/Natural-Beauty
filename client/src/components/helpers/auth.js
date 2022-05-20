@@ -10,7 +10,7 @@ export const getPayload = () => {
   console.log(JSON.parse(atob(payload)))
   return JSON.parse(atob(payload))
 }
-getPayload()
+// getPayload()
 
 // ? Checking to see if user is autheticated
 export const userIsAuthenticated = () => {
@@ -26,5 +26,5 @@ export const userIsAuthenticated = () => {
   // Return boolean
   return currentTime < payload.exp
 }
-console.log('is user authenticated? ->', userIsAuthenticated())
-userIsAuthenticated()
+// console.log('is user authenticated? ->', userIsAuthenticated())
+// userIsAuthenticated()
