@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+import ImageGallery from 'react-image-gallery'
+
 const NationalPark = () => {
 
   const { id } = useParams()
@@ -32,6 +34,21 @@ const NationalPark = () => {
 
 
   }, [id])
+
+  const imageCarousel = [
+    {
+      original: park.parkImg[0],
+      thumbnail: park.parkImg[0]
+    },
+    {
+      original: park.parkImg[1],
+      thumbnail: park.parkImg[1]
+    },
+    {
+      original: park.parkImg[1],
+      thumbnail: park.parkImg[1]
+    }
+  ]
 
 
   // console.log('ON FIRST RENDER ->', park.name)
