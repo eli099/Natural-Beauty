@@ -42,18 +42,15 @@ const App = () => {
           {/* Auth routes */}
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-<<<<<<< HEAD
           <Route path="/maptest" element={<Map />}></Route>
 
           <Route path="/parks" element={<ParksIndex />} />
-=======
 
           {/* Maps */}
           <Route path="/maptest" element={<Map />} />
           <Route path="/park" element={<Park />} />
           <Route path="/maptest" element={<Map />} />
           <Route path="/parkmaptest" element={<ParkMap />} />
->>>>>>> development
         </Routes>
       </BrowserRouter>
     </main>
