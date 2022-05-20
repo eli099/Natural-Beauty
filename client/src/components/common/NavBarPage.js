@@ -45,7 +45,7 @@ const NavBarPage = () => {
           <Link to="/" className="logo">🏔</Link>
         </div>
         <div className="nav-right">
-          <Link to="/login">National Parks</Link>
+          <Link to="/parkmaptest">National Parks</Link>
           <Link to="/register">Register</Link>
           <Link to="/login">Login</Link>
           <Link onClick={handleLogout} to="">Logout</Link>
