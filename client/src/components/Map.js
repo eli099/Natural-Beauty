@@ -24,7 +24,7 @@ const Map = () => {
       zoom: zoom
     });
   });
-
+  
   return (
     <>
       <h1>Map Test</h1>

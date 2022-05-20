@@ -4,9 +4,11 @@ import { MONGODB_CONNECTION_STRING } from '../config/environment.js'
 
 // Import national park model
 import Park from '../models/parks.js'
+import User from '../models/users.js'
 
 // Import seed data
 import parkData from './data/parksRec.js'
+import userData from './data/users.js'
 
 const seedDatabase = async () => {
   try {
@@ -18,9 +20,13 @@ const seedDatabase = async () => {
     await mongoose.connection.db.dropDatabase()
     console.log('✅ Database dropped')
 
+    // Add user data
+    const usersAdded = await User.create(userData)
+    console.log('users added ->', usersAdded)
+
     // Add seed data back in
     const parksAdded = await Park.create(parkData)
-    console.log(`🌱 Database seeded with ${parksAdded.length} national park/s`)
+    console.log(`🌱 Database seeded with ${parksAdded.length} national parks and ${usersAdded.length} users.`)
     // console.log(parksAdded[0].attractions)
 
     // Close connection to database

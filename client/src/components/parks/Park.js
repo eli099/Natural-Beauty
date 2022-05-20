@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+
+// eslint-disable-next-line
 import ParkMap from '../maps/ParkMap'
 
 // Below we will import useParams - this is a method that returns an object of placeholders as keys
+// eslint-disable-next-line
 import { useParams, Link, useNavigate } from 'react-router-dom'
+
+// eslint-disable-next-line
+// import { owner, getTokenFromLocalStorage } from '../../helpers/authorise'
+import userEvent from '@testing-library/user-event'
 
 const Park = () => {
   
@@ -42,7 +49,7 @@ const Park = () => {
           </div>
         </div>
         <div id='park-map'>
-          <ParkMap />
+          {/* <ParkMap /> */}
         </div>
       </div>
     </>

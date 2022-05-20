@@ -5,8 +5,8 @@ import mongoose from 'mongoose'
 import { PORT, MONGODB_CONNECTION_STRING } from './config/environment.js'
 // import { getSinglePark, showParks } from './controllers/parks.js'
 
-// // Import model
-// import Park from './models/park.js'
+// Import model
+// import Park from './models/parks.js'
 
 // Import router
 import router from './config/router.js'
