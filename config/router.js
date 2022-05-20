@@ -1,5 +1,5 @@
 import express from 'express'
-import { loginUser, registerUser } from '../controllers/auth.js'
+import { loginUser, registerUser, showAllUsers, showUser } from '../controllers/auth.js'
 // import { secureRoute } from './secureRoute.js'
 
 // Import controllers
@@ -10,7 +10,8 @@ const router = express.Router()
 
 // ? Routes
 
-// Generic
+//? Generic
+// All Parks
 router.route('/parks')
   .get(showParks)
 
@@ -25,6 +26,12 @@ router.route('/register') // POST
 router.route('/login') // POST
   .post(loginUser)
 
+// ? User Related
 router.route('/profile') // GET
+.get(showAllUsers)
+
+// Get Single Park
+router.route('/profile/:id') // GET
+.get(showUser)
 
 export default router

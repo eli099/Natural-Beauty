@@ -34,6 +34,9 @@ const ParkMap = () => {
         setErrors(true)
       }
     }
+    setLng(park.location[0])
+    setLat(park.location[1])
+    setZoom(10)
     getPark()
   }, [id])
   
