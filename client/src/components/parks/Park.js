@@ -18,6 +18,7 @@ const Park = () => {
         setPark(data)
         console.log(data)
       } catch (err) {
+        console.log('There\'s been an error getting your park')
         setErrors(true)
       }
     }
