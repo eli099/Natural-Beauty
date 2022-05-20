@@ -14,6 +14,30 @@ const NavBarPage = () => {
     navigate('/login')
   }
 
+  // ? Funtion to get payload off of token
+  const getPayload = () => {
+    const token = window.localStorage.getItem('natural-beauty')
+    console.log('token ->', token)
+    if (!token) return
+    // Split token and return index 1
+    const payload = token.split('.')[1]
+    console.log('payload ->', payload)
+    console.log(JSON.parse(atob(payload)))
+    return JSON.parse(atob(payload))
+  }
+  getPayload()
+
+  // ? Checking to see if user is autheticated
+  const userIsAuthenticated = () => {
+    // Get payload for localStorage
+    const payload = getPayload()
+    console.log('payload ->', payload)
+    // Get today's date (in seconds)
+    // Compare token expiry -> expiry needs to be in future to be authenticated
+    // Return boolean
+  }
+  userIsAuthenticated()
+
   return (
     <header>
       <nav id="nav-bar">
