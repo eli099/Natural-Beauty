@@ -2,14 +2,20 @@
 // import { owner, getTokenFromLocalStorage } from '../../helpers/authorise'
 import userEvent from '@testing-library/user-event'
 
+import axios from 'axios'
+
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+
 const Park = () => {
   
-//   const navigate = useNavigate()
+  const navigate = useNavigate()
 
-//   const { id } = useParams()
+  const { id } = useParams()
 
-//   const [ park, setPark ] = useState(null)
-//   const [ errors, setErrors ] = useState(false)
+  const [ park, setPark ] = useState(null)
+  const [ errors, setErrors ] = useState(false)
 
   useEffect(() => {
     const getPark = async () => {
@@ -46,6 +52,6 @@ const Park = () => {
   )
 
 
-// }
+}
 
-// export default Park
+export default Park
