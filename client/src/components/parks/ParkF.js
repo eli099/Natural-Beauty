@@ -17,14 +17,15 @@ const NationalPark = () => {
   const [errors, setErrors] = useState(false)
 
   useEffect(() => {
-    console.log('HELLO??')
+    // console.log('HELLO??')
     const getPark = async () => {
       try {
         const { data } = await axios.get(`/api/parks/${id}`)
-        console.log(data.name)
-        console.log('Park data from get -> ', data)
+        // console.log(data.name)
+        // console.log('Park data from get -> ', data)
         setPark(data)
         // console.log('park data->', park)
+        console.log(park.parkImg[0])
       } catch (error) {
         console.log('🧭 There was a problem finding your park ->', error)
         setErrors(true)
@@ -50,8 +51,12 @@ const NationalPark = () => {
   //   }
   // ]
 
+  // class MyGallery extends React.Component{
+  //   render() {
+  //     return <ImageGallery items={imageCarousel} />
+  //   }
+  // }
 
-  // console.log('ON FIRST RENDER ->', park.name)
 
   return (
     <>
@@ -61,7 +66,7 @@ const NationalPark = () => {
           <img src={park.parkImg[0]} alt={park.name} className='np-img' />
         </Container> 
         :
-        <p>I hate this</p>
+        <p>Something went wrong</p>
       }
     </>
   )
