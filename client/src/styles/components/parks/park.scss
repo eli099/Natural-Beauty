@@ -4,37 +4,43 @@
   margin-left: 0;
   margin-right: auto;
   margin-top: 15px;
+  background-color: rgb(9, 179, 0, 0.2);
 
-  .np-carousel-container{
+  .np-carousel-container {
     position: relative;
     height: 40vh;
     width: 100%;
+
     // border: 3px solid red;
     .np-img {
-      height: 100%; 
+      height: 100%;
       width: 100%;
       object-fit: cover;
     }
-    .park-text{
+
+    .park-text {
       position: absolute;
       top: 0;
       height: 100%;
       display: flex;
       align-items: center;
+
       .park-desc {
         // border: 1px solid lightgreen;
         width: 25%;
         height: 100%;
         margin-bottom: 0;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
         display: flex;
+
         p {
           color: white;
           padding: 0 10px;
           display: inline-block;
-          align-self: flex-end ;
+          align-self: flex-end;
         }
       }
+
       h1 {
         // border: 1px solid lightgreen;
         width: 75%;
@@ -50,14 +56,16 @@
     height: 50vh;
     width: 100%;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
 
     .np-attractions {
+      box-sizing: border-box;
       border: 2px solid red;
       border-radius: 8px;
       height: 100%;
       width: 45%;
-      .np-attractions-title{
+      background-color: $pale-green;
+      .np-attractions-title {
         width: 100%;
         height: 50%;
         position: relative;
@@ -77,17 +85,33 @@
           padding: 10px;
         }
       }
-        .np-attractions-info {
-          padding: 10px;
+
+      .np-attractions-info {
+        padding: 10px;
+
       }
+
+      .np-more-info {
+        padding: 10px;
+        text-align: right;
+        right: 0;
+      }
+
     }
-    .np-reviews{
+    .np-stuff{
       border: 2px solid red;
-      border-radius: 8px;
-      // position: absolute;
       height: 100%;
       width: 45%;
+      border-radius: 8px;
+      .np-activities{
+        
+      }
+      .np-reviews {
+
+      }
     }
+
+
 
   }
 }

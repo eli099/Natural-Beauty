@@ -62,16 +62,31 @@ const NationalPark = () => {
                 <h2>{park.attractions[0].name}</h2>
                 <p>{park.attractions[0].description}</p>
               </div>
-              <a href={park.attractions[0].moreInfo}>More info</a>
+              <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
             </div>
-            <div className='np-reviews'>
-              <h2>Reviews</h2>
-              <p>Scenery</p>
-              <p>Wildlife</p>
-              <p>Walks</p>
-              <p>Camping</p>
-              <button>Submit a review</button>
+            <div className='np-stuff'>
+              <div className='np-activities'>
+                <h4>Activities</h4>
+                <p>In {park.name} you can enjoy a range of activities including: {park.activities}</p>
+                <p>Among the incredible scenery, you'll be able to spot: {park.iconicWildlife}</p>
+                <p>Why not try out some of the well-trodden paths:</p>
+                <ul>
+                  <li><a href={park.trails[0].link} target='_blank' rel='noreferrer'>{park.trails[0].name}</a></li>
+                  <li><a href={park.trails[1].link} target='_blank' rel='noreferrer'>{park.trails[1].name}</a></li>
+                  <li><a href={park.trails[2].link} >{park.trails[2].name}</a></li>
+                </ul>
+              </div>
+              <div className='np-reviews'>
+                <h4>Reviews</h4>
+                <p> Scenery<br />
+                  Wildlife<br />
+                  Walks<br />
+                  Camping
+                </p>
+                <button>Submit a review</button>
+              </div>
             </div>
+
           </section>
         </section>
         :
