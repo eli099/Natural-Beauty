@@ -22,7 +22,7 @@ const ParksIndex = () => {
 
     const getParks = async () => {
       try {
-        const { data } = await axios.get('/api/parks/')
+        const { data } = await axios.get('/api/parks')
         console.log('🏆 Got the ParksIndex data')
 
         setParks(data)
@@ -44,7 +44,7 @@ const ParksIndex = () => {
           const { _id, code, name, parkImg, iconicWildlife, activities } = park
           return (
             <Col key={_id} md='6' lg='4' className='park mb-4'>
-              <Link className='park-link' to={`parks/${_id}`}>
+              <Link to={`/parks/${_id}`}>
                 <Card>
                   <Card.Img className='park-img' variant="top" src={`../${parkImg[0]}`} />
                   <Card.Body className='card-body'>

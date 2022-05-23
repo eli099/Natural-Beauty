@@ -13,7 +13,7 @@ import Home from './Home'
 import Map from './components/Map'
 import MainMap from './components/maps/MainMap'
 import ParksIndex from './components/parks/ParksIndex'
-import Park from './components/parks/Park'
+import NationalPark from './components/parks/ParkF'
 import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
 import ProfilePage from './ProfilePage'
@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/parks/') // * <-- replace with your endpoint
-      console.log(data)
+      // console.log(data)
       // console.log('Are you even trying???')
     }
     getData()
@@ -40,15 +40,19 @@ const App = () => {
           {/* Auth routes */}
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+
           {/* User */}
           <Route path="/profile/:id" element={<ProfilePage />} />
-          {/* Park Index */}
-          <Route path="/parks" element={<ParksIndex />} />
+
           {/* Maps */}
           <Route path="/maptest" element={<Map />} />
           {/* <Route path="/park" element={<Park />} /> */}
           <Route path="/mainmaptest" element={<MainMap />} />
           <Route path="/parkmaptest" element={<ParkMap />} />
+
+          {/* Parks pages */}
+          <Route path="/parks" element={<ParksIndex />} />
+          <Route path="/parks/:id" element={<NationalPark />} />
         </Routes>
       </BrowserRouter>
     </main>

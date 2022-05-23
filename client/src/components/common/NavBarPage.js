@@ -26,8 +26,12 @@ const NavBarPage = () => {
           <Link to="/" className="logo">🏔</Link>
         </div>
         <div className="nav-right">
-          <Link to="/parkmaptest">Map of National Parks</Link>
-          <Link to="/parks">Index</Link>
+          <Link to="/parks">National Parks</Link>
+          {/* <Link to="/register">Register</Link>
+          <Link to="/login">Login</Link>
+          <Link onClick={handleLogout} to="">Logout</Link> */}
+          {/* <Link to="/parkmaptest">Map of National Parks</Link>
+          <Link to="/parks">Index</Link> */}
           {/* Change links displayed depending on if user is logged in or not */}
           {userIsAuthenticated() ?
             <Link onClick={handleLogout} to="">Logout</Link>
