@@ -36,35 +36,44 @@ const NationalPark = () => {
 
   }, [id])
 
-  // const imageCarousel = [
-  //   {
-  //     original: park.parkImg[0],
-  //     thumbnail: park.parkImg[0]
-  //   },
-  //   {
-  //     original: park.parkImg[1],
-  //     thumbnail: park.parkImg[1]
-  //   },
-  //   {
-  //     original: park.parkImg[1],
-  //     thumbnail: park.parkImg[1]
-  //   }
-  // ]
 
-  // class MyGallery extends React.Component{
-  //   render() {
-  //     return <ImageGallery items={imageCarousel} />
-  //   }
-  // }
 
 
   return (
     <>
       {park ?
-        <Container className='np-container'>
-          <h1>{park.name}</h1>
-          <img src={park.parkImg[0]} alt={park.name} className='np-img' />
-        </Container> 
+        <section className='np-page-container'>
+          <section className='np-carousel-container'>
+            <img src={park.parkImg[0]} alt={park.name} className='np-img' />
+            <div className='park-text'>
+              <div className='park-desc'>
+                <p>{park.description}</p>
+              </div>
+              <h1>{park.name}</h1>
+            </div>
+          </section>
+          <section className='np-bottom-container'>
+            <div className='np-attractions'>
+              <div className='np-attractions-title'>
+                <h2>{park.attractions[0].category}</h2>
+                <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
+              </div>
+              <div className='np-attractions-info'>
+                <h2>{park.attractions[0].name}</h2>
+                <p>{park.attractions[0].description}</p>
+              </div>
+              <a href={park.attractions[0].moreInfo}>More info</a>
+            </div>
+            <div className='np-reviews'>
+              <h2>Reviews</h2>
+              <p>Scenery</p>
+              <p>Wildlife</p>
+              <p>Walks</p>
+              <p>Camping</p>
+              <button>Submit a review</button>
+            </div>
+          </section>
+        </section>
         :
         <p>Something went wrong</p>
       }
@@ -72,5 +81,27 @@ const NationalPark = () => {
   )
 
 }
+
+
+// const imageCarousel = [
+//   {
+//     original: park.parkImg[0],
+//     thumbnail: park.parkImg[0]
+//   },
+//   {
+//     original: park.parkImg[1],
+//     thumbnail: park.parkImg[1]
+//   },
+//   {
+//     original: park.parkImg[1],
+//     thumbnail: park.parkImg[1]
+//   }
+// ]
+
+// class MyGallery extends React.Component{
+//   render() {
+//     return <ImageGallery items={imageCarousel} />
+//   }
+// }
 
 export default NationalPark

@@ -125,7 +125,7 @@ const parksRec = [
       {
         name: 'Wild-swimming at Watersmeet',
         code: 'WSW',
-        location: [50.864231, -0.550414],
+        location: [50.864231, -3.47586],
         category: 'Wild adventure',
         description: 'The East Lyn River and Hoar Oak Water come together at Watersmeet to create a glorious waterfall. It\'s a fantastic spot for wild swimming, with small plunge pools by the waterfall, or, a little further along the river from there, you will find Long Pool which stretches further and goes deeper…',
         keyFeature: 'Wild-swmming',
@@ -386,7 +386,7 @@ const parksRec = [
       {
         name: 'Whitby Whale Watching',
         code: 'WW',
-        location: [54.4872, 0.6143],
+        location: [54.4872, -0.6143],
         category: 'Wild adventures',
         description: 'Every year late in summer whales arrive in the North Sea just off the coast of Whitby to feast on the migrating herring which come to the Yorkshire coast to spawn.This also attracts cetaceans, sharks, birds and seals to feed.',
         keyFeature: 'Whale watching',
