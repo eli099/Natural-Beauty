@@ -3,9 +3,11 @@ import { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import axios from 'axios'
 
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const MainMap = () => {  
+  
+  const navigate = useNavigate()
 
   mapboxgl.accessToken = 'pk.eyJ1IjoibXJicmVhZCIsImEiOiJjbDM4bHV0Z3UwMTRmM2tueTY1Mm41NTZnIn0.92r4wGEn7bywx1dmpYCe-w'
 
@@ -160,11 +162,10 @@ const MainMap = () => {
       targetPark.current = parks.filter((park) => park.name === clickedPark.current)// our park name must match the geojson park name
       console.log(targetPark)
       targetPark.current.map(park => {
-        const { name, location, attractions } = park
+        const { _id, name, location, attractions } = park
         map.current.flyTo({
           center: [park.location[1],park.location[0]],
-          zoom: 8.5 // add a zoom level to our data object i.e. park.location[2] or park.zoom 
-                  //- we will calculate it from researching the right zoom level
+          zoom: park.location[2] // add a zoom level to our data object i.e. park.location[2] or park.zoom
         })
         for (let i = 0; i < 3; i++){
         const marker = new mapboxgl.Marker({
@@ -172,9 +173,18 @@ const MainMap = () => {
             'anchor' : 'bottom',
           })
           .setLngLat([park.attractions[i].location[1],park.attractions[i].location[0]])
-          .setPopup(new mapboxgl.Popup().setHTML(`<div>${park.attractions[i].name}</div><div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>`))
+          .setPopup(new mapboxgl.Popup()
+          // <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
+          .setHTML(
+            `<div id='attraction-name'>${park.attractions[i].name}</div>
+            <div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>
+            <div><img id='marker-img' src=${park.attractions[i].localImg[1]}></div>
+            <div><img id='marker-img' src=${park.attractions[i].localImg[2]}></div>
+            <div id='attraction-category'>🔎<i>${park.attractions[i].category}</i></div>`
+            ))
           .addTo(map.current)
         }
+        return true
       })
       setCP(clickedPark.current)
     })
@@ -187,6 +197,14 @@ const MainMap = () => {
       zoom: zoom
     })
   }
+
+  const goToPark = () => {
+    if(!map.current) return
+    targetPark.current.map(park => {
+      const { _id } = park
+      return navigate(`/parks/${park._id}`)
+    })
+  }
   
   return (
     <>
@@ -196,7 +214,10 @@ const MainMap = () => {
         <h2>{clickedPark.current}</h2>
         <>
         {clickedPark.current ?
+        <>
           <button onClick={handleClick}>Back to full map</button>
+          <button onClick={goToPark}>Go to park</button>
+        </>
         : ''
         }
         </>
