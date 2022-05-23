@@ -11,11 +11,12 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Home from './Home'
 import Map from './components/Map'
+import MainMap from './components/maps/MainMap'
 import ParksIndex from './components/parks/ParksIndex'
 import Park from './components/parks/Park'
 import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
-import ProfilePage from './components/'
+import ProfilePage from './ProfilePage'
 
 const App = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const App = () => {
           {/* Maps */}
           <Route path="/maptest" element={<Map />} />
           {/* <Route path="/park" element={<Park />} /> */}
-          <Route path="/maptest" element={<Map />} />
+          <Route path="/mainmaptest" element={<MainMap />} />
           <Route path="/parkmaptest" element={<ParkMap />} />
         </Routes>
       </BrowserRouter>
