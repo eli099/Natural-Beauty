@@ -1,6 +1,11 @@
-// ? Funtion to get payload off of token
+// ? Get the token from localStorage
+export const getTokenFromLocalStorage = () => {
+  return window.localStorage.getItem('natural-beauty')
+}
+
+// ? Function to get payload off of token
 export const getPayload = () => {
-  const token = window.localStorage.getItem('natural-beauty')
+  const token = getTokenFromLocalStorage()
   console.log('token ->', token)
   if (!token) return
   // Split token and return index 1
