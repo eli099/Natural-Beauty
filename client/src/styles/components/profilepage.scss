@@ -1,0 +1,28 @@
+.profile-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid;
+  height: 100vh;
+  margin: 0px;
+
+  .row-one {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid;
+  }
+
+  .col-one {
+    width: calc(100% / 2);
+    border: 1px solid;
+    padding: 20px;
+  }
+
+  .col-two {
+    width: calc(100% / 4);
+    border: 1px solid;
+    padding: 20px;
+  }
+}

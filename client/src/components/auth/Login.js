@@ -7,6 +7,8 @@ import axios from 'axios'
 // Import useNavigate
 import { useNavigate } from 'react-router-dom'
 
+import { getTokenFromLocalStorage } from '../helpers/auth.js'
+
 const Login = () => {
 
   const navigate = useNavigate()

@@ -35,7 +35,7 @@ const ParksIndex = () => {
 
     getParks()
 
-  }, [navigate])
+  }, [])
 
   return (
     <Container className='parks-container'>

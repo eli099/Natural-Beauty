@@ -6,6 +6,7 @@ export const secureRoute = async (req, res, next) => {
   console.log('🚨 YOU\'VE HIT THE SECURE ROUTE 🚨')
   try {
     console.log('HEADERS -->', req.headers)
+    console.log('secureRoute req body ->', req.body)
     if (!req.headers.authorization) throw new Error('Missing authorisation header')
     // ^ Check to see if an authorisation header exists 
 
@@ -24,13 +25,13 @@ export const secureRoute = async (req, res, next) => {
 
     req.verifiedUser = userToVerify
     // ^ if they do exist, update the req object with the verified user
-
+    console.log('req.verifiedUser ->', req.verifiedUser)
 
     // At this point the token AND the user is valid, so pass the request onto the controller using next()
     next()
 
   } catch (error) {
-    console.log(error)
+    console.log('verification error ->', error)
     return res.status(401).json({ message: '❌ Unauthorised!'})
   }
 }

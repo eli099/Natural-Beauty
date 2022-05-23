@@ -31,6 +31,8 @@ export const loginUser = async (req, res) => {
       throw new Error()
     }
 
+    console.log('req.body ->', req.body)
+
     const token = jwt.sign({ sub: userToLogin._id }, SECRET, { expiresIn: '10d' })
     // ^ generates a token containing relevant info to validate user
     // 1st use payload.sub to validate user; 2nd SECRET makes our token secure; sets expiry
@@ -40,35 +42,5 @@ export const loginUser = async (req, res) => {
   } catch (error) {
     console.log(error)
     return res.status(401).json({ message: '❌ Unauthorised!' })
-  }
-}
-
-// Method: GET All Users
-// Endpoint: /profile
-// Description: Show all user profile
-export const showAllUsers = async (req, res) => {
-  try {
-    const users = await User.find()
-    console.log('all users ->', { users })
-    return res.status(200).json(users)
-  } catch (error) {
-    console.log(error)
-  }
-}
-
-// Method: GET User profile
-// Endpoint: /profile/:id
-// Description: Show user profile based on their document ID
-export const showUser = async (req, res) => {
-  const { id } = req.params
-  try {
-    const user = User.findById(id)
-    if (!user) {
-      return res.status(404).json({ message: 'User not found'})
-    }
-    return res.status(200).json(user)
-  } catch (error) {
-    console.log(error)
-    res.status(400).json(error)
   }
 }
