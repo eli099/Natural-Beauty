@@ -1,26 +1,69 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
+// Import User Token
+import { getTokenFromLocalStorage } from './components/helpers/auth'
+
+// Import Bootstrap elements
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 const ProfilePage = () => {
 
-  // Get user objects from database
-  const [ users, setUsers ] = useState([])
   // Get logged in user object
+  const [user, setUser] = useState([])
+
 
   useEffect(() => {
-    const getUsers = async () => {
-    try {
-      const response = await axios.get('/api/')
-    } catch (error) {
-      console.log(error)
+    const getUser = async () => {
+      try {
+        const { data } = await axios.get('/api/profile', {
+          headers: {
+            Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+          },
+        })
+        console.log('response ->', data)
+        setUser(data)
+      } catch (error) {
+        console.log(error)
+      }
     }
-    }
-  })
+    getUser()
+  }, [])
 
   return (
-    <>
-    <h1>Profile Page</h1>
-    </>
+    // <main className="profile-page">
+    //   {/* Top Row */}
+    //   <section className="row-one">
+    //     {/* Grid With Liked Places */}
+    //     <section className="col-one">
+    //       <h3>Liked Places</h3>
+    //     </section>
+    //     <section className="col-two">
+    //       <h3>User Info</h3>
+    //       <p><strong>{user.username}</strong> / {user.email}</p>
+
+    //     </section>
+    //   </section>
+    //   {/* Profile Info Section */}
+
+    // </main>
+
+    <Container className='mt-5'>
+      <Row>
+        <Col md="8" className="border p-2"><h3>Liked Places</h3></Col>
+        <Col md="4" className="border p-2">
+          <Row className="border-bottom p-2">
+          <h3>User Info</h3>
+          <p><strong>{user.username}</strong> / {user.email}</p>
+          </Row>
+          <Row className="p-2">
+          <h3>Your reviews:</h3>
+          </Row>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

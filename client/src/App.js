@@ -17,6 +17,7 @@ import NationalPark from './components/parks/ParkF'
 import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
 import ProfilePage from './ProfilePage'
+import FruitShow from './components/likestest/FruitShow'
 
 const App = () => {
   useEffect(() => {
@@ -42,13 +43,17 @@ const App = () => {
           <Route path="/login" element={<Login />} />
 
           {/* User */}
-          {/* <Route path="/profile/:id" element={<ProfilePage />} /> */}
-
+          <Route path="/profile" element={<ProfilePage />} />
+          {/* Park Index */}
+          <Route path="/parks" element={<ParksIndex />} />
           {/* Maps */}
           <Route path="/maptest" element={<Map />} />
           {/* <Route path="/park" element={<Park />} /> */}
           <Route path="/mainmaptest" element={<MainMap />} />
           <Route path="/parkmaptest" element={<ParkMap />} />
+
+        {/* ! Testing ! */}
+        <Route path="/fruitshow/:id" element={<FruitShow />} />
 
           {/* Parks pages */}
           <Route path="/parks" element={<ParksIndex />} />

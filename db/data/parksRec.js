@@ -1,8 +1,8 @@
 const parksRec = [
   {
     code: 'SDNP',
-    name: 'South Down National Park',
-    location: [50.9893, -0.7381],
+    name: 'South Downs National Park',
+    location: [50.931637, -0.524218, 8],
     postcode: 'GU29 9DH',
     description: 'Not only have the centuries of human habitation shaped the National Park but the landscape has and still does, dictate where people have chosen to live and work the land. This is a landscape rich in folklore and legend that has inspired generations of writers, artists and storytellers who have flocked to witness the beauty of the rolling chalk downland and the wooded heaths of the National Park.',
     parkImg: ['../../assets/parkImgs/SDNP/SDNP1.png', '../../assets/parkImgs/SDNP/SDNP2.jpeg', '../../assets/parkImgs/SDNP/SDNP3.jpeg'],
@@ -70,7 +70,7 @@ const parksRec = [
   {
     code: 'EXNP',
     name: 'Exmoor National Park',
-    location: [51.1346, -3.6462],
+    location: [51.14, -3.666344, 9.1],
     postcode: 'TA22 9HL',
     description: 'Famous for its wild deer and ponies, dramatic coastline and rugged heather moorland, there\'s plenty to see and do at Exmoor NP.  Large areas of open moorland provide a sense of remoteness and tranquillity rare in southern Britain. Spectacular coastal views, deep wooded valleys, high sea cliffs and fast flowing streams all combine to form a rich and distinct mosaic.',
     parkImg: ['../../assets/parkImgs/EMNP/EMNP1.jpeg', '../../assets/parkImgs/EMNP/EMNP2.jpeg', '../../assets/parkImgs/EMNP/EMNP3.png'],
@@ -138,7 +138,7 @@ const parksRec = [
   {
     code: 'YDNP',
     name: 'Yorkshire Dales National Park',
-    location: [54.1963, -2.1632],
+    location: [54.213555, -2.087339, 8.6],
     postcode: 'DL8 3EL',
     description: 'The Yorkshire Dales has many moods; it can be wild and windswept or quietly tranquil with valleys full of hay meadows, drystone walls and barns. Spectacular waterfalls and ancient woodlands contrast with the scattered remains of rural industries.',
     parkImg: ['../../assets/parkImgs/YDNP/YDNP1.jpeg', '../../assets/parkImgs/YDNP/YDNP2.jpeg', '../../assets/parkImgs/YDNP/YDNP3.png'],
@@ -197,7 +197,7 @@ const parksRec = [
         category: 'Hidden gem',
         description: 'A fantastic stretch of grassy riverside incorporating river, meadow and beaches, with the limestone cliffs and the gorges of Loup Scar. There\'s a terrifying jump at Loup Scar, from the path on river R, into a small very deep plunge pool.',
         keyFeature: 'Wild-swmming',
-        localImg: ['../../assets/parkImgs/YDNP/JLC1.jpeg', '../../assets/parkImgs/YDNP/JLC2.jpeg', '../../assets/parkImgs/SDNP/YDNP/JLC3.jpeg'],
+        localImg: ['../../assets/parkImgs/YDNP/JLC1.jpeg', '../../assets/parkImgs/YDNP/JLC2.jpeg', '../../assets/parkImgs/YDNP/JLC3.jpeg'],
         moreInfo: 'https://www.wildswimming.co.uk/adventures-yorkshire-dales/',
         // usersSay: [SELECT]
       }
@@ -206,7 +206,7 @@ const parksRec = [
   {
     code: 'PDNP',
     name: 'Peak District National Park',
-    location: [53.3342, -1.7837],
+    location: [53.308887, -1.812726, 8.7],
     postcode: 'S33 8WS',
     description: 'Known as a land of two halves, the Peak District is divided into the White Peak with steep limestone valleys in the North, and dramatic gritstone ridges and stark moorland plateaus making up the Dark Peak in the South.',
     parkImg: ['../../assets/parkImgs/PDNP/PDNP1.jpeg', '../../assets/parkImgs/PDNP/PDNP2.jpeg', '../../assets/parkImgs/PDNP/PDNP3.jpeg'],
@@ -274,7 +274,7 @@ const parksRec = [
   {
     code: 'DMNP',
     name: 'Dartmoor National Park',
-    location: [50.5719, -3.9207],
+    location: [50.564841, -3.898735, 9.4],
     postcode: 'TQ13 9JQ',
     description: 'Wild, open moorlands and deep river valleys, with a rich history and rare wildlife, the story of Dartmoor\'s cherished and protected landscape and wildlife is one of powerful geological forces, relentless weather and more than 10,000 years of human activity.',
     parkImg: ['../../assets/parkImgs/DMNP/DMNP1.jpeg', '../../assets/parkImgs/DMNP/DMNP2.jpeg', '../../assets/parkImgs/DMNP/DMNP3.jpeg'],
@@ -333,7 +333,7 @@ const parksRec = [
         category: 'Hidden gem',
         description: 'In 1854, James Perrott set up a small cairn at Cranmere Pool, inside he put a glass jar where visitors who had ventured to the lonely, bleak spot could leave their visiting cards. To this day, hikers leave a letter or postcard inside a box along the trail, for the next person to discover.',
         keyFeature: 'Letterboxing',
-        localImg: ['../../assets/parkImgs/DMNP/LB1.jpeg', '../../assets/parkImgs/DMNP/LB2.jpeg', '../../assets/parkImgs/PDMNP/LB3.jpeg'],
+        localImg: ['../../assets/parkImgs/DMNP/LB1.jpeg', '../../assets/parkImgs/DMNP/LB2.jpeg', '../../assets/parkImgs/DMNP/LB3.jpeg'],
         moreInfo: 'https://www.dartmoor.gov.uk/enjoy-dartmoor/outdoor-activities/letterboxing-and-geocaching',
         // usersSay: [SELECT]
       }
@@ -342,7 +342,7 @@ const parksRec = [
   {
     code: 'NYNP',
     name: 'North York Moors National Park',
-    location: [54.3872, -0.8927],
+    location: [54.317068, -0.877769, 8.7],
     postcode: 'YO62 5BP',
     description: 'The North York Moors is a special place, forged by nature, shaped over generations – where peace and beauty rub shoulders with a rich history and a warm welcome.',
     parkImg: ['../../assets/parkImgs/NYNP/NYNP1.jpeg', '../../assets/parkImgs/NYNP/NYNP2.jpeg', '../../assets/parkImgs/NYNP/NYNP3.jpeg'],
@@ -410,7 +410,7 @@ const parksRec = [
   {
     code: 'NFNP',
     name: 'New Forest National Park',
-    location: [50.8764, -1.6312],
+    location: [50.869155, -1.556062, 9.6],
     postcode: 'SO41 9ZG',
     description: 'A world capital for wildlife. New Forest National Parkhas ancient woodlands, wild open heathlands and stretches of beautiful coastline.',
     parkImg: ['../../assets/parkImgs/NFNP/NFNP1.jpeg', '../../assets/parkImgs/NFNP/NFNP2.jpeg', '../../assets/parkImgs/NFNP/NFNP3.jpeg'],
@@ -476,29 +476,97 @@ const parksRec = [
     ]
   },
   {
-    code: 'BBNP',
-    name: 'Brecon Beacons National Park',
-    location: [51.8872, -3.4743],
-    postcode: 'LD3 8ER',
-    description: 'Always changing, forever beautiful: From the depths of its caves to the grandeur of Pen y Fan and Cribyn, there\'s plenty to explore in this gem of a national park. By day, there are moorlands, trails and towns to discover, by night, you can feast your eyes on the stars.',
-    parkImg: ['../../assets/parkImgs/BBNP/BBNP1.png', '../../assets/parkImgs/BBNP/BBNP2.jpeg', '../../assets/parkImgs/BBNP/BBNP3.jpeg'],
-    website: 'https://www.breconbeacons.org/',
-    iconicWildlife: ['otters', 'great crested newts', 'marsh fritillary butterflies', 'bats', 'salmon', 'trout', 'sheep'],
-    keyWildlife: ['butterflies'],
+    code: 'TBNP',
+    name: 'The Broads',
+    location: [52.6250, 1.5458, 9.3],
+    postcode: 'NR1 1RY',
+    description: 'The Broads National Park is made up of over 60 open areas of water known as Broads and seven rivers, the Ant, Bure, Chet, Thurne, Waveney, Wensum and Yare. It is also home to a huge variety of the rarest wildlife - greater than any other national park in Britain - and has become a \'must-see\' for nature lovers.',
+    parkImg: ['../../assets/parkImgs/TBNP/TBNP1.jpeg', '../../assets/parkImgs/TBNP/TBNP2.jpeg', '../../assets/parkImgs/TBNP/TBNP3.jpeg'],
+    website: 'https://www.visitthebroads.co.uk/', 
+    iconicWildlife: ['water vole', 'cuckoo', 'european eel', 'chinese water deer', 'norfolk hawker dragonfly'],
+    keyWildlife: 'bittern',
     trails: [{
-      name: 'Dragon\'s Back circular, Black Mountains',
-      link: 'https://www.breconbeacons.org/blog/dragons-back-circular-walk-black-mountains'
-    },
-    {
-      name: 'Pwll-yr-Wrach Reserve, Bluebell trail',
-      link: 'https://www.breconbeacons.org/discover/great-days-out/talgarth-and-black-mountains/pwll-y-wrach'
-    },
-    {
-      name: 'The Monmouthshire & Brecon Canal',
-      link: 'https://www.breconbeacons.org/blog/walks-along-the-monmouthshire-and-brecon-canal'
-    }
+      name: 'Barton Board Walk',
+      link: 'https://www.visitthebroads.co.uk/things-to-do/walking-and-cycling/walking/product-detail?listing=3&key=705501'
+      }, 
+      {
+        name: 'Beccles Marsh Trail Walk',
+        link: 'https://www.visitthebroads.co.uk/things-to-do/walking-and-cycling/walking/product-detail?listing=3&key=700931'
+      },
+      {
+        name: 'Loddon Marshes Walk',
+        link: 'https://www.visitthebroads.co.uk/search/product-detail?listing=3&key=710701'
+      }
     ],
-    activities: ['Walking', 'Hiking', 'Cycling', 'Horse-riding', 'Caving', 'Rock-climbing', 'Stargazing'],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Boating', 'Sailing', 'Rock climbing', 'Bird-watching', 'Stargazing'],
+    reviews: {
+      beauty: 2,
+      wildlife: 3,
+      trails: 4,
+      camping: 2,
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'BeWILDerwood',
+        code: 'B',
+        location: [52.7088, 1.4502],
+        category: 'adventure park',
+        description: 'BeWILDerwood is an award winning wild and imaginative outdoor adventure park. With magical treehouses and hints of intriguing characters, BeWILDerwood brings a curious difference to The Broads. The concept, put quite simply, is one of child’s play. The vision: to enhance an already striking natural playground and encourage children and their families to enjoy traditional, imaginative and healthy outdoor play together.',
+        keyFeature: 'family oriented',
+        localImg: ['../../assets/parkImgs/TBNP/B1.jpeg', '../../assets/parkImgs/TBNP/B2.jpeg', '../../assets/parkImgs/TBNP/B3.jpeg'],
+        moreInfo: 'http://www.bewilderwood.co.uk/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Redwings Horse Sanctuary Visitor Centre Caldecott',
+        code: 'RHSVCC',
+        location: [52.551497, 1.647606],
+        category: 'horse-riding',
+        description: 'Redwings Caldecott, a Visit England Quality Assured Visitor Attraction, is a must-see for all donkey and mule lovers with a herd of over 30 of the adorable, long-eared creatures! Among the gorgeous rescued residents, you can enjoy cuddles with cute little donkey Esther who was rescued from the horrific conditions of Spindle Farm in Amersham, Buckinghamshire, in 2008.',
+        keyFeature: 'horse-riding',
+        localImg: ['../../assets/parkImgs/TBNP/RHSVCC1.jpeg', '../../assets/parkImgs/TBNP/RHSVCC2.jpeg', '../../assets/parkImgs/TBNP/RHSVCC3.jpeg'],
+        moreInfo: 'https://www.redwings.org.uk/get-involved/visit/caldecott-visitor-centre',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Thrigby Hall Wildlife Gardens',
+        code: 'THWG',
+        location: [52.6525, 1.6361],
+        category: 'wildlife park',
+        description: 'Thrigby Hall Wildlife Gardens, near Great Yarmouth have 250-year-old landscaped gardens, a play area and superb willow pattern garden. Renowned for its collection of Asian Mammals, birds and reptiles in the pleasantly landscaped grounds and gardens of Thrigby Hall.',
+        keyFeature: 'rare animals',
+        localImg: ['../../assets/parkImgs/TBNP/THWG1.jpeg', '../../assets/parkImgs/TBNP/THWG2.jpeg', '../../assets/parkImgs/TBNP/THWG3.jpeg'],
+        moreInfo: 'https://www.thrigbyhall.com/',
+        // usersSay: [SELECT]
+      }
+    ]
+  },
+  {
+    code: 'LDNP',
+    name: 'Lake District National Park',
+    location: [54.475, -3.078942, 8.7],
+    postcode: 'LA23 1LJ',
+    description: 'England\'s largest National Park and a World Heritage Site, home to Scafell Pike - its highest mountain, Wastwater - its deepest lake and thriving communities like Keswick and Bowness-on-Windermere.',
+    parkImg: ['../../assets/parkImgs/LDNP/LDNP1.jpeg', '../../assets/parkImgs/LDNP/LDNP2.webp', '../../assets/parkImgs/LDNP/LDNP3.webp'],
+    website: 'https://www.lakedistrict.gov.uk/', 
+    iconicWildlife: ['red and roe deer', 'otter', 'herdwick sheep', 'osprey', 'peregrine falcon'],
+    keyWildlife: 'red squirrel',
+    trails: [{
+      name: 'Coniston Ride',
+      link: 'https://www.lakedistrict.gov.uk/visiting/things-to-do/walking/routes-and-maps/routes-and-maps2/map-2'
+      }, 
+      {
+        name: 'Monk Coniston',
+        link: 'https://www.lakedistrict.gov.uk/visiting/things-to-do/walking/mileswithoutstiles/mws16'
+      },
+      {
+        name: 'Friar\'s Crag',
+        link: 'https://www.lakedistrict.gov.uk/visiting/things-to-do/walking/mileswithoutstiles/mws36'
+      }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Boating', 'Sailing', 'Rock climbing', 'Bird-watching', 'Stargazing'],
     reviews: {
       beauty: 5,
       wildlife: 3,
@@ -509,108 +577,40 @@ const parksRec = [
     // usersSay: [SELECT],
     attractions: [
       {
-        name: 'Pen-Y-Fan',
-        code: 'PYF',
-        location: [51.8840, -3.4364],
-        category: 'Spectacular scenery',
-        description: 'At just under 3,000 feet, this is the highest mountain in South Wales and the jewel in the crown that is the Brecon Beacons National Park. Deservedly popular with walkers, the views from the summit are truly spectacular.',
-        keyFeature: 'Walking',
-        localImg: ['../../assets/parkImgs/BBNP/PYF1.jpeg', '../../assets/parkImgs/BBNP/PYF2.jpeg', '../../assets/parkImgs/BBNP/PYF3.jpeg'],
-        moreInfo: 'https://www.visitwales.com/things-do/adventure-and-activities/walking/crowning-glory-4-ways-walk-pen-y-fan',
+        name: 'Ennerdale Valley',
+        code: 'EV',
+        location: [54.52, -3.376111],
+        category: 'Stargazing',
+        description: 'A remote valley in the North West of the Lake District, Ennerdale is managed to increase wildlife and limit human intervention. There are two car parks at the Western end of the valley and a number of places you can stay. With some of the darkest skies in Cumbria, and real natural wilderness feel, Ennerdale is the perfect place for some serious star gazing.',
+        keyFeature: 'Stargazing',
+        localImg: ['../../assets/parkImgs/LDNP/EV1.jpeg', '../../assets/parkImgs/LDNP/EV2.jpeg'],
+        moreInfo: 'https://www.wildennerdale.co.uk/',
         // usersSay: [SELECT]
       },
       {
-        name: 'Canyoning in \'Waterfall Country\'',
-        code: 'CWC',
-        location: [51.4527, -3.3547],
-        category: 'Wild adventures',
-        description: 'Wild, remote, serious and seriously fun. Canyoning trips take you through a steep sided river gorge in \'Waterfall Country\' the heart of the Brecon Beacons. You will be swimming, jumping, climbing and floating downstream through this breath-taking landscape.',
-        keyFeature: 'Canyoning',
-        localImg: ['../../assets/parkImgs/BBNP/CWC1.jpeg', '../../assets/parkImgs/BBNP/CWC2.jpeg', '../../assets/parkImgs/BBNP/CWC3.jpeg'],
-        moreInfo: 'https://www.adventureswales.co.uk/canyoning-in-wales/',
+        name: 'Hardknott Roman Fort',
+        code: 'HRF',
+        location: [54.4032, -3.2053],
+        category: 'historical',
+        description: 'This far-flung outpost of the Roman Empire guarded the pass on the road from Ravenglass to Ambleside. It was built in the second century during Hadrian\'s reign and garrisoned by troops from the eastern Adriatic, who policed the area and defended the frontier. Thanks to its remote setting, the ruins are well preserved.',
+        keyFeature: 'roman remains',
+        localImg: ['../../assets/parkImgs/LDNP/HRF1.jpeg', '../../assets/parkImgs/LDNP/HRF2.jpeg', '../../assets/parkImgs/LDNP/HRF3.jpeg'],
+        moreInfo: 'https://www.english-heritage.org.uk/visit/places/hardknott-roman-fort',
         // usersSay: [SELECT]
       },
       {
-        name: 'The Monmouthshire & Brecon Canal walk',
-        code: 'AWC',
-        location: [51.4145, -3.0133],
-        category: 'Hidden gem',
-        description: 'The Monmouthshire & Brecon Canal is a true hidden gem. Meandering through the Welsh countryside it is a haven for wildlife and one of the most beautiful and peaceful waterways following the line of the Usk Valley through the Brecon Beacons National Park.',
-        keyFeature: 'Bird-watching',
-        localImg: ['../../assets/parkImgs/SDNP/AWC1.jpeg', '../../assets/parkImgs/SDNP/AWC2.jpeg', '../../assets/parkImgs/SDNP/AWC4.jpeg'],
-        moreInfo: 'https://www.breconbeacons.org/blog/walks-along-the-monmouthshire-and-brecon-canal',
+        name: 'Coniston Boating Centre',
+        code: 'CBC',
+        location: [54.3648, -3.0667],
+        category: 'water activities',
+        description: 'Not-for-profit attraction run by the Lake District National Park Authority. Perfect for the family - hire electric motor boats, take the helm of a traditional wooden rowing boat, try out sit on top kayaks, open Canadian canoes or have fun splashing about on paddleboards.',
+        keyFeature: 'Boats',
+        localImg: ['../../assets/parkImgs/LDNP/CBC1.jpeg', '../../assets/parkImgs/LDNP/CBC2.jpeg', '../../assets/parkImgs/LDNP/CBC3.jpeg'],
+        moreInfo: 'https://www.conistonboatingcentre.co.uk/',
         // usersSay: [SELECT]
       }
     ]
   },
-  {
-    code: 'SNP',
-    name: 'Snowdonia National Park',
-    location: [53.0932, -3.8017],
-    postcode: '',
-    description: '823 square miles of dramatic landscape where the mountains meet the sea. Lakes and scenery to collect one\'s thoughts. Knife-edge ridges that take your breath away. Foaming waterfalls, vast green valleys, ancient marshes and wild river streams.',
-    parkImg: ['../../assets/parkImgs/SNP/SNP1.jpeg', '../../assets/parkImgs/SNP/SNP2.jpeg', '../../assets/parkImgs/SNP/SNP3.jpeg'],
-    website: 'https://snowdonia.gov.wales/',
-    iconicWildlife: ['', '', '', '', ''],
-    keyWildlife: [''],
-    trails: [{
-      name: 'Carneddau & Glyderau',
-      link: 'https://www.nationaltrust.org.uk/carneddau-and-glyderau'
-    },
-    {
-      name: 'Aber Falls',
-      link: 'https://www.alltrails.com/trail/wales/conwy/aber-falls'
-    },
-    {
-      name: 'Dôl Idris parkland',
-      link: 'https://snowdonia.gov.wales/walk/dol-idris-path/'
-    }
-    ],
-    activities: ['Walking', 'Hiking', 'Cycling', 'Surfing', 'Zip wire', 'Rock climbing', 'Bird-watching', 'Stargazing'],
-    reviews: {
-      beauty: 5,
-      wildlife: 5,
-      trails: 5,
-      camping: 3,
-      // foodDrink: 4,
-    },
-    // usersSay: [SELECT],
-    attractions: [
-      {
-        name: 'Cwm Idwal walk',
-        code: 'CIW',
-        location: [53.1135, -4.0301],
-        category: 'Spectacular scenery',
-        description: 'Experience the wildest scenery that Snowdonia has to offer. This walk takes you into a normally inaccessible upland environment, and through beautiful ice-sculpted Cwm Idwal, a bowl-shaped hollow filled with the crystal clear waters of Llyn Idwal.',
-        keyFeature: 'breath-taking views',
-        localImg: ['../../assets/parkImgs/PDNP/RW1.jpeg', '../../assets/parkImgs/PDNP/RW2.jpeg', '../../assets/parkImgs/PDNP/RW3.jpeg'],
-        moreInfo: 'https://www.nationaltrust.org.uk/carneddau-and-glyderau',
-        // usersSay: [SELECT]
-      },
-      {
-        name: 'Surf Snowdonia',
-        code: 'SS',
-        location: [53.1124, -3.5028],
-        category: 'Wild adventures',
-        description: 'Guaranteed waves rolling against a backdrop of mountains and forests, right in the heart of beautiful North Wales. The world\'s first commercial man-made inland waves roll in beginner, intermediate and advanced zones.',
-        keyFeature: 'Surfing in the mountains',
-        localImg: ['../../assets/parkImgs/SNP/SS1.jpeg', '../../assets/parkImgs/SNP/SS2.jpeg', '../../assets/parkImgs/SNP/SS3.jpeg'],
-        moreInfo: 'https://www.adventureparcsnowdonia.com/',
-        // usersSay: [SELECT]
-      },
-      {
-        name: 'Harlech Beach',
-        code: 'HB',
-        location: [52.8571, -4.1246],
-        category: 'Spectacular scenery',
-        description: 'The beach is long and sandy, stretching for 9 kilometres and backed by sand dunes. Beautiful walks, perfect sand dunes, spectacular sunsets, amazing if you want an easy walk and fab if you want to climb and have fun.',
-        keyFeature: '',
-        localImg: ['../../assets/parkImgs/SNP/HB1.jpeg', '../../assets/parkImgs/SNP/HB2.jpeg', '../../assets/parkImgs/SNP/HB3.jpeg'],
-        moreInfo: 'https://www.tripadvisor.co.uk/Attraction_Review-g551984-d4555889-Reviews-Harlech_Beach-Harlech_Snowdonia_National_Park_North_Wales_Wales.html',
-        // usersSay: [SELECT]
-      }
-    ]
-  }
 ]
 
 export default parksRec
