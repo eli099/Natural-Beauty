@@ -2,11 +2,19 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 
+// * Import SimpleSlider
+// import SimpleSlider from '../../carousel/carousel'
+
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import ImageGallery from 'react-image-gallery'
+// React-slick-carousel imports
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import LeftArrow from "../../assets/left-arrow.svg"
+// import RightArrow from "../../assets/right-arrow.svg"
 
 const NationalPark = () => {
 
@@ -53,6 +61,7 @@ const NationalPark = () => {
             </div>
           </section>
           <section className='np-bottom-container'>
+            {/* <SimpleSlider /> */}
             <div className='np-attractions'>
               <div className='np-attractions-title'>
                 <h2>{park.attractions[0].category}</h2>
