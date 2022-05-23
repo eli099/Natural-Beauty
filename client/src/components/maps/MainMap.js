@@ -58,19 +58,14 @@ const MainMap = () => {
   useEffect(() => {
     if(!map.current) return
     map.current.on('load', () => {
-      map.current.addSource('parks', {
+      map.current.addSource('national-parks-geojson', {
         'type': 'geojson',
         'data': 'https://skgrange.github.io/www/data/uk_national_parks_boundaries.json'
       })
   
-      // map.addSource('attractions', {
-      //   type: 'vector',
-      //   url : 'mapbox://mrbread.cl3auux8y045120nr3exgxepi-9a7pc'
-      // })
-  
       map.current.addLayer({
         'id': 'national-parks',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'type': 'fill',
         'filter': ['all', ['==', 'type', 'national_park']],
         'layout': {},
@@ -87,7 +82,7 @@ const MainMap = () => {
       map.current.addLayer({
         'id': 'park-borders',
         'type': 'line',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'filter': ['all', ['==', 'type', 'national_park']],
         'layout': {},
         'paint': {
@@ -97,7 +92,7 @@ const MainMap = () => {
       })
       map.current.addLayer({
         'id': 'area-beauty',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'type': 'fill',
         'filter': ['all', ['==', 'type', 'area_of_outstanding_natural_beauty']],
         'layout': {},
@@ -114,7 +109,7 @@ const MainMap = () => {
       map.current.addLayer({
         'id': 'area-beauty-borders',
         'type': 'line',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'filter': ['all', ['==', 'type', 'area_of_outstanding_natural_beauty']],
         'layout': {},
         'paint': {
@@ -134,13 +129,13 @@ const MainMap = () => {
       if (e.features.length > 0) {
           if (hoveredStateId !== null) {
               map.current.setFeatureState(
-                  { source: 'parks', id: hoveredStateId },
+                  { source: 'national-parks-geojson', id: hoveredStateId },
                   { hover: false }
               )
           }
           hoveredStateId = e.features[0].id;
           map.current.setFeatureState(
-              { source: 'parks', id: hoveredStateId },
+              { source: 'national-parks-geojson', id: hoveredStateId },
               { hover: true }
           )
       }
@@ -148,7 +143,7 @@ const MainMap = () => {
     map.current.on('mouseleave', ['national-parks', 'area-beauty'], () => {
         if (hoveredStateId !== null) {
             map.current.setFeatureState(
-                { source: 'parks', id: hoveredStateId },
+                { source: 'national-parks-geojson', id: hoveredStateId },
                 { hover: false }
             )
         }
@@ -185,6 +180,13 @@ const MainMap = () => {
     })
   },[clickedPark, parks, targetPark])
 
+  const handleClick = () => {
+    if(!map.current) return
+    map.current.flyTo({
+      center: [lng, lat],
+      zoom: zoom
+    })
+  }
   
   return (
     <>
@@ -194,7 +196,7 @@ const MainMap = () => {
         <h2>{clickedPark.current}</h2>
         <>
         {clickedPark.current ?
-          <button>Back to full map</button>
+          <button onClick={handleClick}>Back to full map</button>
         : ''
         }
         </>
