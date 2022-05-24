@@ -57,8 +57,8 @@ const NationalPark = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
     initialSlide: 0,
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
@@ -83,7 +83,7 @@ const NationalPark = () => {
       {park ?
         <section className='np-page-container'>
           <section className='np-carousel-container'>
-            <Slider {...settings} className="slider" >
+            <Slider {...settings} >
               <img src={park.parkImg[0]} alt={park.name} className='np-img' />
               <img src={park.parkImg[1]} alt={park.name} className='np-img' />
               <img src={park.parkImg[2]} alt={park.name} className='np-img' />
