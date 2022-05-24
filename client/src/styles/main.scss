@@ -1,6 +1,11 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'react-image-gallery/styles/scss/image-gallery.scss';
+@import './variables';
 @import './components/auth.scss';
 @import './components/base.scss';
 @import './components/parks/parksIndex.scss';
 @import './components/parks/park.scss';
 @import './components/navbarpage.scss';
+
 @import './components/profilepage.scss';
+@import './components/carousel/carousel.scss';

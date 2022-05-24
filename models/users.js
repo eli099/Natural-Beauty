@@ -12,7 +12,12 @@ import mongooseUniqueValidator from 'mongoose-unique-validator'
 const userSchema = new mongoose.Schema({
   username: { type: String, require: true, unique: true, maxLength: 30 },
   email: { type: String, require: true, unique: true },
-  password: { type: String, require: true }
+  password: { type: String, require: true },
+  favourites: [{
+    parkId: { type: String, required: false },
+    name: { type: String, required: false },
+    image: { type: String, required: false }
+  }]
 })
 
 // ? Virtual Fields - not added to database

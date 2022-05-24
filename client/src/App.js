@@ -18,6 +18,7 @@ import NavBarPage from './components/common/NavBarPage'
 import ParkMap from './components/maps/ParkMap'
 import ProfilePage from './ProfilePage'
 import FruitShow from './components/likestest/FruitShow'
+import SimpleSlider from './carousel/carousel'
 
 const App = () => {
   useEffect(() => {
@@ -58,6 +59,9 @@ const App = () => {
           {/* Parks pages */}
           <Route path="/parks" element={<ParksIndex />} />
           <Route path="/parks/:id" element={<NationalPark />} />
+          {/* Testing carousel */}
+          <Route path="/parks/:id/slider" element={<SimpleSlider />} />
+
         </Routes>
       </BrowserRouter>
     </main>
