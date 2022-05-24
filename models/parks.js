@@ -1,5 +1,18 @@
 import mongoose from 'mongoose'
 
+// ? SUBDOCUMENT
+// Review Schema
+const reviewShema = mongoose.Schema({
+  beauty: { type: Number, required: true, max: 5 },
+  wildlife: { type: Number, required: true, max: 5 },
+  trails: { type: Number, required: true, max: 5 },
+  camping: { type: Number, required: true, max: 5 },
+  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+}, {
+  timestamps: true
+})
+// timestamps set to true to add createdAt and updatedAt keys
+
 const parkSchema = new mongoose.Schema({
   code: { type: String, required: false },
   name: { type: String, required: true },
@@ -15,7 +28,7 @@ const parkSchema = new mongoose.Schema({
     link: { type: String, required: false }
   }],
   activities: { type: Array, required: false },
-  reviews: { type: Object, required: false },
+  reviews: [reviewShema],
   attractions: [{
     code: { type: String, required: false },
     name: { type: String, required: true },

@@ -1,6 +1,6 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
-// import { secureRoute } from './secureRoute.js'
+import { addReview } from '../controllers/parkReviews.js'
 
 // Import controllers
 import { getSinglePark, showParks } from '../controllers/parks.js'
@@ -22,6 +22,10 @@ router.route('/parks/:id')
   .get(getSinglePark)
   .post(secureRoute, addFavourite) // Add a park to user's favourites key
 
+// ? Reviews
+// Add a review
+router.route('/parks/:id/reviews')
+  .post(secureRoute, addReview) // Add review to park document
 
 // Authentication
 router.route('/register') // POST
@@ -36,7 +40,7 @@ router.route('/login') // POST
 router.route('/profile') // GET
 .get(secureRoute, showUser)
 
-// ! For Dev Only 
+// ! For Testing Only 
 router.route('/allprofiles') // GET
 .get(showAllUsers)
 // !

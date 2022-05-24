@@ -49,12 +49,6 @@ export const addFavourite = async (req, res) => {
     // Change the ObjectId to a string
     const parkId = parkToAdd._id.toString()
     console.log('current profile favourites ->', profile.favourites)
-    // // Find index of chosen park object
-    // profile.favourites.forEach(park => {
-    //   console.log('park t', park.id === parkId)
-    // })
-    // // const currentChoiceIndex = profile.favourites.indexOf(parkId)
-    // // console.log('index of ->', currentChoiceIndex)
 
     const newObject = { parkId: parkId, name: parkToAdd.name, image: parkToAdd.parkImg[0] }
     console.log('newObject ->', newObject)
