@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 
 // * Import SimpleSlider
-// import SimpleSlider from '../../carousel/carousel'
+import SimpleSlider from '../../carousel/carousel'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -12,27 +12,26 @@ import Col from 'react-bootstrap/Col'
 // React-slick-carousel imports
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
-// import LeftArrow from "../../assets/left-arrow.svg"
-// import RightArrow from "../../assets/right-arrow.svg"
+import Slider from "react-slick";
+import LeftArrow from "../../assets/left-arrow.svg"
+import RightArrow from "../../assets/right-arrow.svg"
 
 const NationalPark = () => {
 
   const { id } = useParams()
-  const navigate = useNavigate()
 
-  const [park, setPark] = useState()
+  const [park, setPark] = useState(null)
   const [errors, setErrors] = useState(false)
 
   useEffect(() => {
-    // console.log('HELLO??')
+    console.log('HELLO??')
     const getPark = async () => {
       try {
         const { data } = await axios.get(`/api/parks/${id}`)
-        // console.log(data.name)
+        console.log(data.name)
         // console.log('Park data from get -> ', data)
         setPark(data)
-        // console.log('park data->', park)
+        console.log('park data->', park)
         console.log(park.parkImg[0])
       } catch (error) {
         console.log('🧭 There was a problem finding your park ->', error)
