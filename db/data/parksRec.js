@@ -612,6 +612,142 @@ const parksRec = [
       }
     ]
   },
+  {
+    code: 'BBNP',
+    name: 'Brecon Beacons National Park',
+    location: [51.8872, -3.4743],
+    postcode: 'LD3 8ER',
+    description: 'Always changing, forever beautiful: From the depths of its caves to the grandeur of Pen y Fan and Cribyn, there\'s plenty to explore in this gem of a national park. By day, there are moorlands, trails and towns to discover, by night, you can feast your eyes on the stars.',
+    parkImg: ['../../assets/parkImgs/BBNP/BBNP1.jpeg', '../../assets/parkImgs/BBNP/BBNP2.jpeg', '../../assets/parkImgs/BBNP/BBNP3.jpeg'],
+    website: 'https://www.breconbeacons.org/',
+    iconicWildlife: ['otters', 'great crested newts', 'marsh fritillary butterflies', 'bats', 'salmon', 'trout', 'sheep'],
+    keyWildlife: 'butterflies',
+    trails: [{
+      name: 'Dragon\'s Back circular, Black Mountains',
+      link: 'https://www.breconbeacons.org/blog/dragons-back-circular-walk-black-mountains'
+    },
+    {
+      name: 'Pwll-yr-Wrach Reserve, Bluebell trail',
+      link: 'https://www.breconbeacons.org/discover/great-days-out/talgarth-and-black-mountains/pwll-y-wrach'
+    },
+    {
+      name: 'The Monmouthshire & Brecon Canal',
+      link: 'https://www.breconbeacons.org/blog/walks-along-the-monmouthshire-and-brecon-canal'
+    }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Horse-riding', 'Caving', 'Rock-climbing', 'Stargazing'],
+    reviews: {
+      beauty: 5,
+      wildlife: 3,
+      trails: 5,
+      camping: 2,
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'Pen-Y-Fan',
+        code: 'PYF',
+        location: [51.8840, -3.4364],
+        category: 'Spectacular scenery',
+        description: 'At just under 3,000 feet, this is the highest mountain in South Wales and the jewel in the crown that is the Brecon Beacons National Park. Deservedly popular with walkers, the views from the summit are truly spectacular.',
+        keyFeature: 'Walking',
+        localImg: ['../../assets/parkImgs/BBNP/PYF1.jpeg', '../../assets/parkImgs/BBNP/PYF2.jpeg', '../../assets/parkImgs/BBNP/PYF3.jpeg'],
+        moreInfo: 'https://www.visitwales.com/things-do/adventure-and-activities/walking/crowning-glory-4-ways-walk-pen-y-fan',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Canyoning in \'Waterfall Country\'',
+        code: 'CWC',
+        location: [51.4527, -3.3547],
+        category: 'Wild adventures',
+        description: 'Wild, remote, serious and seriously fun. Canyoning trips take you through a steep sided river gorge in \'Waterfall Country\' the heart of the Brecon Beacons. You will be swimming, jumping, climbing and floating downstream through this breath-taking landscape.',
+        keyFeature: 'Canyoning',
+        localImg: ['../../assets/parkImgs/BBNP/CWC1.jpeg', '../../assets/parkImgs/BBNP/CWC2.jpeg', '../../assets/parkImgs/BBNP/CWC3.jpeg'],
+        moreInfo: 'https://www.adventureswales.co.uk/canyoning-in-wales/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'The Monmouthshire & Brecon Canal walk',
+        code: 'AWC',
+        location: [51.4145, -3.0133],
+        category: 'Hidden gem',
+        description: 'The Monmouthshire & Brecon Canal is a true hidden gem. Meandering through the Welsh countryside it is a haven for wildlife and one of the most beautiful and peaceful waterways following the line of the Usk Valley through the Brecon Beacons National Park.',
+        keyFeature: 'Bird-watching',
+        localImg: ['../../assets/parkImgs/SDNP/AWC1.jpeg', '../../assets/parkImgs/SDNP/AWC2.jpeg', '../../assets/parkImgs/SDNP/AWC4.jpeg'],
+        moreInfo: 'https://www.breconbeacons.org/blog/walks-along-the-monmouthshire-and-brecon-canal',
+        // usersSay: [SELECT]
+      }
+    ]
+  },
+  {
+    code: 'SNP',
+    name: 'Snowdonia National Park',
+    location: [53.0932, -3.8017],
+    postcode: '',
+    description: '823 square miles of dramatic landscape where the mountains meet the sea. Lakes and scenery to collect one\'s thoughts. Knife-edge ridges that take your breath away. Foaming waterfalls, vast green valleys, ancient marshes and wild river streams.',
+    parkImg: ['../../assets/parkImgs/SNP/SNP1.jpeg', '../../assets/parkImgs/SNP/SNP2.jpeg', '../../assets/parkImgs/SNP/SNP3.jpeg'],
+    website: 'https://snowdonia.gov.wales/',
+    iconicWildlife: ['Mountain goats', 'Ravens', 'Otters', 'Polecats', 'Stoats'],
+    keyWildlife: 'Mountain goats',
+    trails: [{
+      name: 'Carneddau & Glyderau',
+      link: 'https://www.nationaltrust.org.uk/carneddau-and-glyderau'
+    },
+    {
+      name: 'Aber Falls',
+      link: 'https://www.alltrails.com/trail/wales/conwy/aber-falls'
+    },
+    {
+      name: 'Dôl Idris parkland',
+      link: 'https://snowdonia.gov.wales/walk/dol-idris-path/'
+    }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Surfing', 'Zip wire', 'Rock climbing', 'Bird-watching', 'Stargazing'],
+    reviews: {
+      beauty: 5,
+      wildlife: 5,
+      trails: 5,
+      camping: 3,
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'Cwm Idwal walk',
+        code: 'CIW',
+        location: [53.1135, -4.0301],
+        category: 'Spectacular scenery',
+        description: 'Experience the wildest scenery that Snowdonia has to offer. This walk takes you into a normally inaccessible upland environment, and through beautiful ice-sculpted Cwm Idwal, a bowl-shaped hollow filled with the crystal clear waters of Llyn Idwal.',
+        keyFeature: 'breath-taking views',
+        localImg: ['../../assets/parkImgs/PDNP/RW1.jpeg', '../../assets/parkImgs/PDNP/RW2.jpeg', '../../assets/parkImgs/PDNP/RW3.jpeg'],
+        moreInfo: 'https://www.nationaltrust.org.uk/carneddau-and-glyderau',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Surf Snowdonia',
+        code: 'SS',
+        location: [53.1124, -3.5028],
+        category: 'Wild adventures',
+        description: 'Guaranteed waves rolling against a backdrop of mountains and forests, right in the heart of beautiful North Wales. The world\'s first commercial man-made inland waves roll in beginner, intermediate and advanced zones.',
+        keyFeature: 'Surfing in the mountains',
+        localImg: ['../../assets/parkImgs/SNP/SS1.jpeg', '../../assets/parkImgs/SNP/SS2.jpeg', '../../assets/parkImgs/SNP/SS3.jpeg'],
+        moreInfo: 'https://www.adventureparcsnowdonia.com/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Harlech Beach',
+        code: 'HB',
+        location: [52.8571, -4.1246],
+        category: 'Spectacular scenery',
+        description: 'The beach is long and sandy, stretching for 9 kilometres and backed by sand dunes. Beautiful walks, perfect sand dunes, spectacular sunsets, amazing if you want an easy walk and fab if you want to climb and have fun.',
+        keyFeature: '',
+        localImg: ['../../assets/parkImgs/SNP/HB1.jpeg', '../../assets/parkImgs/SNP/HB2.jpeg', '../../assets/parkImgs/SNP/HB3.jpeg'],
+        moreInfo: 'https://www.tripadvisor.co.uk/Attraction_Review-g551984-d4555889-Reviews-Harlech_Beach-Harlech_Snowdonia_National_Park_North_Wales_Wales.html',
+        // usersSay: [SELECT]
+      }
+    ]
+  }
 ]
 
 export default parksRec

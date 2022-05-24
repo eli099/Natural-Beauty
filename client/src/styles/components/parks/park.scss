@@ -5,6 +5,7 @@
   margin-right: auto;
   margin-top: 15px;
   background-color: rgb(9, 179, 0, 0.2);
+  background-image: url('../../../../src/assets/Grass.jpeg');
 
   .np-carousel-container {
     position: relative;
@@ -12,15 +13,16 @@
     width: 100%;
 
     .slick-slide {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
       height: 40vh;
-      width: 100%;
-      // display: flex !important;
-      // align-items: center;
-      // justify-content: center;
+      width: 100vw;
+
       .np-img {
         height: 100%;
         width: 100% !important;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
