@@ -122,15 +122,16 @@ const parksRec = [
         moreInfo: 'https://www.thebestofexmoor.co.uk/blog/dunster-castle/',
         // usersSay: [SELECT]
       },
+      //This below is in the south downs national park!
       {
         name: 'Wild-swimming at Watersmeet',
         code: 'WSW',
-        location: [50.864231, -3.47586],
+        location: [51.223087, -3.799293],
         category: 'Wild adventure',
         description: 'The East Lyn River and Hoar Oak Water come together at Watersmeet to create a glorious waterfall. It\'s a fantastic spot for wild swimming, with small plunge pools by the waterfall, or, a little further along the river from there, you will find Long Pool which stretches further and goes deeper…',
         keyFeature: 'Wild-swmming',
         localImg: ['../../assets/parkImgs/EMNP/WSW1.jpeg', '../../assets/parkImgs/EMNP/WSW2.jpeg', '../../assets/parkImgs/EMNP/WSW3.jpeg'],
-        moreInfo: 'https://www.visitarundel.co.uk/listing/arundel-wetland-centre/',
+        moreInfo: 'https://www.wildswimming.co.uk/map/long-pool-watersmeet/',
         // usersSay: [SELECT]
       }
     ]

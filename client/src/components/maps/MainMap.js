@@ -173,9 +173,9 @@ const MainMap = () => {
             'anchor' : 'bottom',
           })
           .setLngLat([park.attractions[i].location[1],park.attractions[i].location[0]])
-          const markerHeight = 50;
-          const markerRadius = 10;
-          const linearOffset = 25;
+          const markerHeight = 50
+          const markerRadius = 10
+          const linearOffset = 25
           const popupOffsets = {
           'top': [0, 0],
           'top-left': [0, 0],
@@ -185,20 +185,26 @@ const MainMap = () => {
           'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
           'left': [markerRadius, (markerHeight - markerRadius) * -1],
           'right': [-markerRadius, (markerHeight - markerRadius) * -1]
-          };
+          }
+          // marker.on('click', function(e){
+          //   const goTo = e.getLngLat()
+          //   map.current.flyTo([goTo.lng, goTo.lat])
+          // })
           marker.setPopup(new mapboxgl.Popup({
             'offset' : popupOffsets,
-            'anchor' : 'right',
-
           })
           // <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
             // <div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>
             // <div><img id='marker-img' src=${park.attractions[i].localImg[1]}></div>
             // <div><img id='marker-img' src=${park.attractions[i].localImg[2]}></div>
           .setHTML(
-            `<div id='attraction-name'>${park.attractions[i].name}</div>
-            <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
-            <div id='attraction-category'>🔎<i>${park.attractions[i].category}</i></div>`
+            `<div className='popup'>
+              <div id='popup-name'>${park.attractions[i].name}</div>
+              <div>
+                <img id='popup-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}>
+              </div>
+              <div id='popup-category'>🔎<i>${park.attractions[i].category}</i></div>
+            </div>`
             ))
           .addTo(map.current)
         }
@@ -226,7 +232,6 @@ const MainMap = () => {
   
   return (
     <>
-      <h1>Main Map Test</h1>
       <div ref={parkMapContainer} className="park-map-container" />
       <div>
         <h2>{clickedPark.current}</h2>
