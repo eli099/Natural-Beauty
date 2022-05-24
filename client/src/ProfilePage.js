@@ -52,9 +52,9 @@ const ProfilePage = () => {
                 {user.favourites.map((item) => {
                   const { parkId, image, name } = item
                   return (
-                    <Col lg="4" md="6" sm="12">
+                    <Col key={parkId} lg="4" md="6" sm="12">
                       <Link to={`/parks/${parkId}`}>
-                        <Card key={parkId} className="shadow-sm m-2">
+                        <Card className="shadow-sm m-2">
                           <Card.Img src={image} />
                           <Card.Body>
                             <span className="h6">{name}</span>
