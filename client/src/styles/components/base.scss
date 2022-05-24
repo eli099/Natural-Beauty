@@ -27,11 +27,69 @@ a:hover {
   height: 400px;
 }
 
-.park-map-container {
-  height: 600px;
-  width: 600px;
+#main-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#marker-img{
-  max-width: 150px;
+.main-map-container {
+  border-radius: 15px;
+}
+
+@media screen and (max-width:602px) {
+  .main-map-container {
+    height: 400px;
+    width: 400px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 120px;
+  }
+
+  #popup-img {
+    max-width: 100px;
+  }
+}
+@media screen and (min-width: 603px) and (max-width:1001px) {
+  .main-map-container {
+    height: 600px;
+    width: 600px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 220px;
+  }
+
+  #popup-img {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 1002px) and (max-width: 4000px) {
+  .main-map-container {
+    height: 1000px;
+    width: 1000px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 400px;
+  }
+
+  #popup-img {
+    max-width: 380px;
+  }
+}
+
+.clicked-park-name{
+  color: white;
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-map-btns-container{
+  display: flex;
+  justify-content: space-evenly;
 }
