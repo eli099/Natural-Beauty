@@ -13,7 +13,7 @@ const MainMap = () => {
 
   const [ parks, setParks ] = useState([])
   const [ errors, setErrors ] = useState(false)
-  const parkMapContainer = useRef(null);
+  const mainMapContainer = useRef(null);
   const map = useRef(null);
   const [ mapObject, setMapObject ] = useState(null)
   // eslint-disable-next-line
@@ -21,7 +21,7 @@ const MainMap = () => {
   // eslint-disable-next-line
   const [lat, setLat] = useState(54.6165); //same
   // eslint-disable-next-line
-  const [zoom, setZoom] = useState(4.6); // set to zoom level so that park fills map frame (will have to calculate)
+  const [zoom, setZoom] = useState(5.4); // set to zoom level so that park fills map frame (will have to calculate)
   const { id } = useParams()
   const clickedPark = useRef(null)
   const targetPark = useRef([])
@@ -48,10 +48,10 @@ const MainMap = () => {
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
-      container: parkMapContainer.current,
+      container: mainMapContainer.current,
       style: 'mapbox://styles/mrbread/cl3bpcmjx000a14muue539u5n',
-      center: [lng, lat],
-      zoom: zoom
+      // center: [lng, lat],
+      // zoom: zoom
     })
     setMapObject(map.current)
   },[lat, lng, zoom])
@@ -65,6 +65,10 @@ const MainMap = () => {
         'data': 'https://skgrange.github.io/www/data/uk_national_parks_boundaries.json'
       })
   
+      map.current.fitBounds([
+        [5.155268, 59.138968],
+        [-12.647684, 48.730457]
+      ])
       map.current.addLayer({
         'id': 'national-parks',
         'source': 'national-parks-geojson',
@@ -172,19 +176,24 @@ const MainMap = () => {
             'color' : '#D6C423',
             'anchor' : 'bottom',
           })
-          .setLngLat([park.attractions[i].location[1],park.attractions[i].location[0]])
+          .setLngLat(
+            [
+              park.attractions[i].location[1],
+              park.attractions[i].location[0]
+            ]
+            )
           const markerHeight = 50
           const markerRadius = 10
           const linearOffset = 25
           const popupOffsets = {
-          'top': [0, 0],
-          'top-left': [0, 0],
-          'top-right': [0, 0],
-          'bottom': [0, -markerHeight],
-          'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-          'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-          'left': [markerRadius, (markerHeight - markerRadius) * -1],
-          'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+            'top':          [0, 0],
+            'top-left':     [0, 0],
+            'top-right':    [0, 0],
+            'bottom':       [0, -markerHeight],
+            'bottom-left':  [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+            'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+            'left':         [markerRadius, (markerHeight - markerRadius) * -1],
+            'right':        [-markerRadius, (markerHeight - markerRadius) * -1]
           }
           // marker.on('click', function(e){
           //   const goTo = e.getLngLat()
@@ -216,10 +225,10 @@ const MainMap = () => {
 
   const handleClick = () => {
     if(!map.current) return
-    map.current.flyTo({
-      center: [lng, lat],
-      zoom: zoom
-    })
+    map.current.fitBounds([
+      [5.155268, 59.138968],
+      [-12.647684, 48.730457]
+    ])
   }
 
   const goToPark = () => {
@@ -232,15 +241,17 @@ const MainMap = () => {
   
   return (
     <>
-      <div ref={parkMapContainer} className="park-map-container" />
+      <div ref={mainMapContainer} className="main-map-container" />
       <div>
-        <h2>{clickedPark.current}</h2>
+        <div className='clicked-park-name'>
+          <h2>{clickedPark.current}</h2>
+        </div>
         <>
         {clickedPark.current ?
-        <>
-          <button onClick={handleClick}>Back to full map</button>
-          <button onClick={goToPark}>Go to park</button>
-        </>
+        <div className='main-map-btns-container'>
+          <button onClick={handleClick}>Back to full view</button>
+          <button onClick={goToPark}>Go to the park</button>
+        </div>
         : ''
         }
         </>

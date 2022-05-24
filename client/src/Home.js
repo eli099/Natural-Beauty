@@ -5,11 +5,10 @@ import MainMap from './components/maps/MainMap'
 const Home = () => {
   return (
     <>
-    <h1>Home</h1>
+    <Link to='/parks'><h1>Discover the beauty at your doorstep</h1></Link>
     <div id='main-map'>
       <MainMap />
     </div>
-    <Link to ='/parks' className='btn'>Discover the beauty at your doorstep</Link>
     </>
   )
 }
