@@ -24,6 +24,7 @@ const MainMap = () => {
   const [zoom, setZoom] = useState(5.4); // set to zoom level so that park fills map frame (will have to calculate)
   const { id } = useParams()
   const clickedPark = useRef(null)
+  const clickedParkType = useRef(null)
   const targetPark = useRef([])
   const [ cp, setCP ] = useState(null)
 
@@ -60,6 +61,7 @@ const MainMap = () => {
   useEffect(() => {
     if(!map.current) return
     map.current.on('load', () => {
+      map.current.getCanvas().style.cursor = 'default'
       map.current.addSource('national-parks-geojson', {
         'type': 'geojson',
         'data': 'https://skgrange.github.io/www/data/uk_national_parks_boundaries.json'
@@ -162,6 +164,7 @@ const MainMap = () => {
     if(!map.current) return
     map.current.on('click', ['national-parks', 'area-beauty'], (e) => {
       clickedPark.current = e.features[0].properties.name
+      clickedParkType.current = e.features[0].properties.type
       // console.log(clickedPark.current)
       targetPark.current = parks.filter((park) => park.name === clickedPark.current)// our park name must match the geojson park name
       console.log(targetPark)
@@ -244,17 +247,23 @@ const MainMap = () => {
       <div ref={mainMapContainer} className="main-map-container" />
       <div>
         <div className='clicked-park-name'>
-          <h2>{clickedPark.current}</h2>
+          <>
+          {clickedParkType.current === 'area_of_outstanding_natural_beauty' ?
+            <h2>{clickedPark.current}, Area of Outstanding Natural Beauty</h2>
+            :
+            <h2>{clickedPark.current}</h2>
+          }
+          </>
         </div>
-        <>
-        {clickedPark.current ?
-        <div className='main-map-btns-container'>
-          <button onClick={handleClick}>Back to full view</button>
-          <button onClick={goToPark}>Go to the park</button>
-        </div>
-        : ''
-        }
-        </>
+          <>
+          {clickedParkType.current === 'national_park' ?
+            <div className='main-map-btns-container'>
+              <button onClick={handleClick}>Back to full view</button>
+              <button onClick={goToPark}>Go to the park</button>
+            </div>
+          : ''
+          }
+          </>
       </div>
     </>
   )
