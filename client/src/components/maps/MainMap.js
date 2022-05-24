@@ -3,9 +3,11 @@ import { useRef, useEffect, useState } from 'react'
 import mapboxgl from 'mapbox-gl'
 import axios from 'axios'
 
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const MainMap = () => {  
+  
+  const navigate = useNavigate()
 
   mapboxgl.accessToken = 'pk.eyJ1IjoibXJicmVhZCIsImEiOiJjbDM4bHV0Z3UwMTRmM2tueTY1Mm41NTZnIn0.92r4wGEn7bywx1dmpYCe-w'
 
@@ -58,19 +60,14 @@ const MainMap = () => {
   useEffect(() => {
     if(!map.current) return
     map.current.on('load', () => {
-      map.current.addSource('parks', {
+      map.current.addSource('national-parks-geojson', {
         'type': 'geojson',
         'data': 'https://skgrange.github.io/www/data/uk_national_parks_boundaries.json'
       })
   
-      // map.addSource('attractions', {
-      //   type: 'vector',
-      //   url : 'mapbox://mrbread.cl3auux8y045120nr3exgxepi-9a7pc'
-      // })
-  
       map.current.addLayer({
         'id': 'national-parks',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'type': 'fill',
         'filter': ['all', ['==', 'type', 'national_park']],
         'layout': {},
@@ -87,7 +84,7 @@ const MainMap = () => {
       map.current.addLayer({
         'id': 'park-borders',
         'type': 'line',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'filter': ['all', ['==', 'type', 'national_park']],
         'layout': {},
         'paint': {
@@ -97,7 +94,7 @@ const MainMap = () => {
       })
       map.current.addLayer({
         'id': 'area-beauty',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'type': 'fill',
         'filter': ['all', ['==', 'type', 'area_of_outstanding_natural_beauty']],
         'layout': {},
@@ -114,7 +111,7 @@ const MainMap = () => {
       map.current.addLayer({
         'id': 'area-beauty-borders',
         'type': 'line',
-        'source': 'parks',
+        'source': 'national-parks-geojson',
         'filter': ['all', ['==', 'type', 'area_of_outstanding_natural_beauty']],
         'layout': {},
         'paint': {
@@ -134,13 +131,13 @@ const MainMap = () => {
       if (e.features.length > 0) {
           if (hoveredStateId !== null) {
               map.current.setFeatureState(
-                  { source: 'parks', id: hoveredStateId },
+                  { source: 'national-parks-geojson', id: hoveredStateId },
                   { hover: false }
               )
           }
           hoveredStateId = e.features[0].id;
           map.current.setFeatureState(
-              { source: 'parks', id: hoveredStateId },
+              { source: 'national-parks-geojson', id: hoveredStateId },
               { hover: true }
           )
       }
@@ -148,7 +145,7 @@ const MainMap = () => {
     map.current.on('mouseleave', ['national-parks', 'area-beauty'], () => {
         if (hoveredStateId !== null) {
             map.current.setFeatureState(
-                { source: 'parks', id: hoveredStateId },
+                { source: 'national-parks-geojson', id: hoveredStateId },
                 { hover: false }
             )
         }
@@ -165,11 +162,10 @@ const MainMap = () => {
       targetPark.current = parks.filter((park) => park.name === clickedPark.current)// our park name must match the geojson park name
       console.log(targetPark)
       targetPark.current.map(park => {
-        const { name, location, attractions } = park
+        const { _id, name, location, attractions } = park
         map.current.flyTo({
           center: [park.location[1],park.location[0]],
-          zoom: 8.5 // add a zoom level to our data object i.e. park.location[2] or park.zoom 
-                  //- we will calculate it from researching the right zoom level
+          zoom: park.location[2] // add a zoom level to our data object i.e. park.location[2] or park.zoom
         })
         for (let i = 0; i < 3; i++){
         const marker = new mapboxgl.Marker({
@@ -177,14 +173,38 @@ const MainMap = () => {
             'anchor' : 'bottom',
           })
           .setLngLat([park.attractions[i].location[1],park.attractions[i].location[0]])
-          .setPopup(new mapboxgl.Popup().setHTML(`<div>${park.attractions[i].name}</div><div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>`))
+          .setPopup(new mapboxgl.Popup()
+          // <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
+          .setHTML(
+            `<div id='attraction-name'>${park.attractions[i].name}</div>
+            <div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>
+            <div><img id='marker-img' src=${park.attractions[i].localImg[1]}></div>
+            <div><img id='marker-img' src=${park.attractions[i].localImg[2]}></div>
+            <div id='attraction-category'>🔎<i>${park.attractions[i].category}</i></div>`
+            ))
           .addTo(map.current)
         }
+        return true
       })
       setCP(clickedPark.current)
     })
   },[clickedPark, parks, targetPark])
 
+  const handleClick = () => {
+    if(!map.current) return
+    map.current.flyTo({
+      center: [lng, lat],
+      zoom: zoom
+    })
+  }
+
+  const goToPark = () => {
+    if(!map.current) return
+    targetPark.current.map(park => {
+      const { _id } = park
+      return navigate(`/parks/${park._id}`)
+    })
+  }
   
   return (
     <>
@@ -194,7 +214,10 @@ const MainMap = () => {
         <h2>{clickedPark.current}</h2>
         <>
         {clickedPark.current ?
-          <button>Back to full map</button>
+        <>
+          <button onClick={handleClick}>Back to full map</button>
+          <button onClick={goToPark}>Go to park</button>
+        </>
         : ''
         }
         </>

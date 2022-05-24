@@ -1,8 +1,8 @@
 const parksRec = [
   {
     code: 'SDNP',
-    name: 'South Down National Park',
-    location: [50.9893, -0.7381],
+    name: 'South Downs National Park',
+    location: [50.931637, -0.524218, 8],
     postcode: 'GU29 9DH',
     description: 'Not only have the centuries of human habitation shaped the National Park but the landscape has and still does, dictate where people have chosen to live and work the land. This is a landscape rich in folklore and legend that has inspired generations of writers, artists and storytellers who have flocked to witness the beauty of the rolling chalk downland and the wooded heaths of the National Park.',
     parkImg: ['../../assets/parkImgs/SDNP/SDNP1.png', '../../assets/parkImgs/SDNP/SDNP2.jpeg', '../../assets/parkImgs/SDNP/SDNP3.jpeg'],
@@ -70,7 +70,7 @@ const parksRec = [
   {
     code: 'EXNP',
     name: 'Exmoor National Park',
-    location: [51.1346, -3.6462],
+    location: [51.14, -3.666344, 9.1],
     postcode: 'TA22 9HL',
     description: 'Famous for its wild deer and ponies, dramatic coastline and rugged heather moorland, there\'s plenty to see and do at Exmoor NP.  Large areas of open moorland provide a sense of remoteness and tranquillity rare in southern Britain. Spectacular coastal views, deep wooded valleys, high sea cliffs and fast flowing streams all combine to form a rich and distinct mosaic.',
     parkImg: ['../../assets/parkImgs/EMNP/EMNP1.jpeg', '../../assets/parkImgs/EMNP/EMNP2.jpeg', '../../assets/parkImgs/EMNP/EMNP3.png'],
@@ -125,7 +125,7 @@ const parksRec = [
       {
         name: 'Wild-swimming at Watersmeet',
         code: 'WSW',
-        location: [50.864231, -0.550414],
+        location: [50.864231, -3.47586],
         category: 'Wild adventure',
         description: 'The East Lyn River and Hoar Oak Water come together at Watersmeet to create a glorious waterfall. It\'s a fantastic spot for wild swimming, with small plunge pools by the waterfall, or, a little further along the river from there, you will find Long Pool which stretches further and goes deeper…',
         keyFeature: 'Wild-swmming',
@@ -138,7 +138,7 @@ const parksRec = [
   {
     code: 'YDNP',
     name: 'Yorkshire Dales National Park',
-    location: [54.1963, -2.1632],
+    location: [54.213555, -2.087339, 8.6],
     postcode: 'DL8 3EL',
     description: 'The Yorkshire Dales has many moods; it can be wild and windswept or quietly tranquil with valleys full of hay meadows, drystone walls and barns. Spectacular waterfalls and ancient woodlands contrast with the scattered remains of rural industries.',
     parkImg: ['../../assets/parkImgs/YDNP/YDNP1.jpeg', '../../assets/parkImgs/YDNP/YDNP2.jpeg', '../../assets/parkImgs/YDNP/YDNP3.png'],
@@ -197,7 +197,7 @@ const parksRec = [
         category: 'Hidden gem',
         description: 'A fantastic stretch of grassy riverside incorporating river, meadow and beaches, with the limestone cliffs and the gorges of Loup Scar. There\'s a terrifying jump at Loup Scar, from the path on river R, into a small very deep plunge pool.',
         keyFeature: 'Wild-swmming',
-        localImg: ['../../assets/parkImgs/YDNP/JLC1.jpeg', '../../assets/parkImgs/YDNP/JLC2.jpeg', '../../assets/parkImgs/SDNP/YDNP/JLC3.jpeg'],
+        localImg: ['../../assets/parkImgs/YDNP/JLC1.jpeg', '../../assets/parkImgs/YDNP/JLC2.jpeg', '../../assets/parkImgs/YDNP/JLC3.jpeg'],
         moreInfo: 'https://www.wildswimming.co.uk/adventures-yorkshire-dales/',
         // usersSay: [SELECT]
       }
@@ -206,7 +206,7 @@ const parksRec = [
   {
     code: 'PDNP',
     name: 'Peak District National Park',
-    location: [53.3342, -1.7837],
+    location: [53.308887, -1.812726, 8.7],
     postcode: 'S33 8WS',
     description: 'Known as a land of two halves, the Peak District is divided into the White Peak with steep limestone valleys in the North, and dramatic gritstone ridges and stark moorland plateaus making up the Dark Peak in the South.',
     parkImg: ['../../assets/parkImgs/PDNP/PDNP1.jpeg', '../../assets/parkImgs/PDNP/PDNP2.jpeg', '../../assets/parkImgs/PDNP/PDNP3.jpeg'],
@@ -274,7 +274,7 @@ const parksRec = [
   {
     code: 'DMNP',
     name: 'Dartmoor National Park',
-    location: [50.5719, -3.9207],
+    location: [50.564841, -3.898735, 9.4],
     postcode: 'TQ13 9JQ',
     description: 'Wild, open moorlands and deep river valleys, with a rich history and rare wildlife, the story of Dartmoor\'s cherished and protected landscape and wildlife is one of powerful geological forces, relentless weather and more than 10,000 years of human activity.',
     parkImg: ['../../assets/parkImgs/DMNP/DMNP1.jpeg', '../../assets/parkImgs/DMNP/DMNP2.jpeg', '../../assets/parkImgs/DMNP/DMNP3.jpeg'],
@@ -333,7 +333,7 @@ const parksRec = [
         category: 'Hidden gem',
         description: 'In 1854, James Perrott set up a small cairn at Cranmere Pool, inside he put a glass jar where visitors who had ventured to the lonely, bleak spot could leave their visiting cards. To this day, hikers leave a letter or postcard inside a box along the trail, for the next person to discover.',
         keyFeature: 'Letterboxing',
-        localImg: ['../../assets/parkImgs/DMNP/LB1.jpeg', '../../assets/parkImgs/DMNP/LB2.jpeg', '../../assets/parkImgs/PDMNP/LB3.jpeg'],
+        localImg: ['../../assets/parkImgs/DMNP/LB1.jpeg', '../../assets/parkImgs/DMNP/LB2.jpeg', '../../assets/parkImgs/DMNP/LB3.jpeg'],
         moreInfo: 'https://www.dartmoor.gov.uk/enjoy-dartmoor/outdoor-activities/letterboxing-and-geocaching',
         // usersSay: [SELECT]
       }
@@ -342,7 +342,7 @@ const parksRec = [
   {
     code: 'NYNP',
     name: 'North York Moors National Park',
-    location: [54.3872, -0.8927],
+    location: [54.317068, -0.877769, 8.7],
     postcode: 'YO62 5BP',
     description: 'The North York Moors is a special place, forged by nature, shaped over generations – where peace and beauty rub shoulders with a rich history and a warm welcome.',
     parkImg: ['../../assets/parkImgs/NYNP/NYNP1.jpeg', '../../assets/parkImgs/NYNP/NYNP2.jpeg', '../../assets/parkImgs/NYNP/NYNP3.jpeg'],
@@ -386,7 +386,7 @@ const parksRec = [
       {
         name: 'Whitby Whale Watching',
         code: 'WW',
-        location: [54.4872, 0.6143],
+        location: [54.4872, -0.6143],
         category: 'Wild adventures',
         description: 'Every year late in summer whales arrive in the North Sea just off the coast of Whitby to feast on the migrating herring which come to the Yorkshire coast to spawn.This also attracts cetaceans, sharks, birds and seals to feed.',
         keyFeature: 'Whale watching',
@@ -410,7 +410,7 @@ const parksRec = [
   {
     code: 'NFNP',
     name: 'New Forest National Park',
-    location: [50.8764, -1.6312],
+    location: [50.869155, -1.556062, 9.6],
     postcode: 'SO41 9ZG',
     description: 'A world capital for wildlife. New Forest National Parkhas ancient woodlands, wild open heathlands and stretches of beautiful coastline.',
     parkImg: ['../../assets/parkImgs/NFNP/NFNP1.jpeg', '../../assets/parkImgs/NFNP/NFNP2.jpeg', '../../assets/parkImgs/NFNP/NFNP3.jpeg'],
@@ -477,8 +477,8 @@ const parksRec = [
   },
   {
     code: 'TBNP',
-    name: 'The Broads National Park',
-    location: [52.6049, -1.6089],
+    name: 'The Broads',
+    location: [52.6250, 1.5458, 9.3],
     postcode: 'NR1 1RY',
     description: 'The Broads National Park is made up of over 60 open areas of water known as Broads and seven rivers, the Ant, Bure, Chet, Thurne, Waveney, Wensum and Yare. It is also home to a huge variety of the rarest wildlife - greater than any other national park in Britain - and has become a \'must-see\' for nature lovers.',
     parkImg: ['../../assets/parkImgs/TBNP/TBNP1.jpeg', '../../assets/parkImgs/TBNP/TBNP2.jpeg', '../../assets/parkImgs/TBNP/TBNP3.jpeg'],
@@ -511,7 +511,7 @@ const parksRec = [
       {
         name: 'BeWILDerwood',
         code: 'B',
-        location: [52.7088, -1.4502],
+        location: [52.7088, 1.4502],
         category: 'adventure park',
         description: 'BeWILDerwood is an award winning wild and imaginative outdoor adventure park. With magical treehouses and hints of intriguing characters, BeWILDerwood brings a curious difference to The Broads. The concept, put quite simply, is one of child’s play. The vision: to enhance an already striking natural playground and encourage children and their families to enjoy traditional, imaginative and healthy outdoor play together.',
         keyFeature: 'family oriented',
@@ -522,7 +522,7 @@ const parksRec = [
       {
         name: 'Redwings Horse Sanctuary Visitor Centre Caldecott',
         code: 'RHSVCC',
-        location: [52.551497, -1.647606],
+        location: [52.551497, 1.647606],
         category: 'horse-riding',
         description: 'Redwings Caldecott, a Visit England Quality Assured Visitor Attraction, is a must-see for all donkey and mule lovers with a herd of over 30 of the adorable, long-eared creatures! Among the gorgeous rescued residents, you can enjoy cuddles with cute little donkey Esther who was rescued from the horrific conditions of Spindle Farm in Amersham, Buckinghamshire, in 2008.',
         keyFeature: 'horse-riding',
@@ -533,7 +533,7 @@ const parksRec = [
       {
         name: 'Thrigby Hall Wildlife Gardens',
         code: 'THWG',
-        location: [52.6525, -1.6361],
+        location: [52.6525, 1.6361],
         category: 'wildlife park',
         description: 'Thrigby Hall Wildlife Gardens, near Great Yarmouth have 250-year-old landscaped gardens, a play area and superb willow pattern garden. Renowned for its collection of Asian Mammals, birds and reptiles in the pleasantly landscaped grounds and gardens of Thrigby Hall.',
         keyFeature: 'rare animals',
@@ -546,7 +546,7 @@ const parksRec = [
   {
     code: 'LDNP',
     name: 'Lake District National Park',
-    location: [54.5772, -2.7975],
+    location: [54.475, -3.078942, 8.7],
     postcode: 'LA23 1LJ',
     description: 'England\'s largest National Park and a World Heritage Site, home to Scafell Pike - its highest mountain, Wastwater - its deepest lake and thriving communities like Keswick and Bowness-on-Windermere.',
     parkImg: ['../../assets/parkImgs/LDNP/LDNP1.jpeg', '../../assets/parkImgs/LDNP/LDNP2.webp', '../../assets/parkImgs/LDNP/LDNP3.webp'],
