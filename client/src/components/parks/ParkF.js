@@ -18,6 +18,14 @@ import RightArrow from "../../assets/right-arrow.svg"
 
 const NationalPark = () => {
 
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <img src={LeftArrow} alt="prevArrow" {...props} />
+  );
+
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <img src={RightArrow} alt="nextArrow" {...props} />
+  );
+
   const { id } = useParams()
 
   const [park, setPark] = useState(null)
@@ -43,7 +51,31 @@ const NationalPark = () => {
 
   }, [id])
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    initialSlide: 0,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
+  }
 
+  const settingsAttractions = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    initialSlide: 0,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
+  }
 
 
   return (
@@ -51,7 +83,11 @@ const NationalPark = () => {
       {park ?
         <section className='np-page-container'>
           <section className='np-carousel-container'>
-            <img src={park.parkImg[0]} alt={park.name} className='np-img' />
+            <Slider {...settings} className="slider" >
+              <img src={park.parkImg[0]} alt={park.name} className='np-img' />
+              <img src={park.parkImg[1]} alt={park.name} className='np-img' />
+              <img src={park.parkImg[2]} alt={park.name} className='np-img' />
+            </Slider>
             <div className='park-text'>
               <div className='park-desc'>
                 <p>{park.description}</p>
@@ -62,6 +98,45 @@ const NationalPark = () => {
           <section className='np-bottom-container'>
             {/* <SimpleSlider /> */}
             <div className='np-attractions'>
+              <Slider {...settingsAttractions} className="slider" >
+                <div className='np-attraction-1'>
+                  <div className='np-attractions-title'>
+                    <h2>{park.attractions[0].category}</h2>
+                    <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
+                  </div>
+                  <div className='np-attractions-info'>
+                    <h2>{park.attractions[0].name}</h2>
+                    <p>{park.attractions[0].description}</p>
+                  </div>
+                  <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
+                </div>
+                <div className='np-attraction-2'>
+                  <div className='np-attractions-title'>
+                    <h2>{park.attractions[1].category}</h2>
+                    <img src={park.attractions[1].localImg[0]} alt={park.attractions[1].name} className='attractions-img' />
+                  </div>
+                  <div className='np-attractions-info'>
+                    <h2>{park.attractions[1].name}</h2>
+                    <p>{park.attractions[1].description}</p>
+                  </div>
+                  <a href={park.attractions[1].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
+                </div>
+                <div className='np-attraction-3'>
+                  <div className='np-attractions-title'>
+                    <h2>{park.attractions[2].category}</h2>
+                    <img src={park.attractions[2].localImg[0]} alt={park.attractions[2].name} className='attractions-img' />
+                  </div>
+                  <div className='np-attractions-info'>
+                    <h2>{park.attractions[2].name}</h2>
+                    <p>{park.attractions[2].description}</p>
+                  </div>
+                  <a href={park.attractions[2].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
+                </div>
+
+              </Slider>
+            </div>
+
+            {/* <div className='np-attractions'>
               <div className='np-attractions-title'>
                 <h2>{park.attractions[0].category}</h2>
                 <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
@@ -71,7 +146,7 @@ const NationalPark = () => {
                 <p>{park.attractions[0].description}</p>
               </div>
               <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
-            </div>
+            </div> */}
             <div className='np-stuff'>
               <div className='np-activities'>
                 <h4>Wildlife & wild adventures</h4>

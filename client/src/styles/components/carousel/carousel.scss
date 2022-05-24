@@ -17,11 +17,11 @@ h1 {
   
     // padding: 20px;
   
-    .np-attractions-title {
+    &.np-attractions-title {
       width: 100%;
       height: 50%;
       position: relative;
-      .attractions-img {
+      &.attractions-img {
         position: absolute;
         top: 0;
         left: 0;
@@ -30,7 +30,7 @@ h1 {
         object-fit: cover;
         overflow: hidden;
       }
-      h2 {
+      &h2 {
         position: absolute;
         color: white;
         z-index: 100;

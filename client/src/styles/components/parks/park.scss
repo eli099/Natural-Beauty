@@ -12,11 +12,14 @@
     width: 100%;
 
     // border: 3px solid red;
-    .np-img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+    .slider {
+      .np-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
+
 
     .park-text {
       position: absolute;
@@ -65,11 +68,11 @@
       height: 100%;
       width: 45%;
       background-color: $pale-green;
-      .np-attractions-title {
+      &.np-attractions-title {
         width: 100%;
         height: 50%;
         position: relative;
-        .attractions-img {
+        &.attractions-img {
           position: absolute;
           top: 0;
           left: 0;
@@ -78,7 +81,7 @@
           object-fit: cover;
           overflow: hidden;
         }
-        h2 {
+        &h2 {
           position: absolute;
           color: white;
           z-index: 100;
@@ -86,12 +89,12 @@
         }
       }
 
-      .np-attractions-info {
+      &.np-attractions-info {
         padding: 10px;
 
       }
 
-      .np-more-info {
+      &.np-more-info {
         padding: 10px;
         text-align: right;
         right: 0;
