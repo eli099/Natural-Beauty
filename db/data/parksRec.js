@@ -33,7 +33,7 @@ const parksRec = [
     // usersSay: [SELECT],
     attractions: [
       {
-        name: 'Stargazing at SDNP International Dark Skies Reserve',
+        name: 'Stargazing at SDNP Dark Skies Reserve',
         code: 'IDSR',
         location: [50.977683, -0.980305],
         category: 'Wild adventure',

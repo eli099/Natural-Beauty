@@ -1,6 +1,13 @@
 // @import '~react-photo-gallery/styles/scss/image-gallery.scss'
 
-
+h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 45px;
+}
+  
+h2, h3 {
+  font-family: 'BIZ UDPGothic', sans-serif;
+}
 
 .np-page-container {
   margin-left: 0;
@@ -82,13 +89,10 @@
 
     .np-attractions {
       box-sizing: border-box;
-      border: 2px solid $drk-green;
       border-radius: 8px;
       height: 100%;
       width: 45%;
-      background-color: $pale-green;
       position: relative;
-
       .slick-slider {
         height: inherit !important;
         .slick-list {
@@ -110,7 +114,7 @@
                   width: 100%;
                   object-fit: cover;
                   overflow: hidden;
-                  border-radius: 8px 8px 0 0;
+                  border-radius: 6px 6px 0 0;
                 }
                 h2 {
                   position: absolute;
@@ -118,40 +122,34 @@
                   z-index: 100;
                   padding: 10px;
                 }
+              }
 
-                .np-attractions-info {
-                  padding: 10px;
+
+              .np-attractions-info {
+                padding: 15px;
+                background-color: rgba(225, 225, 225, .6);
+                border-radius: 0 0 6px 6px;
+                h2 {
+                  text-align: center;
+                  font-size: 28px;
                 }
-          
+                p {
+                  margin-bottom: 5px;
+                }
                 .np-more-info {
-                  padding: 10px;
-                  text-align: right;
-                  right: 0;
+                  color: blue;
+                  text-align:right;
                 }
               }
+        
+
             }
           }
         }
-
-
-
       }
       .slick-slide {
         width: 100%;
         height: 100%;
-
-      }
-
-
-      &.np-attractions-info {
-        padding: 10px;
-
-      }
-
-      &.np-more-info {
-        padding: 10px;
-        text-align: right;
-        right: 0;
       }
 
     }
@@ -163,18 +161,29 @@
       width: 45%;
       border-radius: 8px;
       padding: 10px;
-      background-color: $pale-green;
+      background-color: rgba(225, 225, 225, .6);
 
       .np-activities {
         span {
           font-size: 30px;
         }
+        p {
+          margin-bottom: 0;
+        }
+        a {
+          color: blue;
+        }
       }
 
-      .np-reviews {}
+      .np-reviews {
+
+        button {
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
+          // border: 3px solid green;
+        }
+      }
     }
-
-
-
   }
 }

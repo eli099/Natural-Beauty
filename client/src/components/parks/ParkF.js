@@ -35,11 +35,15 @@ const NationalPark = () => {
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 2000,
+    pauseOnHover: true,
     initialSlide: 0,
-    prevArrow: <SlickArrowLeft />,
-    nextArrow: <SlickArrowRight />,
+    // prevArrow: <SlickArrowLeft />,
+    // nextArrow: <SlickArrowRight />,
   }
   const settingsAttractions = {
+    className: "center",
+    centerMode: true,
+    centerPadding: "60px",
     dots: true,
     infinite: true,
     speed: 500,
@@ -109,9 +113,10 @@ const NationalPark = () => {
                   <div className='np-attractions-info'>
                     <h2>{park.attractions[0].name}</h2>
                     <p>{park.attractions[0].description}</p>
+                    <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                   </div>
-                  <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                 </div>
+
                 <div className='np-attraction-2'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[1].category}</h2>
@@ -120,9 +125,10 @@ const NationalPark = () => {
                   <div className='np-attractions-info'>
                     <h2>{park.attractions[1].name}</h2>
                     <p>{park.attractions[1].description}</p>
+                    <a href={park.attractions[1].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                   </div>
-                  <a href={park.attractions[1].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                 </div>
+
                 <div className='np-attraction-3'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[2].category}</h2>
@@ -131,8 +137,8 @@ const NationalPark = () => {
                   <div className='np-attractions-info'>
                     <h2>{park.attractions[2].name}</h2>
                     <p>{park.attractions[2].description}</p>
+                    <a href={park.attractions[2].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                   </div>
-                  <a href={park.attractions[2].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                 </div>
 
               </Slider>

@@ -33,6 +33,9 @@
 #main-wrapper .parks-container .park .card {
   height: inherit;
   width: inherit;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 #main-wrapper .parks-container .park .card .slick-arrow {
@@ -66,5 +69,10 @@
   font-size: 18px;
   padding: 10px;
   margin-top: 20px;
+}
+
+#main-wrapper .parks-container .park .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=parksIndex.css.map */
