@@ -55,9 +55,9 @@ const SimpleSlider = () => {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 2000,
@@ -69,7 +69,7 @@ const SimpleSlider = () => {
   return (
     <div>
       <h1>Give me a carousel... </h1>
-      <Slider {...settings}>
+      <Slider className="slider" {...settings}>
         <div className='np-attractions'>
           <div className='np-attractions-title'>
             <h2>{park.attractions[0].category}</h2>

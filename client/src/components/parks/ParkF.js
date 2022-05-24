@@ -68,17 +68,17 @@ const NationalPark = () => {
                 <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
               </div>
               <div className='np-attractions-info'>
-                <h2>{park.attractions[0].name}</h2>
+                <h4>{park.attractions[0].name}</h4>
                 <p>{park.attractions[0].description}</p>
               </div>
               <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
             </div>
             <div className='np-stuff'>
               <div className='np-activities'>
-                <h4>Activities</h4>
-                <p>In {park.name} you can enjoy a range of activities including: {park.activities}</p>
-                <p>Among the incredible scenery, you'll be able to spot: {park.iconicWildlife}</p>
-                <p>Why not try out some of the well-trodden paths:</p>
+                <h4>Wildlife & wild adventures</h4>
+                <p><span>🦌</span> <b>Among the incredible scenery, you'll be able to spot:</b> {park.iconicWildlife.map((item) => `${item}, `)}</p>
+                <p><span>🧗‍♀️</span> <b>In {park.name} you can enjoy a range of outdoor activities including:</b> {park.activities.map((item) => `${item}, `)}</p>
+                <p><span>🥾</span> <b>Why not try out some of the well-trodden paths:</b></p>
                 <ul>
                   <li><a href={park.trails[0].link} target='_blank' rel='noreferrer'>{park.trails[0].name}</a></li>
                   <li><a href={park.trails[1].link} target='_blank' rel='noreferrer'>{park.trails[1].name}</a></li>

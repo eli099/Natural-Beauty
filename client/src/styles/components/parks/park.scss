@@ -60,7 +60,7 @@
 
     .np-attractions {
       box-sizing: border-box;
-      border: 2px solid red;
+      border: 2px solid $drk-green;
       border-radius: 8px;
       height: 100%;
       width: 45%;
@@ -99,12 +99,16 @@
 
     }
     .np-stuff{
-      border: 2px solid red;
+      border: 2px solid $drk-green;
       height: 100%;
       width: 45%;
       border-radius: 8px;
+      padding: 10px;
+      background-color: $pale-green;
       .np-activities{
-        
+        span {
+          font-size: 30px;
+        }
       }
       .np-reviews {
 
