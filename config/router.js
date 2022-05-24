@@ -4,7 +4,7 @@ import { loginUser, registerUser } from '../controllers/auth.js'
 
 // Import controllers
 import { getSinglePark, showParks } from '../controllers/parks.js'
-import { showAllUsers, showUser } from '../controllers/users.js'
+import { addFavourite, showAllUsers, showUser } from '../controllers/users.js'
 import { secureRoute } from './secureRoute.js'
 
 // Router
@@ -20,6 +20,8 @@ router.route('/parks')
 // Individual
 router.route('/parks/:id')
   .get(getSinglePark)
+  .post(secureRoute, addFavourite) // Add a park to user's favourites key
+
 
 // Authentication
 router.route('/register') // POST

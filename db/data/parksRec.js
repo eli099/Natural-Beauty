@@ -484,7 +484,7 @@ const parksRec = [
     parkImg: ['../../assets/parkImgs/TBNP/TBNP1.jpeg', '../../assets/parkImgs/TBNP/TBNP2.jpeg', '../../assets/parkImgs/TBNP/TBNP3.jpeg'],
     website: 'https://www.visitthebroads.co.uk/', 
     iconicWildlife: ['water vole', 'cuckoo', 'european eel', 'chinese water deer', 'norfolk hawker dragonfly'],
-    keyWildlife: ['bittern'],
+    keyWildlife: 'bittern',
     trails: [{
       name: 'Barton Board Walk',
       link: 'https://www.visitthebroads.co.uk/things-to-do/walking-and-cycling/walking/product-detail?listing=3&key=705501'
@@ -552,7 +552,7 @@ const parksRec = [
     parkImg: ['../../assets/parkImgs/LDNP/LDNP1.jpeg', '../../assets/parkImgs/LDNP/LDNP2.webp', '../../assets/parkImgs/LDNP/LDNP3.webp'],
     website: 'https://www.lakedistrict.gov.uk/', 
     iconicWildlife: ['red and roe deer', 'otter', 'herdwick sheep', 'osprey', 'peregrine falcon'],
-    keyWildlife: ['red squirrel'],
+    keyWildlife: 'red squirrel',
     trails: [{
       name: 'Coniston Ride',
       link: 'https://www.lakedistrict.gov.uk/visiting/things-to-do/walking/routes-and-maps/routes-and-maps2/map-2'
