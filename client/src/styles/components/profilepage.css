@@ -1,0 +1,39 @@
+.profile-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid;
+  height: 100vh;
+  margin: 0px;
+}
+
+.profile-page .row-one {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid;
+}
+
+.profile-page .col-one {
+  width: calc(100% / 2);
+  border: 1px solid;
+  padding: 20px;
+}
+
+.profile-page .col-two {
+  width: calc(100% / 4);
+  border: 1px solid;
+  padding: 20px;
+}
+/*# sourceMappingURL=profilepage.css.map */
