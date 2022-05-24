@@ -13,8 +13,8 @@ import Col from 'react-bootstrap/Col'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import LeftArrow from "../../assets/left-arrow.svg"
-import RightArrow from "../../assets/right-arrow.svg"
+import LeftArrow from "../../assets/arrow-greenLeft.png"
+import RightArrow from "../../assets/arrow-greenRight.png"
 
 const NationalPark = () => {
 
