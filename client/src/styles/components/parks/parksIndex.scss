@@ -1,28 +1,60 @@
-.parks-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  .park{
-    height: 350px;
-    max-width: 300px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    border: 1px solid white;
-    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
-    border-radius: 4px;
-    .park-link{
-      text-decoration: none;
-    }
-    .park-img{
-      max-width: 100%;
-      object-fit: contain;
-      border-radius: 4px 4px 0 0;
-    }
-    .card-body{
-      color: black;
-      .title{
-        font-weight: 900;
+#main-wrapper {
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url('../../../../public/assets/parkImgs/BBNP/PYF1.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  .parks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    
+    .park {
+      height: 450px;
+      max-width: 380px;
+      margin: 20px;
+      margin-bottom: 10px;
+      // border: 1px solid white;
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      padding-top: 20px;
+
+      .card{
+        height: inherit;
+        width: inherit;
+        .slick-arrow {
+          height: 100px;
+          width: 100px;
+          z-index: 10;
+        }
+        .slick-slide {
+          height: calc(450px / 100 * 40);
+        }
+        .park-link {
+          text-decoration: none;
+        }
+
+        .park-img {
+          max-width: 100%;
+          max-height: 35% !important;
+          object-fit: cover;
+          border-radius: 4px 4px 0 0;
+        }
+        .card-body {
+          color: black;
+          .title{
+            font-weight: 900;
+            font-size: 18px;
+            padding: 10px;
+            margin-top: 20px;
+          }
+        }
       }
     }
   }
+
 }
