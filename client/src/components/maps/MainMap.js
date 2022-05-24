@@ -173,13 +173,31 @@ const MainMap = () => {
             'anchor' : 'bottom',
           })
           .setLngLat([park.attractions[i].location[1],park.attractions[i].location[0]])
-          .setPopup(new mapboxgl.Popup()
+          const markerHeight = 50;
+          const markerRadius = 10;
+          const linearOffset = 25;
+          const popupOffsets = {
+          'top': [0, 0],
+          'top-left': [0, 0],
+          'top-right': [0, 0],
+          'bottom': [0, -markerHeight],
+          'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+          'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+          'left': [markerRadius, (markerHeight - markerRadius) * -1],
+          'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+          };
+          marker.setPopup(new mapboxgl.Popup({
+            'offset' : popupOffsets,
+            'anchor' : 'right',
+
+          })
           // <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
+            // <div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>
+            // <div><img id='marker-img' src=${park.attractions[i].localImg[1]}></div>
+            // <div><img id='marker-img' src=${park.attractions[i].localImg[2]}></div>
           .setHTML(
             `<div id='attraction-name'>${park.attractions[i].name}</div>
-            <div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>
-            <div><img id='marker-img' src=${park.attractions[i].localImg[1]}></div>
-            <div><img id='marker-img' src=${park.attractions[i].localImg[2]}></div>
+            <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
             <div id='attraction-category'>🔎<i>${park.attractions[i].category}</i></div>`
             ))
           .addTo(map.current)
