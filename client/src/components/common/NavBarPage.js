@@ -17,7 +17,7 @@ const NavBarPage = () => {
     navigate('/login')
   }
 
-  
+
 
   return (
     <header>
@@ -34,11 +34,14 @@ const NavBarPage = () => {
           <Link to="/parks">Index</Link> */}
           {/* Change links displayed depending on if user is logged in or not */}
           {userIsAuthenticated() ?
-            <Link onClick={handleLogout} to="">Logout</Link>
+            <>
+              <Link to="/profile" alt="Profile">Profile</Link>
+              <Link onClick={handleLogout} to="" alt="Logout">Logout</Link>
+            </>
             :
             <>
-              <Link to="/register">Register</Link>
-              <Link to="/login">Login</Link>
+              <Link to="/register" alt="Register">Register</Link>
+              <Link to="/login" alt="Login">Login</Link>
             </>
           }
         </div>
