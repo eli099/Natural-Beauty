@@ -33,8 +33,8 @@ const NationalPark = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     pauseOnHover: true,
     initialSlide: 0,
     // prevArrow: <SlickArrowLeft />,
@@ -169,12 +169,25 @@ const NationalPark = () => {
               </div>
               <div className='np-reviews'>
                 <h4>Reviews</h4>
-                <p> Scenery<br />
-                  Wildlife<br />
-                  Walks<br />
-                  Camping
-                </p>
-                <button>Submit a review</button>
+                <div className='review-container'>
+                  <div className='review-index'>
+                    <p> Scenery:  <br />
+                      Wildlife:   <br />
+                      Walks:      <br />
+                      Camping:
+                    </p>
+                  </div>
+                  <div className='review-stars'>
+                    <p> ★★★★★<br />
+                      ★★★★★<br />
+                      ★★★★★<br />
+                      ★★★★★
+                    </p>
+                    {/* <div className="Stars" style={{'--rating: 2.3;'}} aria-label="Rating of this product is 2.3 out of 5."></div> */}
+                  </div>
+
+                  <button>Submit a review</button>
+                </div>
               </div>
             </div>
 
