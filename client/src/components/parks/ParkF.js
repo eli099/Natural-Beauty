@@ -138,7 +138,7 @@ const NationalPark = () => {
         },
       })
       console.log('add to fav response ->', data)
-      // setFavIcon('Remove from your favourites 💚')
+
       let array = []
       data.favourites.forEach(park => {
 

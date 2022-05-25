@@ -34,10 +34,14 @@ h2, h3 {
       width: 100vw;
 
       .np-img {
-        vertical-align: middle;
         height: 100%;
         width: 100% !important;
         object-fit: contain;
+
+        margin: 0;
+        top: 50%;
+        -ms-transform: translateY(-20%);
+        transform: translateY(-20%);
       }
 
     }
