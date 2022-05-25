@@ -23,6 +23,10 @@ a:hover {
   margin: 0px;
 }
 
+.home-title {
+  font-size: 2em;
+}
+
 .map-container {
   height: 400px;
 }
@@ -38,7 +42,22 @@ a:hover {
   border-radius: 15px;
 }
 
-@media screen and (max-width:602px) {
+// ! MEDIA QUERIES FOR MAP RESPONSIVE DESIGN
+@media screen and (max-width:420px) {
+  .main-map-container {
+    height: 280px;
+    width: 280px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 80px;
+  }
+
+  #popup-img {
+    max-width: 70px;
+  }
+}
+@media screen and (min-width: 421px) and (max-width:700px) and (min-height: 421px) {
   .main-map-container {
     height: 400px;
     width: 400px;
@@ -52,10 +71,10 @@ a:hover {
     max-width: 100px;
   }
 }
-@media screen and (min-width: 603px) and (max-width:1001px) {
+@media screen and (min-width: 701px) and (max-width: 1001px) and (min-height: 701px) {
   .main-map-container {
-    height: 600px;
-    width: 600px;
+    height: 580px;
+    width: 580px;
   }
 
   .mapboxgl-popup {
@@ -66,7 +85,7 @@ a:hover {
     max-width: 200px;
   }
 }
-@media screen and (min-width: 1002px) and (max-width: 4000px) {
+@media screen and (min-width: 1002px) and (min-height: 1002px) {
   .main-map-container {
     height: 1000px;
     width: 1000px;
@@ -80,16 +99,22 @@ a:hover {
     max-width: 380px;
   }
 }
+// ! (END)
 
 .clicked-park-name{
   color: white;
-  mix-blend-mode: difference;
+  background-color: rgb(0, 0, 0, 0.6);
+  font-size: 2.2rem;
+  border-radius: 15px;
+  // mix-blend-mode: difference;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 20px;
+  margin: 10px 0px;
 }
 
 .main-map-btns-container{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }

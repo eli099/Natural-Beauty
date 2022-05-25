@@ -23,7 +23,14 @@ const parksRec = [
     }
     ],
     activities: ['Walking', 'Hiking', 'Cycling', 'Kayaking', 'Paddleboarding', 'Foraging', 'Stargazing'],
-    reviews: {},
+    reviews: {
+      beauty: 5,
+      wildlife: 3,
+      trails: 5,
+      camping: 2,
+      
+      // foodDrink: 4,
+    },
     // usersSay: [SELECT],
     attractions: [
       {
@@ -90,6 +97,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -159,6 +167,7 @@ const parksRec = [
       wildlife: 2,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -227,6 +236,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -295,6 +305,7 @@ const parksRec = [
       wildlife: 4,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -363,6 +374,7 @@ const parksRec = [
       wildlife: 4,
       trails: 4,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -431,6 +443,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -499,6 +512,7 @@ const parksRec = [
       wildlife: 3,
       trails: 4,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -567,6 +581,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -635,6 +650,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -703,6 +719,7 @@ const parksRec = [
       wildlife: 5,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
