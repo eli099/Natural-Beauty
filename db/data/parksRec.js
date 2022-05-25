@@ -758,7 +758,77 @@ const parksRec = [
         // usersSay: [SELECT]
       }
     ]
+  },
+  {
+    code: 'LL',
+    name: 'Loch Lomond and The Trossachs National Park',
+    location: [56.235790, -4.634805, 8.4],
+    postcode: '',
+    description: 'From the Arrochar Alps to the island habitats of Loch Lomond, the views from the top of Ben Lomond to the Falls of Dochart, there’s a breath-taking view practically everywhere you go.',
+    parkImg: ['../../assets/parkImgs/LL/LL1.jpeg', '../../assets/parkImgs/LL/LL2.jpeg', '../../assets/parkImgs/LL/LL3.jpeg'],
+    website: 'https://www.lochlomond-trossachs.org/',
+    iconicWildlife: ['Red Deer', 'Red Squirrels', 'Otters', 'Curlews', 'Black Grouse', 'Barn Owls'],
+    keyWildlife: 'Ospreys',
+    trails: [{
+      name: 'The Rob Roy Way',
+      link: 'https://www.robroyway.com/'
+    },
+    {
+      name: 'The Great Trossachs Path',
+      link: 'https://www.lochlomond-trossachs.org/things-to-do/walking/long-distance-routes/great-trossachs-path/'
+    },
+    {
+      name: 'Loch Lomond & Coral Way',
+      link: 'https://www.lochlomond-trossachs.org/things-to-do/walking/long-distance-routes/loch-lomond-cowal-way/'
+    }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Surfing', 'Golf', 'Rock climbing', 'Bird-watching', 'Stargazing', 'Water Bus', 'Loch Cruises'],
+    reviews: {
+      beauty: 5,
+      wildlife: 5,
+      trails: 5,
+      camping: 5,
+      owner: '628d757b56bb93b966aca68f'
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'Inchcailloch Island',
+        code: 'INI',
+        location: [56.079248, -4.55946],
+        category: 'Wild adventure',
+        description: 'Inchcailloch is part of the Loch Lomond National Nature Reserve and is a wonderful place to visit due to its rich natural and cultural heritage. It is the perfect place to experience remoteness and wildness in a safe and easily accessible location and, weather permitting, you can visit the island all year round.',
+        keyFeature: 'remote-camping',
+        localImg: ['../../assets/parkImgs/LL/ICI1.jpeg', '../../assets/parkImgs/LL/ICI2.jpeg', '../../assets/parkImgs/LL/ICI3.jpeg'],
+        moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/inchcailloch/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Loch Lomond',
+        code: 'LLL',
+        location: [56.088862, -4.595235],
+        category: '',
+        description: 'Britain\'s largest inland stretch of water. Picturesque villages and mesmerising scenery, all overlooked by the majestic Ben Lomond.',
+        keyFeature: 'Loch-Cruising',
+        localImg: ['../../assets/parkImgs/LL/LLL1.jpeg', '../../assets/parkImgs/LL/LLL2.jpeg', '../../assets/parkImgs/LL/LLL3.jpeg'],
+        moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/lochs-in-the-national-park/loch-lomond/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'LookOut: Loch Voil',
+        code: 'LOLV',
+        location: [56.344513, -4.465772],
+        category: 'Hidden Gem',
+        description: 'This mirrored cabin, wood-framed \'lookout\' pavilion has benches built into it framing three mesmerizing views of the landscape whilst reflecting the surrounding vistas on its mirrored surfaces.',
+        keyFeature: '',
+        localImg: ['../../assets/parkImgs/LL/LOLV1.jpeg', '../../assets/parkImgs/LL/LOLV2.jpeg', '../../assets/parkImgs/SNP/LOLV3.jpeg'],
+        moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/scenic-routes-viewpoints/lookout-loch-voil/',
+        // usersSay: [SELECT]
+      }
+    ]
   }
+
 ]
 
 export default parksRec
