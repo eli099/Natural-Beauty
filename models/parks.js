@@ -2,12 +2,12 @@ import mongoose from 'mongoose'
 
 // ? SUBDOCUMENT
 // Review Schema
-const reviewShema = mongoose.Schema({
+const reviewShchema = mongoose.Schema({
   beauty: { type: Number, required: true, max: 5 },
   wildlife: { type: Number, required: true, max: 5 },
   trails: { type: Number, required: true, max: 5 },
   camping: { type: Number, required: true, max: 5 },
-  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: false }
 }, {
   timestamps: true
 })
@@ -28,7 +28,7 @@ const parkSchema = new mongoose.Schema({
     link: { type: String, required: false }
   }],
   activities: { type: Array, required: false },
-  reviews: [reviewShema],
+  reviews: [reviewShchema],
   attractions: [{
     code: { type: String, required: false },
     name: { type: String, required: true },
@@ -40,5 +40,11 @@ const parkSchema = new mongoose.Schema({
     moreInfo: { type: String, required: false }
   }]
 })
+
+parkSchema
+  .virtual('avgRating') // Virtual field name
+  .get(function() {
+    // Check reviews exist to take ratings from
+  })
 
 export default mongoose.model('Park', parkSchema)

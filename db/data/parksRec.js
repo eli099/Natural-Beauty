@@ -23,13 +23,7 @@ const parksRec = [
     }
     ],
     activities: ['Walking', 'Hiking', 'Cycling', 'Kayaking', 'Paddleboarding', 'Foraging', 'Stargazing'],
-    reviews: {
-      beauty: 5,
-      wildlife: 3,
-      trails: 5,
-      camping: 2,
-      // foodDrink: 4,
-    },
+    reviews: {},
     // usersSay: [SELECT],
     attractions: [
       {
