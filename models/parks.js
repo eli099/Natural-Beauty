@@ -41,10 +41,20 @@ const parkSchema = new mongoose.Schema({
   }]
 })
 
-parkSchema
-  .virtual('avgRating') // Virtual field name
-  .get(function() {
-    // Check reviews exist to take ratings from
-  })
+// parkSchema
+//   .virtual('avgRating') // Virtual field name
+//   .get(function() {
+//     // Check reviews exist to take ratings from
+//     if (!this.reviews.length) return 'Not Rated Yet'
+//     // Add review ratings together
+//     const sum = this.reviews.reduce((acc, review) => {
+//       return acc + review.?
+//     }, 0)
+//     console.log('sum ->', sum)
+//   })
+
+//   parkSchema.set('toJSON', {
+//     virtuals: true
+//   })
 
 export default mongoose.model('Park', parkSchema)
