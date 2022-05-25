@@ -179,11 +179,10 @@ const NationalPark = () => {
                   </div>
                   <div className='review-stars'>
                     <p> ★★★★★<br />
+                      ★★★★<br />
                       ★★★★★<br />
-                      ★★★★★<br />
-                      ★★★★★
+                      ★★★
                     </p>
-                    {/* <div className="Stars" style={{'--rating: 2.3;'}} aria-label="Rating of this product is 2.3 out of 5."></div> */}
                   </div>
 
                   <button>Submit a review</button>
