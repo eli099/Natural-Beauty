@@ -15,7 +15,7 @@
     margin-top: 40px;
     
     .park {
-      height: 450px;
+      height: 480px;
       max-width: 380px;
       margin: 20px;
       margin-bottom: 10px;
@@ -49,11 +49,12 @@
         }
         .card-body {
           color: black;
+          height: 250px;
           .title{
             font-weight: 900;
-            font-size: 16px;
+            font-size: 18px;
             padding: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
             font-family: $title-main;
             font-size: 25px;
           }
