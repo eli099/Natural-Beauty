@@ -1,29 +1,49 @@
 // @import '~react-photo-gallery/styles/scss/image-gallery.scss'
 
+h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 45px;
+}
+  
+h2, h3 {
+  font-family: 'BIZ UDPGothic', sans-serif;
+}
+
 .np-page-container {
   margin-left: 0;
   margin-right: auto;
   margin-top: 15px;
   background-color: rgb(9, 179, 0, 0.2);
-  background-image: url('../../../../src/assets/Grass.jpeg');
+  background-image: none;
 
+  .slick-arrow {
+    height: 100px;
+    width: 100px;
+    z-index: 10;
+  }
+
+  // * Top half of page
   .np-carousel-container {
     position: relative;
     height: 40vh;
     width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 
     .slick-slide {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
       height: 40vh;
       width: 100vw;
 
       .np-img {
+        vertical-align: middle;
         height: 100%;
         width: 100% !important;
         object-fit: contain;
       }
+
+    }
+
+    .slick-dots {
+      top: 90%;
     }
 
     .park-text {
@@ -58,6 +78,8 @@
     }
   }
 
+
+  // * Bottom half of page
   .np-bottom-container {
     // position: relative;
     margin-top: 20px;
@@ -68,65 +90,154 @@
 
     .np-attractions {
       box-sizing: border-box;
-      border: 2px solid $drk-green;
       border-radius: 8px;
+      // border: 1px solid red;
       height: 100%;
       width: 45%;
-      background-color: $pale-green;
+      max-width: 550px;
+      position: relative;
+      .slick-slider {
+        height: inherit !important;
+        .slick-list {
+          height: inherit !important;
+          .slick-track {
+            height: inherit !important;
+            div {
+              height: inherit ;
+              padding: 0 5px;
 
-        &.np-attractions-title {
-          width: 100%;
-          height: 50%;
-          position: relative;
-          &.attractions-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            overflow: hidden;
+
+              .np-attraction{
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+                padding: 0;
+
+                .np-attractions-title {
+                  width: 100%;
+                  height: 45%;
+                  position: relative;
+                  .attractions-img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    overflow: hidden;
+                    border-radius: 6px 6px 0 0;
+                  }
+                  h2 {
+                    position: absolute;
+                    color: white;
+                    z-index: 100;
+                    padding: 10px;
+                  }
+                }
+  
+                .np-attractions-info {
+                  padding: 15px;
+                  background-color: rgba(225, 225, 225, .6);
+                  border-radius: 0 0 6px 6px;
+                  h2 {
+                    text-align: center;
+                    font-size: 28px;
+                  }
+                  p {
+                    margin-bottom: 5px;
+                  }
+                  .np-more-info {
+                    color: blue;
+                    text-align:right;
+                  }
+                }
+
+              }
+
+            }
           }
-          &h2 {
-            position: absolute;
-            color: white;
-            z-index: 100;
-            padding: 10px;
-          }
         }
-  
-        &.np-attractions-info {
-          padding: 10px;
-  
-        }
-  
-        &.np-more-info {
-          padding: 10px;
-          text-align: right;
-          right: 0;
-        }
-  
+      }
+      .slick-slide {
+        width: 100%;
+        height: 100%;
+      }
+
     }
 
 
-    .np-stuff{
+    .np-stuff {
       border: 2px solid $drk-green;
       height: 100%;
       width: 45%;
+      max-width: 550px;
       border-radius: 8px;
       padding: 10px;
-      background-color: $pale-green;
-      .np-activities{
+      background-color: rgba(225, 225, 225, .6);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+
+      .np-activities {
         span {
           font-size: 30px;
         }
+        p {
+          margin-bottom: 0;
+        }
+        a {
+          color: blue;
+        }
       }
+
       .np-reviews {
+        h4 {
+          margin-bottom: 5px;
+        }
+        .review-container{
+          display: flex;
+          justify-content: space-between;
+
+          :root {
+            --star-size: 60px;
+            --star-color: #fff;
+            --star-background: #fc0;
+          }
+
+          .review-stars {
+            // align-items: center;
+            // color: gold;
+            // text-shadow: #FC0 1px 0 5px;
+            // display: inline;
+            // font-size: 20px;
+
+            .Stars{
+                          --percent: calc(var(--rating) / 5 * 100%);
+            display: inline-block;
+            font-size: var(--star-size);
+            font-family: Times; // make sure ★ appears correctly
+            line-height: 1;
+  
+            &::before {
+              content: '★★★★★';
+              letter-spacing: 3px;
+              background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            }
+
+            }
+            
+          }
+  
+          button {
+            height: 30px;
+            background-color: gold;
+            vertical-align: middle;
+          }
+        }
+        
+
 
       }
     }
-
-
-
   }
 }
