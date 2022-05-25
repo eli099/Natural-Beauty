@@ -105,7 +105,7 @@ const NationalPark = () => {
             {/* <SimpleSlider /> */}
             <div className='np-attractions'>
               <Slider {...settingsAttractions} className="slider" >
-                <div className='np-attraction-1'>
+                <div className='np-attraction'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[0].category}</h2>
                     <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
@@ -117,7 +117,7 @@ const NationalPark = () => {
                   </div>
                 </div>
 
-                <div className='np-attraction-2'>
+                <div className='np-attraction'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[1].category}</h2>
                     <img src={park.attractions[1].localImg[0]} alt={park.attractions[1].name} className='attractions-img' />
@@ -129,7 +129,7 @@ const NationalPark = () => {
                   </div>
                 </div>
 
-                <div className='np-attraction-3'>
+                <div className='np-attraction'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[2].category}</h2>
                     <img src={park.attractions[2].localImg[0]} alt={park.attractions[2].name} className='attractions-img' />

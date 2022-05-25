@@ -20,7 +20,7 @@
       margin: 20px;
       margin-bottom: 10px;
       // border: 1px solid white;
-      box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
       border-radius: 4px;
       padding-top: 20px;
 
@@ -54,6 +54,8 @@
             font-size: 18px;
             padding: 10px;
             margin-top: 20px;
+            font-family: $title-main;
+            font-size: 25px;
           }
         }
 
