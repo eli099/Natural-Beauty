@@ -28,6 +28,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -96,6 +97,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -165,6 +167,7 @@ const parksRec = [
       wildlife: 2,
       trails: 5,
       camping: 2,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -233,6 +236,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 3,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -301,6 +305,7 @@ const parksRec = [
       wildlife: 4,
       trails: 5,
       camping: 3,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -369,6 +374,7 @@ const parksRec = [
       wildlife: 4,
       trails: 4,
       camping: 2,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -437,6 +443,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 3,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -505,6 +512,7 @@ const parksRec = [
       wildlife: 3,
       trails: 4,
       camping: 2,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -573,6 +581,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -641,6 +650,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -709,6 +719,7 @@ const parksRec = [
       wildlife: 5,
       trails: 5,
       camping: 3,
+      owner: '628d757b56bb93b966aca68f'
       // foodDrink: 4,
     },
     // usersSay: [SELECT],

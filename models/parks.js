@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 // ? SUBDOCUMENT
 // Review Schema
-const reviewShema = mongoose.Schema({
+const reviewSchema = mongoose.Schema({
   beauty: { type: Number, required: true, max: 5 },
   wildlife: { type: Number, required: true, max: 5 },
   trails: { type: Number, required: true, max: 5 },
@@ -28,7 +28,7 @@ const parkSchema = new mongoose.Schema({
     link: { type: String, required: false }
   }],
   activities: { type: Array, required: false },
-  reviews: [reviewShema],
+  reviews: [reviewSchema],
   attractions: [{
     code: { type: String, required: false },
     name: { type: String, required: true },
