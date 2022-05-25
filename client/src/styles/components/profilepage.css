@@ -5,4 +5,10 @@ a {
 h3 {
   font-size: 1.3em;
 }
+
+.profile-container {
+  background-color: rgba(225, 225, 225, 0.6);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
 /*# sourceMappingURL=profilepage.css.map */

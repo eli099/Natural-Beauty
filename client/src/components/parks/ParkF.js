@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 // Import bearer token
-import { getTokenFromLocalStorage } from '../helpers/auth'
+import { getTokenFromLocalStorage, userIsAuthenticated } from '../helpers/auth'
 
 // * Import SimpleSlider
 // import SimpleSlider from '../../carousel/carousel'
@@ -39,7 +39,7 @@ const NationalPark = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
-    initialSlide: 0,
+    // initialSlide: 0,
     // prevArrow: <SlickArrowLeft />,
     // nextArrow: <SlickArrowRight />,
   }
@@ -92,8 +92,8 @@ const NationalPark = () => {
   }, [id])
 
   // ? Sates for added OR not added to favourites
-  const [notSaved, setNotSaved] = useState('Add to your favourites ❤️')
-  const [saved, setSaved] = useState('Remove from your favourites 💚')
+  const [notSaved, setNotSaved] = useState('Add to favourites ❤️')
+  const [saved, setSaved] = useState('Remove from favourites 💚')
 
   // ? State for button & icon
   const [favIcon, setFavIcon] = useState('')
@@ -156,6 +156,13 @@ const NationalPark = () => {
     }
   }
 
+  const navigate = useNavigate()
+
+  const handleLoginButton = () => {
+    // e.preventDefault()
+    return navigate('/login')
+  }
+
   return (
     <>
       {park ?
@@ -216,17 +223,6 @@ const NationalPark = () => {
               </Slider>
             </div>
 
-            {/* <div className='np-attractions'>
-              <div className='np-attractions-title'>
-                <h2>{park.attractions[0].category}</h2>
-                <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
-              </div>
-              <div className='np-attractions-info'>
-                <h4>{park.attractions[0].name}</h4>
-                <p>{park.attractions[0].description}</p>
-              </div>
-              <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
-            </div> */}
             <div className='np-stuff'>
               <div className='np-activities'>
                 <h4>Wildlife & wild adventures</h4>
@@ -256,10 +252,14 @@ const NationalPark = () => {
                       ★★★
                     </p>
                   </div>
-
-                  <button>Submit a review</button>
-                  <button onClick={handleAddToFav}>{favIcon}</button>
+                  <div className='buttons-container'>
+                    <button className='btn-review'>Submit a review</button>
+                    {!userIsAuthenticated() ? <button className='btn-none' onClick={handleLoginButton}>Login to add ❤️</button> : <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button>}
+                    
+                    {/* <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button> */}
+                  </div>
                 </div>
+
               </div>
             </div>
 

@@ -144,7 +144,7 @@ const parksRec = [
     location: [54.213555, -2.087339, 8.6],
     postcode: 'DL8 3EL',
     description: 'The Yorkshire Dales has many moods; it can be wild and windswept or quietly tranquil with valleys full of hay meadows, drystone walls and barns. Spectacular waterfalls and ancient woodlands contrast with the scattered remains of rural industries.',
-    parkImg: ['../../assets/parkImgs/YDNP/YDNP1.jpeg', '../../assets/parkImgs/YDNP/YDNP2.jpeg', '../../assets/parkImgs/YDNP/YDNP3.png'],
+    parkImg: ['../../assets/parkImgs/YDNP/YDNP1.jpeg', '../../assets/parkImgs/YDNP/YDNP2.jpeg', '../../assets/parkImgs/YDNP/YDNP3.jpeg'],
     website: 'https://www.yorkshiredales.org.uk/',
     iconicWildlife: ['curlews', 'lapwings', 'black grouse', 'skylarks', 'peregrine falcons', 'red squirrels'],
     keyWildlife: 'peregrine falcons',
@@ -753,7 +753,7 @@ const parksRec = [
         category: 'Spectacular scenery',
         description: 'The beach is long and sandy, stretching for 9 kilometres and backed by sand dunes. Beautiful walks, perfect sand dunes, spectacular sunsets, amazing if you want an easy walk and fab if you want to climb and have fun.',
         keyFeature: '',
-        localImg: ['../../assets/parkImgs/SNP/HLB.jpeg', '../../assets/parkImgs/SNP/HLB1.jpeg', '../../assets/parkImgs/SNP/HLB2.jpeg', '../../assets/parkImgs/SNP/HLB3.jpeg'],
+        localImg: ['../../assets/parkImgs/SNP/HLB1.jpeg', '../../assets/parkImgs/SNP/HLB2.jpeg', '../../assets/parkImgs/SNP/HLB3.jpeg'],
         moreInfo: 'https://www.tripadvisor.co.uk/Attraction_Review-g551984-d4555889-Reviews-Harlech_Beach-Harlech_Snowdonia_National_Park_North_Wales_Wales.html',
         // usersSay: [SELECT]
       }
