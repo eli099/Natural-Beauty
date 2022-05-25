@@ -12,6 +12,10 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+import FormControl from 'react-bootstrap/FormControl'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Form from 'react-bootstrap/Form'
+
 // React-slick-carousel imports
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -107,7 +111,7 @@ const NationalPark = () => {
             Authorization: `Bearer ${getTokenFromLocalStorage()}`,
           },
         })
-        
+
         let array = []
         data.favourites.forEach(park => {
 
@@ -153,6 +157,40 @@ const NationalPark = () => {
       array.includes(true) ? setFavIcon(saved) : setFavIcon(notSaved)
     } catch (error) {
       console.log(error)
+    }
+  }
+
+  // Review data parsed by user
+  const [ submitData, setSubmitData ] = useState({
+    text: ''
+  })
+
+  // State to log errors
+  const [ submitErrors, setSubmitErrors ] = useState({
+    text: ''
+  })
+
+  // Update review form data
+  const handleChange = (e) => {
+    console.log(e.target.name, e.target.value)
+    setSubmitData({ ...submitData, [e.target.name]: e.target.value })
+    setErrors({ ...errors, [e.target.name]: '' })
+    console.log(submitData)
+  }
+
+  // ? Funtion to submit a review
+  const handleReviewSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const { data } = await axios.post(`/api/parks/${id}/reviews`, submitData, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
+      console.log('data ->', data)
+    } catch (error) {
+      console.log(error)
+      setSubmitErrors(error)
     }
   }
 
@@ -252,8 +290,19 @@ const NationalPark = () => {
                       ★★★
                     </p>
                   </div>
+
+                  
+
+                  <button onClick={handleAddToFav}>{favIcon}</button>
                   <div className='buttons-container'>
-                    <button className='btn-review'>Submit a review</button>
+                  <Form>
+                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1" placeholder="Write a review">
+                      <Form.Label>Review</Form.Label>
+                      <Form.Control as="textarea" rows={3} value={submitData.text} name="text" onChange={handleChange} />
+                    </Form.Group>
+                    <button type="submit" onClick={handleReviewSubmit}>Submit a review</button>
+                  </Form>
+                    {/* <button className='btn-review'>Submit a review</button> */}
                     {!userIsAuthenticated() ? <button className='btn-none' onClick={handleLoginButton}>Login to add ❤️</button> : <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button>}
                     
                     {/* <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button> */}

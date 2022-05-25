@@ -3,10 +3,11 @@ import mongoose from 'mongoose'
 // ? SUBDOCUMENT
 // Review Schema
 const reviewSchema = mongoose.Schema({
-  beauty: { type: Number, required: true, max: 5 },
-  wildlife: { type: Number, required: true, max: 5 },
-  trails: { type: Number, required: true, max: 5 },
-  camping: { type: Number, required: true, max: 5 },
+  // beauty: { type: Number, required: true, max: 5 },
+  // wildlife: { type: Number, required: true, max: 5 },
+  // trails: { type: Number, required: true, max: 5 },
+  // camping: { type: Number, required: true, max: 5 },
+  text: { type: String, required: false, maxLength: 350, minLength: 3 },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: false }
 }, {
   timestamps: true

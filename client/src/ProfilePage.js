@@ -87,10 +87,10 @@ const ProfilePage = () => {
                   </Card>
                 </Col>
               </Row>
-              <Row className="" lg="1" md="1" sm="1">
+              {/* <Row className="" lg="1" md="1" sm="1">
                 <Col>
                   <Card className="shadow-sm mt-2">
-                    {/* <Card.Img src={'/'} alt="Profile Pic" /> */}
+                    
                     <Card.Body>
                       <h3>Your reviews:</h3>
                       <hr />
@@ -99,6 +99,22 @@ const ProfilePage = () => {
                   </Card>
                 </Col>
               </Row>
+              <Row className="" lg="1" md="1" sm="1">
+                {user.createdReviews.map(review => {
+                  return (
+                    <Col key={review._id}>
+                      <Card className="shadow-sm mt-2">
+                        
+                        <Card.Body>
+                          <strong>{review.name}</strong>
+                          <hr />
+                          <p>{review.reviews.text}</p>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  )
+                })}
+              </Row> */}
             </>
             :
             <>
