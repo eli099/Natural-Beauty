@@ -28,6 +28,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -96,6 +97,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -122,15 +124,16 @@ const parksRec = [
         moreInfo: 'https://www.thebestofexmoor.co.uk/blog/dunster-castle/',
         // usersSay: [SELECT]
       },
+      //This below is in the south downs national park!
       {
         name: 'Wild-swimming at Watersmeet',
         code: 'WSW',
-        location: [50.864231, -3.47586],
+        location: [51.223087, -3.799293],
         category: 'Wild adventure',
         description: 'The East Lyn River and Hoar Oak Water come together at Watersmeet to create a glorious waterfall. It\'s a fantastic spot for wild swimming, with small plunge pools by the waterfall, or, a little further along the river from there, you will find Long Pool which stretches further and goes deeper…',
         keyFeature: 'Wild-swmming',
         localImg: ['../../assets/parkImgs/EMNP/WSW1.jpeg', '../../assets/parkImgs/EMNP/WSW2.jpeg', '../../assets/parkImgs/EMNP/WSW3.jpeg'],
-        moreInfo: 'https://www.visitarundel.co.uk/listing/arundel-wetland-centre/',
+        moreInfo: 'https://www.wildswimming.co.uk/map/long-pool-watersmeet/',
         // usersSay: [SELECT]
       }
     ]
@@ -164,6 +167,7 @@ const parksRec = [
       wildlife: 2,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -232,6 +236,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -300,6 +305,7 @@ const parksRec = [
       wildlife: 4,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -368,6 +374,7 @@ const parksRec = [
       wildlife: 4,
       trails: 4,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -436,6 +443,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -504,6 +512,7 @@ const parksRec = [
       wildlife: 3,
       trails: 4,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -572,6 +581,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -614,7 +624,7 @@ const parksRec = [
   {
     code: 'BBNP',
     name: 'Brecon Beacons National Park',
-    location: [51.8872, -3.4743],
+    location: [51.814372, -3.396019, 8.4],
     postcode: 'LD3 8ER',
     description: 'Always changing, forever beautiful: From the depths of its caves to the grandeur of Pen y Fan and Cribyn, there\'s plenty to explore in this gem of a national park. By day, there are moorlands, trails and towns to discover, by night, you can feast your eyes on the stars.',
     parkImg: ['../../assets/parkImgs/BBNP/BBNP1.jpeg', '../../assets/parkImgs/BBNP/BBNP2.jpeg', '../../assets/parkImgs/BBNP/BBNP3.jpeg'],
@@ -640,6 +650,7 @@ const parksRec = [
       wildlife: 3,
       trails: 5,
       camping: 2,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -669,7 +680,7 @@ const parksRec = [
       {
         name: 'The Monmouthshire & Brecon Canal walk',
         code: 'AWC',
-        location: [51.4145, -3.0133],
+        location: [51.910678, -3.365566],
         category: 'Hidden gem',
         description: 'The Monmouthshire & Brecon Canal is a true hidden gem. Meandering through the Welsh countryside it is a haven for wildlife and one of the most beautiful and peaceful waterways following the line of the Usk Valley through the Brecon Beacons National Park.',
         keyFeature: 'Bird-watching',
@@ -682,7 +693,7 @@ const parksRec = [
   {
     code: 'SNP',
     name: 'Snowdonia National Park',
-    location: [53.0932, -3.8017],
+    location: [52.920468, -3.903671, 8.3],
     postcode: '',
     description: '823 square miles of dramatic landscape where the mountains meet the sea. Lakes and scenery to collect one\'s thoughts. Knife-edge ridges that take your breath away. Foaming waterfalls, vast green valleys, ancient marshes and wild river streams.',
     parkImg: ['../../assets/parkImgs/SNP/SNP1.jpeg', '../../assets/parkImgs/SNP/SNP2.jpeg', '../../assets/parkImgs/SNP/SNP3.jpeg'],
@@ -708,6 +719,7 @@ const parksRec = [
       wildlife: 5,
       trails: 5,
       camping: 3,
+      
       // foodDrink: 4,
     },
     // usersSay: [SELECT],
@@ -726,7 +738,7 @@ const parksRec = [
       {
         name: 'Surf Snowdonia',
         code: 'SS',
-        location: [53.1124, -3.5028],
+        location: [53.189161, -3.839952],
         category: 'Wild adventures',
         description: 'Guaranteed waves rolling against a backdrop of mountains and forests, right in the heart of beautiful North Wales. The world\'s first commercial man-made inland waves roll in beginner, intermediate and advanced zones.',
         keyFeature: 'Surfing in the mountains',
@@ -741,7 +753,7 @@ const parksRec = [
         category: 'Spectacular scenery',
         description: 'The beach is long and sandy, stretching for 9 kilometres and backed by sand dunes. Beautiful walks, perfect sand dunes, spectacular sunsets, amazing if you want an easy walk and fab if you want to climb and have fun.',
         keyFeature: '',
-        localImg: ['../../assets/parkImgs/SNP/HB1.jpeg', '../../assets/parkImgs/SNP/HB2.jpeg', '../../assets/parkImgs/SNP/HB3.jpeg'],
+        localImg: ['../../assets/parkImgs/SNP/HLB.jpeg', '../../assets/parkImgs/SNP/HLB1.jpeg', '../../assets/parkImgs/SNP/HLB2.jpeg', '../../assets/parkImgs/SNP/HLB3.jpeg'],
         moreInfo: 'https://www.tripadvisor.co.uk/Attraction_Review-g551984-d4555889-Reviews-Harlech_Beach-Harlech_Snowdonia_National_Park_North_Wales_Wales.html',
         // usersSay: [SELECT]
       }

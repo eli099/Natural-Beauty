@@ -13,7 +13,7 @@ const MainMap = () => {
 
   const [ parks, setParks ] = useState([])
   const [ errors, setErrors ] = useState(false)
-  const parkMapContainer = useRef(null);
+  const mainMapContainer = useRef(null);
   const map = useRef(null);
   const [ mapObject, setMapObject ] = useState(null)
   // eslint-disable-next-line
@@ -21,9 +21,10 @@ const MainMap = () => {
   // eslint-disable-next-line
   const [lat, setLat] = useState(54.6165); //same
   // eslint-disable-next-line
-  const [zoom, setZoom] = useState(4.6); // set to zoom level so that park fills map frame (will have to calculate)
+  const [zoom, setZoom] = useState(5.4); // set to zoom level so that park fills map frame (will have to calculate)
   const { id } = useParams()
   const clickedPark = useRef(null)
+  const clickedParkType = useRef(null)
   const targetPark = useRef([])
   const [ cp, setCP ] = useState(null)
 
@@ -39,32 +40,34 @@ const MainMap = () => {
         setErrors(true)
       }
     }
-    // setLng(parks.location[0])
-    // setLat(parks.location[1])
-    // setZoom(10)
     getPark()
   }, [])
   
   useEffect(() => {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
-      container: parkMapContainer.current,
+      container: mainMapContainer.current,
       style: 'mapbox://styles/mrbread/cl3bpcmjx000a14muue539u5n',
-      center: [lng, lat],
-      zoom: zoom
+      // center: [lng, lat],
+      // zoom: zoom
     })
     setMapObject(map.current)
-  },[lat, lng, zoom])
+  },[])
 
 // ! On load effects; load the national park boundaries
   useEffect(() => {
     if(!map.current) return
     map.current.on('load', () => {
+      map.current.getCanvas().style.cursor = 'default'
       map.current.addSource('national-parks-geojson', {
         'type': 'geojson',
-        'data': 'https://skgrange.github.io/www/data/uk_national_parks_boundaries.json'
+        'data': '../../assets/uk_national_parks_boundaries.json'
       })
   
+      map.current.fitBounds([
+        [5.155268, 59.138968],
+        [-12.647684, 48.730457]
+      ])
       map.current.addLayer({
         'id': 'national-parks',
         'source': 'national-parks-geojson',
@@ -158,6 +161,7 @@ const MainMap = () => {
     if(!map.current) return
     map.current.on('click', ['national-parks', 'area-beauty'], (e) => {
       clickedPark.current = e.features[0].properties.name
+      clickedParkType.current = e.features[0].properties.type
       // console.log(clickedPark.current)
       targetPark.current = parks.filter((park) => park.name === clickedPark.current)// our park name must match the geojson park name
       console.log(targetPark)
@@ -172,33 +176,44 @@ const MainMap = () => {
             'color' : '#D6C423',
             'anchor' : 'bottom',
           })
-          .setLngLat([park.attractions[i].location[1],park.attractions[i].location[0]])
-          const markerHeight = 50;
-          const markerRadius = 10;
-          const linearOffset = 25;
+          .setLngLat(
+            [
+              park.attractions[i].location[1],
+              park.attractions[i].location[0]
+            ]
+            )
+          const markerHeight = 50
+          const markerRadius = 10
+          const linearOffset = 25
           const popupOffsets = {
-          'top': [0, 0],
-          'top-left': [0, 0],
-          'top-right': [0, 0],
-          'bottom': [0, -markerHeight],
-          'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-          'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-          'left': [markerRadius, (markerHeight - markerRadius) * -1],
-          'right': [-markerRadius, (markerHeight - markerRadius) * -1]
-          };
+            'top':          [0, 0],
+            'top-left':     [0, 0],
+            'top-right':    [0, 0],
+            'bottom':       [0, -markerHeight],
+            'bottom-left':  [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+            'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+            'left':         [markerRadius, (markerHeight - markerRadius) * -1],
+            'right':        [-markerRadius, (markerHeight - markerRadius) * -1]
+          }
+          // marker.on('click', function(e){
+          //   const goTo = e.getLngLat()
+          //   map.current.flyTo([goTo.lng, goTo.lat])
+          // })
           marker.setPopup(new mapboxgl.Popup({
             'offset' : popupOffsets,
-            'anchor' : 'right',
-
           })
           // <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
             // <div><img id='marker-img' src=${park.attractions[i].localImg[0]}></div>
             // <div><img id='marker-img' src=${park.attractions[i].localImg[1]}></div>
             // <div><img id='marker-img' src=${park.attractions[i].localImg[2]}></div>
           .setHTML(
-            `<div id='attraction-name'>${park.attractions[i].name}</div>
-            <div><img id='marker-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}></div>
-            <div id='attraction-category'>🔎<i>${park.attractions[i].category}</i></div>`
+            `<div className='popup'>
+              <div id='popup-name'>${park.attractions[i].name}</div>
+              <div>
+                <img id='popup-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}>
+              </div>
+              <div id='popup-category'>🔎<i>${park.attractions[i].category}</i></div>
+            </div>`
             ))
           .addTo(map.current)
         }
@@ -210,10 +225,10 @@ const MainMap = () => {
 
   const handleClick = () => {
     if(!map.current) return
-    map.current.flyTo({
-      center: [lng, lat],
-      zoom: zoom
-    })
+    map.current.fitBounds([
+      [5.155268, 59.138968],
+      [-12.647684, 48.730457]
+    ])
   }
 
   const goToPark = () => {
@@ -226,91 +241,30 @@ const MainMap = () => {
   
   return (
     <>
-      <h1>Main Map Test</h1>
-      <div ref={parkMapContainer} className="park-map-container" />
+      <div ref={mainMapContainer} className="main-map-container" />
       <div>
-        <h2>{clickedPark.current}</h2>
-        <>
-        {clickedPark.current ?
-        <>
-          <button onClick={handleClick}>Back to full map</button>
-          <button onClick={goToPark}>Go to park</button>
-        </>
-        : ''
-        }
-        </>
+        <div className='clicked-park-name'>
+          <>
+          {clickedParkType.current === 'area_of_outstanding_natural_beauty' ?
+            <div>{clickedPark.current}, Area of Outstanding Natural Beauty</div>
+            :
+            <div>{clickedPark.current}</div>
+          }
+          </>
+        </div>
+          <div className='main-map-btns-container'>
+            { clickedPark.current ?
+              <button onClick={handleClick}>Back to full view</button>
+            : ''
+            }
+            {clickedParkType.current === 'national_park' ?
+              <button onClick={goToPark}>Enter the park</button>
+            : ''
+            }
+          </div>
       </div>
     </>
   )
 }
 
 export default MainMap
-
-// ? WORKING CODE FROM CODEPEN
-// mapboxgl.accessToken = 'pk.eyJ1IjoibXJicmVhZCIsImEiOiJjbDM4bHV0Z3UwMTRmM2tueTY1Mm41NTZnIn0.92r4wGEn7bywx1dmpYCe-w';
-//     const map = new mapboxgl.Map({
-//         container: 'map',
-//         style: 'mapbox://styles/mrbread/cl3bpcmjx000a14muue539u5n',
-//         center: [-3.9323, 54.6165],
-//         zoom: 4.6
-//     });
-//     let hoveredStateId = null;
-
-//     map.on('load', () => {
-//         map.addSource('parks', {
-//             'type': 'geojson',
-//             'data': 'https://skgrange.github.io/www/data/uk_national_parks_boundaries.json'
-//         });
-//         map.addLayer({
-//             'id': 'park-fills',
-//             'type': 'fill',
-//             'source': 'parks',
-//             'filter': ['all', ['==', 'type', 'national_park']],
-//             'layout': {},
-//             'paint': {
-//                 'fill-color': '#70c32c',
-//                 'fill-opacity': [
-//                     'case',
-//                     ['boolean', ['feature-state', 'hover'], false],
-//                     0.5,
-//                     1
-//                 ]
-//             }
-//         });
-//         map.addLayer({
-//             'id': 'park-borders',
-//             'type': 'line',
-//             'source': 'parks',
-//             'filter': ['all', ['==', 'type', 'national_park']],
-//             'layout': {},
-//             'paint': {
-//                 'line-color': '#70d32d',
-//                 'line-width': 2
-//             }
-//         });
-//         map.on('mousemove', 'park-fills', (e) => {
-//             if (e.features.length > 0) {
-//                 if (hoveredStateId !== null) {
-//                     map.setFeatureState(
-//                         { source: 'parks', id: hoveredStateId },
-//                         { hover: false }
-//                     );
-//                 }
-//                 hoveredStateId = e.features[0].id;
-//                 map.setFeatureState(
-//                     { source: 'parks', id: hoveredStateId },
-//                     { hover: true }
-//                 );
-//             }
-//         });
-//         map.on('mouseleave', 'park-fills', () => {
-//             if (hoveredStateId !== null) {
-//                 map.setFeatureState(
-//                     { source: 'parks', id: hoveredStateId },
-//                     { hover: false }
-//                 );
-//             }
-//             hoveredStateId = null;
-//         });
-//     });
-// ?

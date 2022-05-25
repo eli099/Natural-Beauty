@@ -201,6 +201,7 @@ h2, h3 {
           }
 
           .review-stars {
+<<<<<<< HEAD
             align-items: center;
             color: gold;
             text-shadow: #FC0 1px 0 5px;
@@ -226,6 +227,34 @@ h2, h3 {
 
           }
             
+=======
+            // align-items: center;
+            // color: gold;
+            // text-shadow: #FC0 1px 0 5px;
+            // display: inline;
+            // font-size: 20px;
+
+            .Stars{
+                          --percent: calc(var(--rating) / 5 * 100%);
+            display: inline-block;
+            font-size: var(--star-size);
+            font-family: Times; // make sure ★ appears correctly
+            line-height: 1;
+  
+            &::before {
+              content: '★★★★★';
+              letter-spacing: 3px;
+              background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            }
+
+            }
+            
+          }
+>>>>>>> development
   
           button {
             height: 30px;

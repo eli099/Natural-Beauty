@@ -17,7 +17,7 @@ export const getSinglePark = async (req, res) => {
   const { id } = req.params
   // console.log('id ->', id)
   try {
-    const park = await Park.findById(id)
+    const park = await Park.findById(id).populate('reviews.owner')
     if (!park) {
       return res.status(404).json({ message: 'National park not found' })
     }

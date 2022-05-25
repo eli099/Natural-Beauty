@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 
+// Import bearer token
+import { getTokenFromLocalStorage } from '../helpers/auth'
+
 // * Import SimpleSlider
 // import SimpleSlider from '../../carousel/carousel'
 
@@ -73,6 +76,11 @@ const NationalPark = () => {
         setPark(data)
         console.log('park data->', park)
         console.log(park.parkImg[0])
+
+        let array = []
+        data.favourites.f()
+        array.includes(true) ? setFavIcon(saved) : setFavIcon(notSaved)
+
       } catch (error) {
         console.log('🧭 There was a problem finding your park ->', error)
         setErrors(true)
@@ -83,6 +91,69 @@ const NationalPark = () => {
 
   }, [id])
 
+  // ? Sates for added OR not added to favourites
+  const [notSaved, setNotSaved] = useState('Add to your favourites ❤️')
+  const [saved, setSaved] = useState('Remove from your favourites 💚')
+
+  // ? State for button & icon
+  const [favIcon, setFavIcon] = useState('')
+
+  useEffect(() => {
+    const getProfileFav = async () => {
+      try {
+        const { data } = await axios.get('/api/profile', {
+          headers: {
+            Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+          },
+        })
+        
+        let array = []
+        data.favourites.forEach(park => {
+
+          if (park.parkId === id) {
+            array.push(true)
+          } else {
+            array.push(false)
+          }
+          console.log('array ->', array)
+        })
+        array.includes(true) ? setFavIcon(saved) : setFavIcon(notSaved)
+
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getProfileFav()
+  }, [])
+
+  // ? Function to add Park to user favourites
+  const handleAddToFav = async (e) => {
+    e.preventDefault()
+    console.log('Add to fav')
+    try {
+      // Post request to /profile endpoint params ID
+      const { data } = await axios.post(`/api/parks/${id}`, null, {
+        headers: {
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
+      console.log('add to fav response ->', data)
+      // setFavIcon('Remove from your favourites 💚')
+      let array = []
+      data.favourites.forEach(park => {
+
+        if (park.parkId === id) {
+          array.push(true)
+        } else {
+          array.push(false)
+        }
+        console.log('array ->', array)
+      })
+      array.includes(true) ? setFavIcon(saved) : setFavIcon(notSaved)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <>
@@ -186,6 +257,7 @@ const NationalPark = () => {
                   </div>
 
                   <button>Submit a review</button>
+                  <button onClick={handleAddToFav}>{favIcon}</button>
                 </div>
               </div>
             </div>
