@@ -40,9 +40,6 @@ const MainMap = () => {
         setErrors(true)
       }
     }
-    // setLng(parks.location[0])
-    // setLat(parks.location[1])
-    // setZoom(10)
     getPark()
   }, [])
   
@@ -55,7 +52,7 @@ const MainMap = () => {
       // zoom: zoom
     })
     setMapObject(map.current)
-  },[lat, lng, zoom])
+  },[])
 
 // ! On load effects; load the national park boundaries
   useEffect(() => {
@@ -249,21 +246,22 @@ const MainMap = () => {
         <div className='clicked-park-name'>
           <>
           {clickedParkType.current === 'area_of_outstanding_natural_beauty' ?
-            <h2>{clickedPark.current}, Area of Outstanding Natural Beauty</h2>
+            <div>{clickedPark.current}, Area of Outstanding Natural Beauty</div>
             :
-            <h2>{clickedPark.current}</h2>
+            <div>{clickedPark.current}</div>
           }
           </>
         </div>
-          <>
-          {clickedParkType.current === 'national_park' ?
-            <div className='main-map-btns-container'>
+          <div className='main-map-btns-container'>
+            { clickedPark.current ?
               <button onClick={handleClick}>Back to full view</button>
-              <button onClick={goToPark}>Go to the park</button>
-            </div>
-          : ''
-          }
-          </>
+            : ''
+            }
+            {clickedParkType.current === 'national_park' ?
+              <button onClick={goToPark}>Enter the park</button>
+            : ''
+            }
+          </div>
       </div>
     </>
   )

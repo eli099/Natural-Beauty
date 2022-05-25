@@ -23,6 +23,10 @@ a:hover {
   margin: 0px;
 }
 
+.home-title {
+  font-size: 2em;
+}
+
 .map-container {
   height: 400px;
 }
@@ -99,10 +103,15 @@ a:hover {
 
 .clicked-park-name{
   color: white;
-  mix-blend-mode: difference;
+  background-color: rgb(0, 0, 0, 0.6);
+  font-size: 2.2rem;
+  border-radius: 15px;
+  // mix-blend-mode: difference;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 20px;
+  margin: 10px 0px;
 }
 
 .main-map-btns-container{
