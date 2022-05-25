@@ -834,7 +834,7 @@ const parksRec = [
     location: [57.050284, -3.610286, 8],
     postcode: '',
     description: 'One of National Geographic\s top 20 places to visit in the world. The UK\’s largest National Park, in the Scottish Highlands, offers masses of things to do including watersports, snowsports, wildlife watching, and some incredible high and low level walking and cycling routes.',
-    parkImg: ['../../assets/parkImgs/CNP/CNP1.jpeg', '../../assets/parkImgs/CNP/CNP2.jpeg', '../../assets/parkImgs/CNP/CNP3.jpeg'],
+    parkImg: ['../../assets/parkImgs/CNP/CNP/CNP1.jpeg', '../../assets/parkImgs/CNP/CNP/CNP2.jpeg', '../../assets/parkImgs/CNP/CNP/CNP3.jpeg'],
     website: 'https://www.visitcairngorms.com/',
     iconicWildlife: ['Ospreys', 'Red Deer', 'Red Squirrels', 'Otters', 'Curlews', 'Black Grouse', 'Barn Owls'],
     keyWildlife: 'Golden Eagles',
@@ -869,7 +869,7 @@ const parksRec = [
         category: 'Historic',
         description: 'A forbidding exterior conceals 12 authentic rooms charmingly furnished as though the chief of Clan has just stepped out. Dig deeper and discover a turbulent past which echoes the story of Scotland over the past 400 years',
         keyFeature: 'community-run',
-        localImg: ['../../assets/parkImgs/CNP/BC1.jpeg', '../../assets/parkImgs/CNP/BC2.jpeg', '../../assets/parkImgs/CNP/BC3.jpeg'],
+        localImg: ['../../assets/parkImgs/CNP/BC/BC1.jpeg', '../../assets/parkImgs/CNP/BC/BC2.jpeg', '../../assets/parkImgs/CNP/BC/BC3.jpeg'],
         moreInfo: 'https://www.braemarcastle.co.uk/discover/',
         // usersSay: [SELECT]
       },
@@ -880,7 +880,7 @@ const parksRec = [
         category: 'Snowsports',
         description: 'Yes, really, snow sports in the UK! Three of Scotland\'s FIVE ski resorts - Cairngorm Mountain, the Lecht and Glenshee are in the Cairngorms.',
         keyFeature: 'Go tubular',
-        localImg: ['../../assets/parkImgs/CNP/SKI1.jpeg', '../../assets/parkImgs/CNP/SKI2.jpeg', '../../assets/parkImgs/CNP/SKI3.jpeg'],
+        localImg: ['../../assets/parkImgs/CNP/SKI/SKI1.jpeg', '../../assets/parkImgs/CNP/SKI/SKI2.jpeg', '../../assets/parkImgs/CNP/SKI/SKI3.jpeg'],
         moreInfo: 'https://www.visitscotland.com/see-do/active/skiing-snowsports/',
         // usersSay: [SELECT]
       },
@@ -891,7 +891,7 @@ const parksRec = [
         category: 'Historic',
         description: 'Step back in time and experience life in the Highlands from 1700s to the 1950s. Discover over 35 historical buildings onsite for you to explore how people in the Highlands lived, worked, went to school, enjoyed their leisure time.',
         keyFeature: '',
-        localImg: ['../../assets/parkImgs/CNP/HFM1.jpeg', '../../assets/parkImgs/CNP/HFM2.jpeg', '../../assets/parkImgs/CNP/HFM3.jpeg'],
+        localImg: ['../../assets/parkImgs/CNP/HFM/HFM1.jpeg', '../../assets/parkImgs/CNP/HFM/HFM2.jpeg', '../../assets/parkImgs/CNP/HFM/HFM3.jpeg'],
         moreInfo: 'https://www.highlandlife.com/highlandfolkmuseum',
         // usersSay: [SELECT]
       }
