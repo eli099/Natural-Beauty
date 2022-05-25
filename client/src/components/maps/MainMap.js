@@ -195,10 +195,6 @@ const MainMap = () => {
             'left':         [markerRadius, (markerHeight - markerRadius) * -1],
             'right':        [-markerRadius, (markerHeight - markerRadius) * -1]
           }
-          // marker.on('click', function(e){
-          //   const goTo = e.getLngLat()
-          //   map.current.flyTo([goTo.lng, goTo.lat])
-          // })
           marker.setPopup(new mapboxgl.Popup({
             'offset' : popupOffsets,
           })
@@ -208,11 +204,11 @@ const MainMap = () => {
             // <div><img id='marker-img' src=${park.attractions[i].localImg[2]}></div>
           .setHTML(
             `<div className='popup'>
-              <div id='popup-name'>${park.attractions[i].name}</div>
+              <div id='popup-name'><strong>${park.attractions[i].name}</strong></div>
               <div>
                 <img id='popup-img' src=${park.attractions[i].localImg[Math.floor(Math.random() * (park.attractions[i].localImg.length))]}>
               </div>
-              <div id='popup-category'>🔎<i>${park.attractions[i].category}</i></div>
+              <div id='popup-category'>🔎 <i> ${park.attractions[i].category}</i></div>
             </div>`
             ))
           .addTo(map.current)

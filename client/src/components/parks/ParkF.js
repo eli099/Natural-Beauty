@@ -98,6 +98,7 @@ const NationalPark = () => {
   // ? State for button & icon
   const [favIcon, setFavIcon] = useState('')
 
+  // Check if park has been favourited aready
   useEffect(() => {
     const getProfileFav = async () => {
       try {
@@ -124,7 +125,7 @@ const NationalPark = () => {
       }
     }
     getProfileFav()
-  }, [])
+  }, [id, favIcon])
 
   // ? Function to add Park to user favourites
   const handleAddToFav = async (e) => {
