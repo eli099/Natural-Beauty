@@ -39,7 +39,7 @@ const NationalPark = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
-    initialSlide: 0,
+    // initialSlide: 0,
     // prevArrow: <SlickArrowLeft />,
     // nextArrow: <SlickArrowRight />,
   }
