@@ -69,7 +69,7 @@ const ParksIndex = () => {
 
   return (
     <Container className='parks-container'>
-      <Row>
+      <Row className="justify-content-center">
         {parks.map(park => {
           const { _id, code, name, parkImg, keyWildlife, activities } = park
           return (

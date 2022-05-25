@@ -41,7 +41,7 @@ const ProfilePage = () => {
   console.log('3 user ->', user)
 
   return (
-    <Container className='mt-5 shadow-sm p-3 border rounded'>
+    <Container className='mt-5 shadow-sm p-3 border rounded profile-container'>
       <Row>
         <Col lg="9" md="8" sm="6" className="p-2 border-end">
           <h3 className="p-2">Liked Places</h3>

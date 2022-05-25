@@ -3,6 +3,7 @@
 h1 {
   font-family: 'Courgette', cursive;
   font-size: 45px;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 0 10px;
 }
   
 h2, h3 {
@@ -29,17 +30,24 @@ h2, h3 {
     width: 100%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 
+    :hover {
+      cursor: pointer;
+    }
+
     .slick-slide {
       height: 40vh;
       width: 100vw;
 
       .np-img {
-        vertical-align: middle;
         height: 100%;
         width: 100% !important;
         object-fit: contain;
-      }
 
+        margin: 0;
+        top: 50%;
+        -ms-transform: translateY(-20%);
+        transform: translateY(-20%);
+      }
     }
 
     .slick-dots {
@@ -206,36 +214,41 @@ h2, h3 {
             text-shadow: #FC0 1px 0 5px;
             display: inline;
             font-size: 20px;
-
-            // .Stars{
-            //   --percent: calc(var(--rating) / 5 * 100%);
-            //   display: inline-block;
-            //   font-size: var(--star-size);
-            //   font-family: Times; // make sure ★ appears correctly
-            //   line-height: 1;
-    
-            //   &::before {
-            //     content: '★★★★★';
-            //     letter-spacing: 3px;
-            //     background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
-            //     -webkit-background-clip: text;
-            //     -webkit-text-fill-color: transparent;
-            //   }
-
-            // }
-
           }
             
-  
-          button {
-            height: 30px;
-            background-color: gold;
-            vertical-align: middle;
+          .buttons-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: inherit;
+              font-weight: 500;
+              font-size: 16px;
+              padding: 5px 10px;
+              margin-bottom: 20px;
+              color: white;
+              background: linear-gradient(6deg, $md-green 8%, $pale-green 100%);
+              border: none;
+              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+              letter-spacing: 0.05em;
+              border-radius: 8px;
+              cursor: pointer;
+              user-select: none;
+              -webkit-user-select: none;
+              touch-action: manipulation;
+            }
+            button:hover {
+              box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+            }
+            button:active {
+              box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+            }
           }
         }
-        
-
-
       }
     }
   }

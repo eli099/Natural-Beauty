@@ -144,7 +144,7 @@ const parksRec = [
     location: [54.213555, -2.087339, 8.6],
     postcode: 'DL8 3EL',
     description: 'The Yorkshire Dales has many moods; it can be wild and windswept or quietly tranquil with valleys full of hay meadows, drystone walls and barns. Spectacular waterfalls and ancient woodlands contrast with the scattered remains of rural industries.',
-    parkImg: ['../../assets/parkImgs/YDNP/YDNP1.jpeg', '../../assets/parkImgs/YDNP/YDNP2.jpeg', '../../assets/parkImgs/YDNP/YDNP3.png'],
+    parkImg: ['../../assets/parkImgs/YDNP/YDNP1.jpeg', '../../assets/parkImgs/YDNP/YDNP2.jpeg', '../../assets/parkImgs/YDNP/YDNP3.jpeg'],
     website: 'https://www.yorkshiredales.org.uk/',
     iconicWildlife: ['curlews', 'lapwings', 'black grouse', 'skylarks', 'peregrine falcons', 'red squirrels'],
     keyWildlife: 'peregrine falcons',
@@ -753,12 +753,152 @@ const parksRec = [
         category: 'Spectacular scenery',
         description: 'The beach is long and sandy, stretching for 9 kilometres and backed by sand dunes. Beautiful walks, perfect sand dunes, spectacular sunsets, amazing if you want an easy walk and fab if you want to climb and have fun.',
         keyFeature: '',
-        localImg: ['../../assets/parkImgs/SNP/HLB.jpeg', '../../assets/parkImgs/SNP/HLB1.jpeg', '../../assets/parkImgs/SNP/HLB2.jpeg', '../../assets/parkImgs/SNP/HLB3.jpeg'],
+        localImg: ['../../assets/parkImgs/SNP/HLB1.jpeg', '../../assets/parkImgs/SNP/HLB2.jpeg', '../../assets/parkImgs/SNP/HLB3.jpeg'],
         moreInfo: 'https://www.tripadvisor.co.uk/Attraction_Review-g551984-d4555889-Reviews-Harlech_Beach-Harlech_Snowdonia_National_Park_North_Wales_Wales.html',
         // usersSay: [SELECT]
       }
     ]
+  },
+  {
+    code: 'LL',
+    name: 'Loch Lomond and The Trossachs National Park',
+    location: [56.235790, -4.634805, 8.4],
+    postcode: '',
+    description: 'From the Arrochar Alps to the island habitats of Loch Lomond, the views from the top of Ben Lomond to the Falls of Dochart, there’s a breath-taking view practically everywhere you go.',
+    parkImg: ['../../assets/parkImgs/LL/LL1.jpeg', '../../assets/parkImgs/LL/LL2.jpeg', '../../assets/parkImgs/LL/LL3.jpeg'],
+    website: 'https://www.lochlomond-trossachs.org/',
+    iconicWildlife: ['Red Deer', 'Red Squirrels', 'Otters', 'Curlews', 'Black Grouse', 'Barn Owls'],
+    keyWildlife: 'Ospreys',
+    trails: [{
+      name: 'The Rob Roy Way',
+      link: 'https://www.robroyway.com/'
+    },
+    {
+      name: 'The Great Trossachs Path',
+      link: 'https://www.lochlomond-trossachs.org/things-to-do/walking/long-distance-routes/great-trossachs-path/'
+    },
+    {
+      name: 'Loch Lomond & Coral Way',
+      link: 'https://www.lochlomond-trossachs.org/things-to-do/walking/long-distance-routes/loch-lomond-cowal-way/'
+    }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Surfing', 'Golf', 'Rock climbing', 'Bird-watching', 'Stargazing', 'Water Bus', 'Loch Cruises'],
+    reviews: {
+      beauty: 5,
+      wildlife: 5,
+      trails: 5,
+      camping: 5,
+      owner: '628d757b56bb93b966aca68f'
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'Inchcailloch Island',
+        code: 'INI',
+        location: [56.079248, -4.55946],
+        category: 'Wild adventure',
+        description: 'Inchcailloch is part of the Loch Lomond National Nature Reserve and is a wonderful place to visit due to its rich natural and cultural heritage. It is the perfect place to experience remoteness and wildness in a safe and easily accessible location and, weather permitting, you can visit the island all year round.',
+        keyFeature: 'remote-camping',
+        localImg: ['../../assets/parkImgs/LL/ICI1.jpeg', '../../assets/parkImgs/LL/ICI2.jpeg', '../../assets/parkImgs/LL/ICI3.jpeg'],
+        moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/inchcailloch/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Loch Lomond',
+        code: 'LLL',
+        location: [56.088862, -4.595235],
+        category: '',
+        description: 'Britain\'s largest inland stretch of water. Picturesque villages and mesmerising scenery, all overlooked by the majestic Ben Lomond.',
+        keyFeature: 'Loch-Cruising',
+        localImg: ['../../assets/parkImgs/LL/LLL1.jpeg', '../../assets/parkImgs/LL/LLL2.jpeg', '../../assets/parkImgs/LL/LLL3.jpeg'],
+        moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/lochs-in-the-national-park/loch-lomond/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'LookOut: Loch Voil',
+        code: 'LOLV',
+        location: [56.344513, -4.465772],
+        category: 'Hidden Gem',
+        description: 'This mirrored cabin, wood-framed \'lookout\' pavilion has benches built into it framing three mesmerizing views of the landscape whilst reflecting the surrounding vistas on its mirrored surfaces.',
+        keyFeature: '',
+        localImg: ['../../assets/parkImgs/LL/LOLV1.jpeg', '../../assets/parkImgs/LL/LOLV2.jpeg', '../../assets/parkImgs/SNP/LOLV3.jpeg'],
+        moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/scenic-routes-viewpoints/lookout-loch-voil/',
+        // usersSay: [SELECT]
+      }
+    ]
+  },
+  {
+    code: 'CNP',
+    name: 'Cairngorms National Park',
+    location: [57.050284, -3.610286, 8],
+    postcode: '',
+    description: 'One of National Geographic\s top 20 places to visit in the world. The UK\’s largest National Park, in the Scottish Highlands, offers masses of things to do including watersports, snowsports, wildlife watching, and some incredible high and low level walking and cycling routes.',
+    parkImg: ['../../assets/parkImgs/CNP/CNP/CNP1.jpeg', '../../assets/parkImgs/CNP/CNP/CNP2.jpeg', '../../assets/parkImgs/CNP/CNP/CNP3.jpeg'],
+    website: 'https://www.visitcairngorms.com/',
+    iconicWildlife: ['Ospreys', 'Red Deer', 'Red Squirrels', 'Otters', 'Curlews', 'Black Grouse', 'Barn Owls'],
+    keyWildlife: 'Golden Eagles',
+    trails: [{
+      name: 'East Highland Way',
+      link: 'https://www.walkhighlands.co.uk/east-highland-way.shtml'
+    },
+    {
+      name: 'The Speyside Way',
+      link: 'https://www.speysideway.org/'
+    },
+    {
+      name: 'Community Paths and Trails',
+      link: 'https://cairngorms.co.uk/discover-explore/things-to-do/walking-trails/community-paths-and-trails/'
+    }
+    ],
+    activities: ['Walking', 'Hiking', 'Cycling', 'Surfing', 'Golf', 'Rock climbing', 'Bird-watching', 'Stargazing', 'Water Bus', 'Loch Cruises'],
+    reviews: {
+      beauty: 5,
+      wildlife: 5,
+      trails: 5,
+      camping: 4,
+      owner: '628d757b56bb93b966aca68f'
+      // foodDrink: 4,
+    },
+    // usersSay: [SELECT],
+    attractions: [
+      {
+        name: 'Braemar Castle',
+        code: 'BC',
+        location: [57.014370, -3.390211],
+        category: 'Historic',
+        description: 'A forbidding exterior conceals 12 authentic rooms charmingly furnished as though the chief of Clan has just stepped out. Dig deeper and discover a turbulent past which echoes the story of Scotland over the past 400 years',
+        keyFeature: 'community-run',
+        localImg: ['../../assets/parkImgs/CNP/BC/BC1.jpeg', '../../assets/parkImgs/CNP/BC/BC2.jpeg', '../../assets/parkImgs/CNP/BC/BC3.jpeg'],
+        moreInfo: 'https://www.braemarcastle.co.uk/discover/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Skiing and Snowboarding',
+        code: 'SKI',
+        location: [57.133672, -3.673147],
+        category: 'Snowsports',
+        description: 'Yes, really, snow sports in the UK! Three of Scotland\'s FIVE ski resorts - Cairngorm Mountain, the Lecht and Glenshee are in the Cairngorms.',
+        keyFeature: 'Go tubular',
+        localImg: ['../../assets/parkImgs/CNP/SKI/SKI1.jpeg', '../../assets/parkImgs/CNP/SKI/SKI2.jpeg', '../../assets/parkImgs/CNP/SKI/SKI3.jpeg'],
+        moreInfo: 'https://www.visitscotland.com/see-do/active/skiing-snowsports/',
+        // usersSay: [SELECT]
+      },
+      {
+        name: 'Highland Folk Museum',
+        code: 'HFM',
+        location: [57.069541, -4.102719],
+        category: 'Historic',
+        description: 'Step back in time and experience life in the Highlands from 1700s to the 1950s. Discover over 35 historical buildings onsite for you to explore how people in the Highlands lived, worked, went to school, enjoyed their leisure time.',
+        keyFeature: '',
+        localImg: ['../../assets/parkImgs/CNP/HFM/HFM1.jpeg', '../../assets/parkImgs/CNP/HFM/HFM2.jpeg', '../../assets/parkImgs/CNP/HFM/HFM3.jpeg'],
+        moreInfo: 'https://www.highlandlife.com/highlandfolkmuseum',
+        // usersSay: [SELECT]
+      }
+    ]
   }
+
+
 ]
 
 export default parksRec

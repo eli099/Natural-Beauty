@@ -76,7 +76,19 @@ h1 {
   border-radius: 5px;
   font-size: 1.1em;
   color: white;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
+}
+
+.form-page form button:hover {
+  -webkit-box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+          box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.form-page form button:active {
+  -webkit-box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+          box-shadow: 0 0.3em 1em -0.5em #14a73e98;
 }
 /*# sourceMappingURL=auth.css.map */
