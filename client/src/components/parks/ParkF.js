@@ -16,8 +16,8 @@ import Col from 'react-bootstrap/Col'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import LeftArrow from "../../assets/left-arrow.svg"
-import RightArrow from "../../assets/right-arrow.svg"
+import LeftArrow from "../../assets/arrow-greenLeft.png"
+import RightArrow from "../../assets/arrow-greenRight.png"
 
 const NationalPark = () => {
 
@@ -36,13 +36,17 @@ const NationalPark = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
     initialSlide: 0,
-    prevArrow: <SlickArrowLeft />,
-    nextArrow: <SlickArrowRight />,
+    // prevArrow: <SlickArrowLeft />,
+    // nextArrow: <SlickArrowRight />,
   }
   const settingsAttractions = {
+    className: "center",
+    centerMode: true,
+    centerPadding: "60px",
     dots: true,
     infinite: true,
     speed: 500,
@@ -173,7 +177,7 @@ const NationalPark = () => {
             {/* <SimpleSlider /> */}
             <div className='np-attractions'>
               <Slider {...settingsAttractions} className="slider" >
-                <div className='np-attraction-1'>
+                <div className='np-attraction'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[0].category}</h2>
                     <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
@@ -181,10 +185,11 @@ const NationalPark = () => {
                   <div className='np-attractions-info'>
                     <h2>{park.attractions[0].name}</h2>
                     <p>{park.attractions[0].description}</p>
+                    <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                   </div>
-                  <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                 </div>
-                <div className='np-attraction-2'>
+
+                <div className='np-attraction'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[1].category}</h2>
                     <img src={park.attractions[1].localImg[0]} alt={park.attractions[1].name} className='attractions-img' />
@@ -192,10 +197,11 @@ const NationalPark = () => {
                   <div className='np-attractions-info'>
                     <h2>{park.attractions[1].name}</h2>
                     <p>{park.attractions[1].description}</p>
+                    <a href={park.attractions[1].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                   </div>
-                  <a href={park.attractions[1].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                 </div>
-                <div className='np-attraction-3'>
+
+                <div className='np-attraction'>
                   <div className='np-attractions-title'>
                     <h2>{park.attractions[2].category}</h2>
                     <img src={park.attractions[2].localImg[0]} alt={park.attractions[2].name} className='attractions-img' />
@@ -203,8 +209,8 @@ const NationalPark = () => {
                   <div className='np-attractions-info'>
                     <h2>{park.attractions[2].name}</h2>
                     <p>{park.attractions[2].description}</p>
+                    <a href={park.attractions[2].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                   </div>
-                  <a href={park.attractions[2].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
                 </div>
 
               </Slider>
@@ -235,13 +241,25 @@ const NationalPark = () => {
               </div>
               <div className='np-reviews'>
                 <h4>Reviews</h4>
-                <p> Scenery<br />
-                  Wildlife<br />
-                  Walks<br />
-                  Camping
-                </p>
-                <button>Submit a review</button>
-                <button onClick={handleAddToFav}>{favIcon}</button>
+                <div className='review-container'>
+                  <div className='review-index'>
+                    <p> Scenery:  <br />
+                      Wildlife:   <br />
+                      Walks:      <br />
+                      Camping:
+                    </p>
+                  </div>
+                  <div className='review-stars'>
+                    <p> ★★★★★<br />
+                      ★★★★<br />
+                      ★★★★★<br />
+                      ★★★
+                    </p>
+                  </div>
+
+                  <button>Submit a review</button>
+                  <button onClick={handleAddToFav}>{favIcon}</button>
+                </div>
               </div>
             </div>
 

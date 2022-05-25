@@ -38,6 +38,7 @@ const ParksIndex = () => {
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 2000,
+    pauseOnHover: true,
     initialSlide: 0,
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
