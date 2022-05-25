@@ -1,6 +1,6 @@
 import express from 'express'
 import { loginUser, registerUser } from '../controllers/auth.js'
-import { addReview } from '../controllers/parkReviews.js'
+import { addReview, deleteReview } from '../controllers/parkReviews.js'
 
 // Import controllers
 import { getSinglePark, showParks } from '../controllers/parks.js'
@@ -26,6 +26,10 @@ router.route('/parks/:id')
 // Add a review
 router.route('/parks/:id/reviews')
   .post(secureRoute, addReview) // Add review to park document
+
+// Delete a review
+router.route('/parks/:id/reviews/:reviewId')
+  .delete(secureRoute, deleteReview)
 
 // Authentication
 router.route('/register') // POST

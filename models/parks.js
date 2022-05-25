@@ -7,7 +7,7 @@ const reviewSchema = mongoose.Schema({
   wildlife: { type: Number, required: true, max: 5 },
   trails: { type: Number, required: true, max: 5 },
   camping: { type: Number, required: true, max: 5 },
-  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: false }
 }, {
   timestamps: true
 })
@@ -40,5 +40,21 @@ const parkSchema = new mongoose.Schema({
     moreInfo: { type: String, required: false }
   }]
 })
+
+// parkSchema
+//   .virtual('avgRating') // Virtual field name
+//   .get(function() {
+//     // Check reviews exist to take ratings from
+//     if (!this.reviews.length) return 'Not Rated Yet'
+//     // Add review ratings together
+//     const sum = this.reviews.reduce((acc, review) => {
+//       return acc + review.?
+//     }, 0)
+//     console.log('sum ->', sum)
+//   })
+
+//   parkSchema.set('toJSON', {
+//     virtuals: true
+//   })
 
 export default mongoose.model('Park', parkSchema)

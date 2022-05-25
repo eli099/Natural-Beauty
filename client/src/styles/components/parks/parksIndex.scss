@@ -3,6 +3,7 @@
   height: 100%;
   min-height: 100vh;
   background-image: url('../../../../public/assets/parkImgs/BBNP/PYF1.jpeg');
+  // background-image: url('../../../../public/assets/parkImgs/NFNP/NFNP3.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,13 +20,15 @@
       margin: 20px;
       margin-bottom: 10px;
       // border: 1px solid white;
-      box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
       border-radius: 4px;
       padding-top: 20px;
 
       .card{
         height: inherit;
         width: inherit;
+        overflow: hidden;
+
         .slick-arrow {
           height: 100px;
           width: 100px;
@@ -51,8 +54,16 @@
             font-size: 18px;
             padding: 10px;
             margin-top: 20px;
+            font-family: $title-main;
+            font-size: 25px;
           }
         }
+
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; 
+      }
+      .card:hover {
+        transform: scale(1.1); 
       }
     }
   }
