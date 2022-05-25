@@ -92,8 +92,8 @@ const NationalPark = () => {
   }, [id])
 
   // ? Sates for added OR not added to favourites
-  const [notSaved, setNotSaved] = useState('Add to your favourites ❤️')
-  const [saved, setSaved] = useState('Remove from your favourites 💚')
+  const [notSaved, setNotSaved] = useState('Add to favourites ❤️')
+  const [saved, setSaved] = useState('Remove from favourites 💚')
 
   // ? State for button & icon
   const [favIcon, setFavIcon] = useState('')
@@ -215,17 +215,6 @@ const NationalPark = () => {
               </Slider>
             </div>
 
-            {/* <div className='np-attractions'>
-              <div className='np-attractions-title'>
-                <h2>{park.attractions[0].category}</h2>
-                <img src={park.attractions[0].localImg[0]} alt={park.attractions[0].name} className='attractions-img' />
-              </div>
-              <div className='np-attractions-info'>
-                <h4>{park.attractions[0].name}</h4>
-                <p>{park.attractions[0].description}</p>
-              </div>
-              <a href={park.attractions[0].moreInfo} className='np-more-info' target='_blank' rel='noreferrer'>More info</a>
-            </div> */}
             <div className='np-stuff'>
               <div className='np-activities'>
                 <h4>Wildlife & wild adventures</h4>
@@ -255,10 +244,15 @@ const NationalPark = () => {
                       ★★★
                     </p>
                   </div>
-
-                  <button>Submit a review</button>
-                  <button onClick={handleAddToFav}>{favIcon}</button>
+                  <div className='buttons-container'>
+                    <button className='btn-review'>Submit a review</button>
+                    <button className='btn-review' onClick={handleAddToFav}>{favIcon}</button>
+                  </div>
                 </div>
+
+
+
+
               </div>
             </div>
 

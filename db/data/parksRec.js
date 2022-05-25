@@ -753,7 +753,7 @@ const parksRec = [
         category: 'Spectacular scenery',
         description: 'The beach is long and sandy, stretching for 9 kilometres and backed by sand dunes. Beautiful walks, perfect sand dunes, spectacular sunsets, amazing if you want an easy walk and fab if you want to climb and have fun.',
         keyFeature: '',
-        localImg: ['../../assets/parkImgs/SNP/HLB.jpeg', '../../assets/parkImgs/SNP/HLB1.jpeg', '../../assets/parkImgs/SNP/HLB2.jpeg', '../../assets/parkImgs/SNP/HLB3.jpeg'],
+        localImg: ['../../assets/parkImgs/SNP/HLB1.jpeg', '../../assets/parkImgs/SNP/HLB2.jpeg', '../../assets/parkImgs/SNP/HLB3.jpeg'],
         moreInfo: 'https://www.tripadvisor.co.uk/Attraction_Review-g551984-d4555889-Reviews-Harlech_Beach-Harlech_Snowdonia_National_Park_North_Wales_Wales.html',
         // usersSay: [SELECT]
       }
