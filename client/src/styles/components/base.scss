@@ -10,6 +10,11 @@ body {
 
 a {
   text-decoration: none;
+  color: rgb(6, 129, 0);
+}
+
+a:hover {
+  color: rgba(9, 179, 0, 1);
 }
 
 #main-wrapper {
@@ -18,15 +23,98 @@ a {
   margin: 0px;
 }
 
+.home-title {
+  font-size: 2em;
+}
+
 .map-container {
   height: 400px;
 }
 
-.park-map-container {
-  height: 600px;
-  width: 600px;
+#main-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#marker-img{
-  max-width: 150px;
+.main-map-container {
+  border-radius: 15px;
+}
+
+// ! MEDIA QUERIES FOR MAP RESPONSIVE DESIGN
+@media screen and (max-width:420px) {
+  .main-map-container {
+    height: 280px;
+    width: 280px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 80px;
+  }
+
+  #popup-img {
+    max-width: 70px;
+  }
+}
+@media screen and (min-width: 421px) and (max-width:700px) and (min-height: 421px) {
+  .main-map-container {
+    height: 400px;
+    width: 400px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 120px;
+  }
+
+  #popup-img {
+    max-width: 100px;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 1001px) and (min-height: 701px) {
+  .main-map-container {
+    height: 580px;
+    width: 580px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 220px;
+  }
+
+  #popup-img {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 1002px) and (min-height: 1002px) {
+  .main-map-container {
+    height: 1000px;
+    width: 1000px;
+  }
+
+  .mapboxgl-popup {
+    min-width: 400px;
+  }
+
+  #popup-img {
+    max-width: 380px;
+  }
+}
+// ! (END)
+
+.clicked-park-name{
+  color: white;
+  background-color: rgb(0, 0, 0, 0.6);
+  font-size: 2.2rem;
+  border-radius: 15px;
+  // mix-blend-mode: difference;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 10px 0px;
+}
+
+.main-map-btns-container{
+  display: flex;
+  justify-content: center;
 }
