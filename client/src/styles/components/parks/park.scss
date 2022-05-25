@@ -3,6 +3,7 @@
 h1 {
   font-family: 'Courgette', cursive;
   font-size: 45px;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 0 10px;
 }
   
 h2, h3 {
@@ -216,13 +217,6 @@ h2, h3 {
             flex-direction: column;
             justify-content: center;
 
-            // button {
-            //   height: 30px;
-            //   background-color: gold;
-            //   vertical-align: middle;
-            //   margin-bottom: 10px;
-
-            // }
             button {
               display: flex;
               align-items: center;
@@ -231,9 +225,9 @@ h2, h3 {
               font-weight: 500;
               font-size: 16px;
               padding: 5px 10px;
-              margin-bottom: 10px;
+              margin-bottom: 20px;
               color: white;
-              background: linear-gradient(6deg, $md-green 0%, $pale-green 100%);
+              background: linear-gradient(6deg, $md-green 8%, $pale-green 100%);
               border: none;
               box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
               letter-spacing: 0.05em;
@@ -243,11 +237,9 @@ h2, h3 {
               -webkit-user-select: none;
               touch-action: manipulation;
             }
-            
             button:hover {
               box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
             }
-            
             button:active {
               box-shadow: 0 0.3em 1em -0.5em #14a73e98;
             }

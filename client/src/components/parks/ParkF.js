@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 // Import bearer token
-import { getTokenFromLocalStorage } from '../helpers/auth'
+import { getTokenFromLocalStorage, userIsAuthenticated } from '../helpers/auth'
 
 // * Import SimpleSlider
 // import SimpleSlider from '../../carousel/carousel'
@@ -155,6 +155,13 @@ const NationalPark = () => {
     }
   }
 
+  const navigate = useNavigate()
+
+  const handleLoginButton = () => {
+    // e.preventDefault()
+    return navigate('/login')
+  }
+
   return (
     <>
       {park ?
@@ -246,12 +253,11 @@ const NationalPark = () => {
                   </div>
                   <div className='buttons-container'>
                     <button className='btn-review'>Submit a review</button>
-                    <button className='btn-review' onClick={handleAddToFav}>{favIcon}</button>
+                    {!userIsAuthenticated() ? <button className='btn-none' onClick={handleLoginButton}>Login to add ❤️</button> : <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button>}
+                    
+                    {/* <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button> */}
                   </div>
                 </div>
-
-
-
 
               </div>
             </div>
