@@ -29,6 +29,16 @@ userSchema
     this._passwordConfirmation =  value // value of virtual field is whatever the user inputs
   })
 
+// ! Reverse relationship
+// ? Add virtual field to show reviews user has posted
+userSchema.virtual('createdReviews', {
+  // Reference the model
+  ref: 'Park',
+  localField: '_id',
+  // Field from reference model containing ID to match localField ID
+  foreignField: 'reviews.owner'
+})
+
 
 // ? Pre Validation
 // Check password matches passwordConfirmation

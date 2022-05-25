@@ -23,7 +23,7 @@ export const showUser = async (req, res) => {
   console.log('verfifiedUser ->', req.verifiedUser)
   try {
     // Get profile info
-    const profile = await User.findById(req.verifiedUser._id)
+    const profile = await User.findById(req.verifiedUser._id).populate('createdReviews') // add field to show reviews user has posted
     return res.status(200).json(profile)
   } catch (error) {
     console.log(error)
@@ -63,7 +63,7 @@ export const addFavourite = async (req, res) => {
         console.log('updated favourites ->', profile.favourites)
       } else {
         profile.favourites.push(newObject)
-      }
+      } 
     })
 
 
