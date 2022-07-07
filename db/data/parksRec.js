@@ -800,7 +800,7 @@ const parksRec = [
         category: 'Wild adventure',
         description: 'Inchcailloch is part of the Loch Lomond National Nature Reserve and is a wonderful place to visit due to its rich natural and cultural heritage. It is the perfect place to experience remoteness and wildness in a safe and easily accessible location and, weather permitting, you can visit the island all year round.',
         keyFeature: 'remote-camping',
-        localImg: ['../../assets/parkImgs/LL/ICI1.jpeg', '../../assets/parkImgs/LL/ICI2.jpeg', '../../assets/parkImgs/LL/ICI3.jpeg'],
+        localImg: ['../../assets/parkImgs/LL/INI/INI1.jpeg', '../../assets/parkImgs/LL/INI/INI2.jpeg', '../../assets/parkImgs/LL/INI/INI3.jpeg'],
         moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/inchcailloch/',
         // usersSay: [SELECT]
       },
@@ -811,7 +811,7 @@ const parksRec = [
         category: '',
         description: 'Britain\'s largest inland stretch of water. Picturesque villages and mesmerising scenery, all overlooked by the majestic Ben Lomond.',
         keyFeature: 'Loch-Cruising',
-        localImg: ['../../assets/parkImgs/LL/LLL1.jpeg', '../../assets/parkImgs/LL/LLL2.jpeg', '../../assets/parkImgs/LL/LLL3.jpeg'],
+        localImg: ['../../assets/parkImgs/LL/LLL/LLL1.jpeg', '../../assets/parkImgs/LL/LLL/LLL2.jpeg', '../../assets/parkImgs/LL/LLL/LLL3.jpeg'],
         moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/lochs-in-the-national-park/loch-lomond/',
         // usersSay: [SELECT]
       },
@@ -822,7 +822,7 @@ const parksRec = [
         category: 'Hidden Gem',
         description: 'This mirrored cabin, wood-framed \'lookout\' pavilion has benches built into it framing three mesmerizing views of the landscape whilst reflecting the surrounding vistas on its mirrored surfaces.',
         keyFeature: '',
-        localImg: ['../../assets/parkImgs/LL/LOLV1.jpeg', '../../assets/parkImgs/LL/LOLV2.jpeg', '../../assets/parkImgs/SNP/LOLV3.jpeg'],
+        localImg: ['../../assets/parkImgs/LL/LOLV/LOLV1.jpeg', '../../assets/parkImgs/LL/LOLV/LOLV2.jpeg', '../../assets/parkImgs/LL/LOLV/LOLV3.jpeg'],
         moreInfo: 'https://www.lochlomond-trossachs.org/things-to-see/scenic-routes-viewpoints/lookout-loch-voil/',
         // usersSay: [SELECT]
       }
@@ -833,7 +833,7 @@ const parksRec = [
     name: 'Cairngorms National Park',
     location: [57.050284, -3.610286, 8],
     postcode: '',
-    description: 'One of National Geographic\s top 20 places to visit in the world. The UK\’s largest National Park, in the Scottish Highlands, offers masses of things to do including watersports, snowsports, wildlife watching, and some incredible high and low level walking and cycling routes.',
+    description: 'One of National Geographic\s top 20 places to visit in the world. The UK\'s largest National Park, in the Scottish Highlands, offers masses of things to do including watersports, snowsports, wildlife watching, and some incredible high and low level walking and cycling routes.',
     parkImg: ['../../assets/parkImgs/CNP/CNP/CNP1.jpeg', '../../assets/parkImgs/CNP/CNP/CNP2.jpeg', '../../assets/parkImgs/CNP/CNP/CNP3.jpeg'],
     website: 'https://www.visitcairngorms.com/',
     iconicWildlife: ['Ospreys', 'Red Deer', 'Red Squirrels', 'Otters', 'Curlews', 'Black Grouse', 'Barn Owls'],
