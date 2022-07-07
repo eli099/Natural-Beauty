@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Project Three - Natural Beauty
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Brief
 
-## Available Scripts
+To build a MERN stack application with CRUD functionality as a group.
+The app must implement React on the front-end and use Express.js on the backend to serve data from a Mongo database. It must also include at least one relationship and reverse relationship on the backend.
 
-In the project directory, you can run:
+## The Idea
 
-### `npm start`
+I worked on this project with [Fran Knight](https://github.com/fransurf) and [Ben Cave](https://github.com/bens-cave) and created the main git repository here.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The idea was to create an app focused on areas of Natural Beauty in the UK and that allows users to navigate around a map to access information about national parks. We wanted the user to be able to leave reviews and to add their favourite places to come back to on their own profile page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Techonolgies Used
 
-### `npm test`
+- React
+- JSX
+- Node.js
+- MongoDB
+- Express
+- CSS
+- SASS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tools Used
 
-### `npm run build`
+- Git
+- Github
+- Trello
+- Slack
+- Excalidraw
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Our Approach
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* We decided to use a Trello board to track our progress and to hold usefull links/resources related to the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* After brainstorming ideas together we came to the decision that we would like to incorporate a map of some kind into our app so that users can navigate easily through national park related information. After a recommendation we decided to use Mapbox to implement our idea.
 
-### `npm run eject`
+* Initially we each read through Mapbox documentation and did research to find out how to use a map in our app.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* We then delegated tasks daily. Me and Ben focused on figuring out how to use Mapbox and Fran collated the National Park data for our API.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Backend -> For the remainder of the project I focused on the backend - database schema, middleware, request (get, post, delete) & endpoints, seeding & seed data, routing and part of the authentication process.
+  - Front-end -> Navbar, Login, Register and Profile page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Fran worked on collating the data we needed for our API - descriptions, links, images etc - and part of user authentication processes on the front and backend.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Hurdles & Unsolved Problems
 
-## Learn More
+- Figuring out how to use Mapbox maps inside our app.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The ability for a user to add national parks to their favourites list worked initially but a couple houre before presenting, it stopped working. We need to figure out how to fix this bug.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Stretch Goal
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Improve styling
+- Optimise for mobile screens -> make more responsive
+- Finish function for adding reviews
+- Add function to display avergae rating for each national park
+- Expand the API to AONBs (Areas of Natural Beauty)

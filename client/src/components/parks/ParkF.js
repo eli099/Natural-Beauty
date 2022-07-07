@@ -293,7 +293,7 @@ const NationalPark = () => {
 
                   
 
-                  <button onClick={handleAddToFav}>{favIcon}</button>
+                  
                   <div className='buttons-container'>
                   <Form>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1" placeholder="Write a review">
