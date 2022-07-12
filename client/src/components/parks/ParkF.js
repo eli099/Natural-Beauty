@@ -95,7 +95,7 @@ const NationalPark = () => {
 
   }, [id])
 
-  // ? Sates for added OR not added to favourites
+  // ? States for added OR not added to favourites
   const [notSaved, setNotSaved] = useState('Add to favourites ❤️')
   const [saved, setSaved] = useState('Remove from favourites 💚')
 
@@ -160,39 +160,39 @@ const NationalPark = () => {
     }
   }
 
-  // Review data parsed by user
-  const [ submitData, setSubmitData ] = useState({
-    text: ''
-  })
+  // // Review data parsed by user
+  // const [ submitData, setSubmitData ] = useState({
+  //   text: ''
+  // })
 
-  // State to log errors
-  const [ submitErrors, setSubmitErrors ] = useState({
-    text: ''
-  })
+  // // State to log errors
+  // const [ submitErrors, setSubmitErrors ] = useState({
+  //   text: ''
+  // })
 
-  // Update review form data
-  const handleChange = (e) => {
-    console.log(e.target.name, e.target.value)
-    setSubmitData({ ...submitData, [e.target.name]: e.target.value })
-    setErrors({ ...errors, [e.target.name]: '' })
-    console.log(submitData)
-  }
+  // // Update review form data
+  // const handleChange = (e) => {
+  //   console.log(e.target.name, e.target.value)
+  //   setSubmitData({ ...submitData, [e.target.name]: e.target.value })
+  //   setErrors({ ...errors, [e.target.name]: '' })
+  //   console.log(submitData)
+  // }
 
-  // ? Funtion to submit a review
-  const handleReviewSubmit = async (e) => {
-    e.preventDefault()
-    try {
-      const { data } = await axios.post(`/api/parks/${id}/reviews`, submitData, {
-        headers: {
-          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
-        },
-      })
-      console.log('data ->', data)
-    } catch (error) {
-      console.log(error)
-      setSubmitErrors(error)
-    }
-  }
+  // // ? Funtion to submit a review
+  // const handleReviewSubmit = async (e) => {
+  //   e.preventDefault()
+  //   try {
+  //     const { data } = await axios.post(`/api/parks/${id}/reviews`, submitData, {
+  //       headers: {
+  //         Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+  //       },
+  //     })
+  //     console.log('data ->', data)
+  //   } catch (error) {
+  //     console.log(error)
+  //     setSubmitErrors(error)
+  //   }
+  // }
 
   const navigate = useNavigate()
 
@@ -204,8 +204,10 @@ const NationalPark = () => {
   return (
     <>
       {park ?
+      // Park title, description & carousel of images for top section of page
         <section className='np-page-container'>
           <section className='np-carousel-container'>
+            {/* Simple carousel of images presented underneath title and description */}
             <Slider {...settings} >
               <img src={park.parkImg[0]} alt={park.name} className='np-img' />
               <img src={park.parkImg[1]} alt={park.name} className='np-img' />
@@ -219,7 +221,8 @@ const NationalPark = () => {
             </div>
           </section>
           <section className='np-bottom-container'>
-            {/* <SimpleSlider /> */}
+
+            {/* Carousel of information for the 3 suggested activities */}
             <div className='np-attractions'>
               <Slider {...settingsAttractions} className="slider" >
                 <div className='np-attraction'>
@@ -261,6 +264,7 @@ const NationalPark = () => {
               </Slider>
             </div>
 
+            {/* Additional information on wildlife and recommended walking trails */}
             <div className='np-stuff'>
               <div className='np-activities'>
                 <h4>Wildlife & wild adventures</h4>
@@ -291,21 +295,18 @@ const NationalPark = () => {
                     </p>
                   </div>
 
-                  
-
-                  
                   <div className='buttons-container'>
-                  <Form>
+                    <button className='btn-review'>Submit a review</button>
+                    {!userIsAuthenticated() ? <button className='btn-none' onClick={handleLoginButton}>Login to add ❤️</button> : <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button>}
+
+                  {/* <Form>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1" placeholder="Write a review">
                       <Form.Label>Review</Form.Label>
                       <Form.Control as="textarea" rows={3} value={submitData.text} name="text" onChange={handleChange} />
                     </Form.Group>
                     <button type="submit" onClick={handleReviewSubmit}>Submit a review</button>
-                  </Form>
-                    {/* <button className='btn-review'>Submit a review</button> */}
-                    {!userIsAuthenticated() ? <button className='btn-none' onClick={handleLoginButton}>Login to add ❤️</button> : <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button>}
-                    
-                    {/* <button className='btn-fav' onClick={handleAddToFav}>{favIcon}</button> */}
+                  </Form> */}
+
                   </div>
                 </div>
 
