@@ -33,7 +33,7 @@ export const loginUser = async (req, res) => {
 
     console.log('req.body ->', req.body)
 
-    const token = jwt.sign({ sub: userToLogin._id }, SECRET, { expiresIn: '10d' })
+    const token = jwt.sign({ sub: userToLogin._id }, process.env.SECRET, { expiresIn: '10d' })
     // ^ generates a token containing relevant info to validate user
     // 1st use payload.sub to validate user; 2nd SECRET makes our token secure; sets expiry
 
