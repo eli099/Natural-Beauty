@@ -5,13 +5,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 // Import bearer token
 import { getTokenFromLocalStorage, userIsAuthenticated } from '../helpers/auth'
 
-// * Import SimpleSlider
-// import SimpleSlider from '../../carousel/carousel'
-
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-
 import FormControl from 'react-bootstrap/FormControl'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Form from 'react-bootstrap/Form'
@@ -93,6 +86,7 @@ const NationalPark = () => {
     getPark()
 
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id])
 
   // ? States for added OR not added to favourites
@@ -129,6 +123,7 @@ const NationalPark = () => {
       }
     }
     getProfileFav()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, favIcon])
 
   // ? Function to add Park to user favourites
@@ -268,8 +263,8 @@ const NationalPark = () => {
             <div className='np-stuff'>
               <div className='np-activities'>
                 <h4>Wildlife & wild adventures</h4>
-                <p><span>🦌</span> <b>Among the incredible scenery, you'll be able to spot:</b> {park.iconicWildlife.map((item) => `${item}, `)}</p>
-                <p><span>🧗‍♀️</span> <b>In {park.name} you can enjoy a range of outdoor activities including:</b> {park.activities.map((item) => `${item}, `)}</p>
+                <p><span>🦌</span> <b>Among the incredible scenery, you'll be able to spot:</b> {park.iconicWildlife.slice(0, 8).map((item) => `${item}, `)}</p>
+                <p><span>🧗‍♀️</span> <b>You can enjoy a range of activities including:</b> {park.activities.map((item) => `${item}, `)}</p>
                 <p><span>🥾</span> <b>Why not try out some of the well-trodden paths:</b></p>
                 <ul>
                   <li><a href={park.trails[0].link} target='_blank' rel='noreferrer'>{park.trails[0].name}</a></li>
