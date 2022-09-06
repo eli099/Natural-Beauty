@@ -36,9 +36,9 @@ const startServer = async () => {
   app.use(express.json())
 
 
-  app.get('/', (req, res, next) => {
-    return res.end('Welcome to our API')
-  })
+  // app.get('/', (req, res, next) => {
+  //   return res.end('Welcome to our API')
+  // })
 
   // Connect to router
   app.use('/api', router)
