@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Courgette&display=swap");
+h1 {
+  text-align: center;
+}
+
+.form-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0px solid;
+  height: 100vh;
+  margin: 0px;
+}
+
+.form-page form {
+  border: none;
+  background-color: rgba(225, 225, 225, 0.6);
+  display: block;
+  width: 40%;
+  min-width: 500px;
+  margin: 30px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+
+.form-page form h1 {
+  width: 100%;
+  padding: 0px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
+  font-size: 1.5em;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.form-page form p {
+  color: rgba(0, 0, 0, 0.6);
+  margin: -5px 0 15px;
+  text-align: center;
+}
+
+.form-page form .auth-error {
+  font-size: 0.8em;
+  color: red;
+  margin: 0px 0px 5px 0px;
+  text-align: left;
+}
+
+.form-page form .cent {
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.form-page form input {
+  width: 100%;
+  margin: 5px 0px 10px 0px;
+  padding: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  font-size: 1em;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.form-page form button {
+  margin-top: 15px;
+  padding: 15px;
+  width: 100%;
+  background-color: #09b300;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: white;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+.form-page form button:hover {
+  -webkit-box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+          box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.form-page form button:active {
+  -webkit-box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+          box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #068100;
+}
+
+a:hover {
+  color: #09b300;
+}
+
+#main-wrapper {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+}
+
+#home-title {
+  font-size: 2em;
+  color: #1A4314;
+}
+
+.map-container {
+  height: 400px;
+}
+
+#main-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-map-container {
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 420px) {
+  .main-map-container {
+    height: 280px;
+    width: 280px;
+  }
+  .mapboxgl-popup {
+    min-width: 80px;
+  }
+  #popup-img {
+    max-width: 70px;
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 700px) and (min-height: 421px) {
+  .main-map-container {
+    height: 400px;
+    width: 400px;
+  }
+  .mapboxgl-popup {
+    min-width: 120px;
+  }
+  #popup-img {
+    max-width: 100px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1001px) and (min-height: 701px) {
+  .main-map-container {
+    height: 580px;
+    width: 580px;
+  }
+  .mapboxgl-popup {
+    min-width: 220px;
+  }
+  #popup-img {
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 1002px) and (min-height: 1002px) {
+  .main-map-container {
+    height: 940px;
+    width: 940px;
+  }
+  .mapboxgl-popup {
+    min-width: 400px;
+  }
+  #popup-img {
+    max-width: 380px;
+  }
+}
+
+.clicked-park-name {
+  color: white;
+  background-color: rgba(15, 40, 12, 0.6);
+  font-size: 2.2rem;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  margin: 10px 0px;
+}
+
+.main-map-btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-map-btns-container button {
+  color: white;
+  background-color: rgba(15, 40, 12, 0.6);
+  font-size: 1.4rem;
+  border-radius: 15px;
+  padding: 7px 14px;
+}
+
+#main-wrapper {
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("../../../../public/assets/parkImgs/BBNP/PYF1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#main-wrapper .parks-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 40px;
+}
+
+#main-wrapper .parks-container .park {
+  height: 480px;
+  max-width: 380px;
+  margin: 20px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding-top: 20px;
+}
+
+#main-wrapper .parks-container .park .card {
+  height: inherit;
+  width: inherit;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#main-wrapper .parks-container .park .card .slick-arrow {
+  height: 100px;
+  width: 100px;
+  z-index: 10;
+}
+
+#main-wrapper .parks-container .park .card .slick-slide {
+  height: calc(450px / 100 * 40);
+}
+
+#main-wrapper .parks-container .park .card .park-link {
+  text-decoration: none;
+}
+
+#main-wrapper .parks-container .park .card .park-img {
+  max-width: 100%;
+  max-height: 35% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+#main-wrapper .parks-container .park .card .card-body {
+  color: black;
+  height: 250px;
+}
+
+#main-wrapper .parks-container .park .card .card-body .title {
+  font-weight: 900;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: "Courgette", cursive;
+  font-size: 25px;
+}
+
+#main-wrapper .parks-container .park .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+h1 {
+  font-family: 'Courgette', cursive;
+  font-size: 45px;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 0 10px;
+}
+
+h2, h3 {
+  font-family: 'BIZ UDPGothic', sans-serif;
+}
+
+.np-page-container {
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 15px;
+  background-color: rgba(9, 179, 0, 0.2);
+  background-image: none;
+}
+
+.np-page-container .slick-arrow {
+  height: 100px;
+  width: 100px;
+  z-index: 10;
+}
+
+.np-page-container .np-carousel-container {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.np-page-container .np-carousel-container :hover {
+  cursor: pointer;
+}
+
+.np-page-container .np-carousel-container .slick-slide {
+  height: 40vh;
+  width: 100vw;
+}
+
+.np-page-container .np-carousel-container .slick-slide .np-img {
+  height: 100%;
+  width: 100% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+.np-page-container .np-carousel-container .slick-dots {
+  top: 90%;
+}
+
+.np-page-container .np-carousel-container .park-text {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.np-page-container .np-carousel-container .park-text .park-desc {
+  width: 25%;
+  height: 100%;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.np-page-container .np-carousel-container .park-text .park-desc p {
+  color: white;
+  padding: 0 10px;
+  display: inline-block;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.np-page-container .np-carousel-container .park-text h1 {
+  width: 75%;
+  margin-bottom: 0;
+  color: white;
+}
+
+.np-page-container .np-bottom-container {
+  margin-top: 20px;
+  height: 50vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.np-page-container .np-bottom-container .np-attractions {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  height: 100%;
+  width: 45%;
+  max-width: 550px;
+  position: relative;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider {
+  height: inherit !important;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list {
+  height: inherit !important;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track {
+  height: inherit !important;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div {
+  height: inherit;
+  padding: 0 5px;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  padding: 0;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction .np-attractions-title {
+  width: 100%;
+  height: 45%;
+  position: relative;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction .np-attractions-title .attractions-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 6px 6px 0 0;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction .np-attractions-title h2 {
+  position: absolute;
+  color: white;
+  z-index: 100;
+  padding: 10px;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction .np-attractions-info {
+  padding: 1em;
+  background-color: rgba(225, 225, 225, 0.6);
+  border-radius: 0 0 6px 6px;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction .np-attractions-info h2 {
+  text-align: center;
+  font-size: 28px;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction .np-attractions-info p {
+  margin-bottom: 5px;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slider .slick-list .slick-track div .np-attraction .np-attractions-info .np-more-info {
+  color: blue;
+  text-align: right;
+}
+
+.np-page-container .np-bottom-container .np-attractions .slick-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.np-page-container .np-bottom-container .np-stuff {
+  border: 2px solid #1A4314;
+  height: 100%;
+  width: 45%;
+  max-width: 550px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: rgba(225, 225, 225, 0.6);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-activities span {
+  font-size: 30px;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-activities p {
+  margin-bottom: 0;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-activities a {
+  color: blue;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews h4 {
+  margin-bottom: 5px;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews .review-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews .review-container :root {
+  --star-size: 60px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews .review-container .review-stars {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: gold;
+  text-shadow: #FC0 1px 0 5px;
+  display: inline;
+  font-size: 20px;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews .review-container .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews .review-container .buttons-container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  color: white;
+  background: linear-gradient(6deg, #1D741B 8%, #e2fab5 100%);
+  border: none;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  cursor: pointer;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews .review-container .buttons-container button:hover {
+  -webkit-box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+          box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.np-page-container .np-bottom-container .np-stuff .np-reviews .review-container .buttons-container button:active {
+  -webkit-box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+          box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+}
+
+header nav {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 0.5px solid #09b300;
+  background-color: rgba(9, 179, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+
+header nav a:hover {
+  color: black;
+}
+
+header nav .nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav .nav-right a {
+  margin: 0px 15px;
+}
+
+a {
+  color: #068100;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+.profile-container {
+  background-color: rgba(225, 225, 225, 0.6);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+.slider {
+  margin: 0 -15px;
+}
+
+.slider .np-attractions {
+  margin-left: 15px;
+  margin-right: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 8px;
+  height: 50vh;
+  width: 40%;
+  background-color: #e2fab5;
+}
+
+.slider .np-attractions.np-attractions-title {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.slider .np-attractions.np-attractions-title.attractions-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.slider .np-attractions.np-attractions-titleh2 {
+  position: absolute;
+  color: white;
+  z-index: 100;
+  padding: 10px;
+}
+
+.slider .np-attractions .np-attractions-info {
+  padding: 10px;
+}
+
+.slider .np-attractions .np-more-info {
+  padding: 10px;
+  text-align: right;
+  right: 0;
+}
+/*# sourceMappingURL=main.css.map */
