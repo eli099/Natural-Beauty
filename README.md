@@ -1,5 +1,3 @@
-Project 3
- 
 # Project Three - Natural Beauty
  
 ## The Project Brief
@@ -13,6 +11,8 @@ Build a MERN stack application with CRUD functionality. The app must implement R
 I worked on this project with [Fran Knight](https://github.com/fransurf) and [Ben Cave](https://github.com/bens-cave) and created the main git repository here.
  
 The idea was to create an app focused on areas of Natural Beauty in the UK and that allows users to navigate around a map to access information about national parks. We wanted the user to be able to leave reviews and to add their favourite places to come back to on their own profile page.
+
+**Deployment: https://natural-b.herokuapp.com**
  
 ## Technologies Used
  
