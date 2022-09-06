@@ -11,6 +11,15 @@ import { PORT, MONGODB_CONNECTION_STRING } from './config/environment.js'
 // Import router
 import router from './config/router.js'
 
+// ! Heroku/Deployment
+
+import 'dotenv/config' // only needs to be added if it doesn't already exist
+import path, { dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 // Logger
 const logger = (req, res, next) => {
   // console.log('req.body ->', req.body)
@@ -34,11 +43,19 @@ const startServer = async () => {
   // Connect to router
   app.use('/api', router)
 
+  // ** New lines **
+  // ! Heroku/Deployment
+  app.use(express.static(path.join(__dirname, 'client', 'build')))
+
+  app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
+  })
+
   // Connect to database with mongoose
-  await mongoose.connect(MONGODB_CONNECTION_STRING)
+  await mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
   console.log('Connected to MongoDB!')
 
-  app.listen(PORT, () => console.log(`🏔  - Server listening on port ${PORT}`))
+  app.listen(process.env.PORT, () => console.log(`🏔  - Server listening on port ${process.env.PORT}`))
 }
 
 startServer()

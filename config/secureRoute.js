@@ -14,7 +14,7 @@ export const secureRoute = async (req, res, next) => {
     // ^ this removes 'Bearer ' from the beginning of the tokenm which allows straightforward decoding for comparison
     console.log('secureRoute token ->', token)
 
-    const payload = jwt.verify(token, SECRET)
+    const payload = jwt.verify(token, process.env.SECRET)
     // ^ verifies the token using the secure secret key
     console.log('secureRoute payload ->', payload)
 

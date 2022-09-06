@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 
 
@@ -33,7 +33,7 @@ const App = () => {
     <main id="main-wrapper">
       {/* <h1>Natural Beauty</h1> */}
       {/* Components with link components */}
-      <BrowserRouter>
+      <HashRouter>
         <NavBarPage />
         <Routes>
           {/* Home */}
@@ -61,7 +61,7 @@ const App = () => {
           <Route path="/parks/:id/slider" element={<SimpleSlider />} />
 
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </main>
   )
 }
