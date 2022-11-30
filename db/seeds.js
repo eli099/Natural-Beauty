@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
-
-import { MONGODB_CONNECTION_STRING } from '../config/environment.js'
+import 'dotenv/config' // only needs to be added if it doesn't already exist
 
 // Import national park model
 import Park from '../models/parks.js'
@@ -14,6 +13,7 @@ const seedDatabase = async () => {
   try {
     // Connect to database
     await mongoose.connect(process.env.DB_URI)
+    // await mongoose.connect("mongodb+srv://natbeauty:ybpMkn26dRUNtpu5@cluster0.cpuag0r.mongodb.net/natural-b?retryWrites=true&w=majority")
     console.log(`🚀 Database connected`)
 
     // Remove data
