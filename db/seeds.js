@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-import { MONGODB_CONNECTION_STRING } from '../config/environment.js'
+// import { MONGODB_CONNECTION_STRING } from '../config/environment.js'
 
 // Import national park model
 import Park from '../models/parks.js'
@@ -13,7 +13,7 @@ import userData from './data/users.js'
 const seedDatabase = async () => {
   try {
     // Connect to database
-    await mongoose.connect(process.env.DB_URI)
+    await mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
     console.log(`🚀 Database connected`)
 
     // Remove data
